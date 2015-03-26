@@ -1,5 +1,7 @@
 #pragma once
-
+#include <cstdlib>
+#include <ctime>
+#include "player.h"
 namespace Project1 {
 
 	using namespace System;
@@ -14,6 +16,8 @@ namespace Project1 {
 	/// </summary>
 	public ref class MyForm : public System::Windows::Forms::Form
 	{
+		Graphics^ g;
+		array <player^, 2>^ Box1;
 	public:
 		MyForm(void)
 		{
@@ -110,12 +114,42 @@ namespace Project1 {
 
 		}
 #pragma endregion
+	
+		int numrow = 40;
+		int numcol = 40;
 	private: System::Void MyForm_Load(System::Object^  sender, System::EventArgs^  e) {
-	}
-	};
+				 g = pictureBox1->CreateGraphics();
+				 Box1 = gcnew array<player^, 2>(40, 40);
+				 for (int row = 0; row < numrow; row++)
+				 {
+					 for (int col = 0; col < numcol; col++)
+					 {
+						 
+							 Box1[row, col] = gcnew player(row, col, 'b');
+							 
+
+
+						 
+
+					 }
+				 }
+	
+	
+}
+};
 }
 
+System::Void Computer_move()
+{
 
+	srand(time(NULL));
+	int x = rand() % 40 + 0;
+	int y = rand() % 40 + 0;
+	Box1[x, y]->status = 'r';
+
+
+
+}
 
 
 
@@ -123,15 +157,12 @@ namespace Project1 {
 /*
 large cell size == 40
 small cell size == 20
-
-
-
-
-
-
-
-
-
-
-
 */
+
+
+
+
+
+
+
+
