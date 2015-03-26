@@ -1,3 +1,17 @@
+<<<<<<< HEAD
+#pragma once;
+using namespace System::Drawing;
+ref class player
+{
+private:
+	
+public:
+	player();
+	player(int , int , char);
+	char status;
+
+};
+=======
 #pragma once
 
 ref class player{
@@ -22,3 +36,8 @@ public:
 
 
 };
+<<<<<<< HEAD
+=======
+*/
+>>>>>>> origin/master
+>>>>>>> origin/master

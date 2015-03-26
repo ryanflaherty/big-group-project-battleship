@@ -1,8 +1,14 @@
 #pragma once
+<<<<<<< HEAD
+#include <cstdlib>
+#include <ctime>
+#include "player.h"
+=======
 #include <stdlib.h>
 #include "player.h"
 #include "5cellship.h"
 
+>>>>>>> origin/master
 namespace Project1 {
 
 	using namespace System;
@@ -17,6 +23,8 @@ namespace Project1 {
 	/// </summary>
 	public ref class MyForm : public System::Windows::Forms::Form
 	{
+		Graphics^ g;
+		array <player^, 2>^ Box1;
 	public:
 		MyForm(void)
 		{
@@ -146,7 +154,29 @@ namespace Project1 {
 
 		}
 #pragma endregion
+	
+		int numrow = 40;
+		int numcol = 40;
 	private: System::Void MyForm_Load(System::Object^  sender, System::EventArgs^  e) {
+<<<<<<< HEAD
+				 g = pictureBox1->CreateGraphics();
+				 Box1 = gcnew array<player^, 2>(40, 40);
+				 for (int row = 0; row < numrow; row++)
+				 {
+					 for (int col = 0; col < numcol; col++)
+					 {
+						 
+							 Box1[row, col] = gcnew player(row, col, 'b');
+							 
+
+
+						 
+
+					 }
+				 }
+	
+	
+=======
 
 				 g = pictureBox1->CreateGraphics();
 				 blackBrush = gcnew System::Drawing::Pen(Color::Black);
@@ -185,10 +215,18 @@ private: System::Void button1_Click(System::Object^  sender, System::EventArgs^ 
 					 g->DrawRectangle(blackBrush, lrggridsrect);
 				 }
 			 }
+>>>>>>> origin/master
 }
 };
 }
 
+System::Void Computer_move()
+{
+
+	srand(time(NULL));
+	int x = rand() % 40 + 0;
+	int y = rand() % 40 + 0;
+	Box1[x, y]->status = 'r';
 
 
 /*
@@ -207,20 +245,20 @@ Void draw_grid(){
 */
 
 
+}
+
+
 
 //notes
 /*
 large cell size == 40
 small cell size == 20
-
-
-
-
-
-
-
-
-
-
-
 */
+
+
+
+
+
+
+
+
