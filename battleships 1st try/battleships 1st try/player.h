@@ -1,5 +1,5 @@
 #pragma once
-/*
+
 ref class player{
 private:
 	int x;
@@ -17,9 +17,8 @@ public:
 	void set_y(int);
 
 	bool get_ship();
-	void set_ship();
+	void set_ship(bool);
 
 
 
 };
-*/

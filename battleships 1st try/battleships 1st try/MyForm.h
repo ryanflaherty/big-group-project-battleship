@@ -1,6 +1,7 @@
 #pragma once
 #include <stdlib.h>
 #include "player.h"
+#include "5cellship.h"
 
 namespace Project1 {
 
@@ -45,12 +46,12 @@ namespace Project1 {
 	private:
 
 	////////Player Array////
-		//array <player^, 2>^ PLAYER_GRID;
+		array <player^, 2>^ PLAYER_GRID;
 
 	/////GRAPHICS//////////////	 
 		Graphics^ g;
 		Pen^ blackBrush;
-
+		Bitmap^ Ship_5 = gcnew Bitmap("Graphics/(250x50)_Colony_CarrierShip_[5Cells].png");
 
 	/////////////////////
 
@@ -150,14 +151,16 @@ namespace Project1 {
 				 g = pictureBox1->CreateGraphics();
 				 blackBrush = gcnew System::Drawing::Pen(Color::Black);
 
-				 /*
+				 
 
 				 PLAYER_GRID = gcnew array<player^, 2>(NUMCOLS, NUMROWS);
 				 for (int row = 0; row < NUMROWS; row++)
 				 for (int col = 0; col < NUMCOLS; col++)
 					 PLAYER_GRID[col, row] = gcnew player(col, row, false);
 
-					 */
+				 player5cell(false);
+
+					
 
 
 				// draw_grid();
@@ -168,10 +171,15 @@ namespace Project1 {
 
 
 private: System::Void button1_Click(System::Object^  sender, System::EventArgs^  e) {
+
 			 for (int row = 0; row < NUMROWS; row++){
 				 for (int col = 0; col < NUMCOLS; col++){
 					 int x = col * LRGCELLSIZE;
 					 int y = row * LRGCELLSIZE;
+
+
+
+					 
 
 					 Rectangle lrggridsrect = Rectangle(x, y, LRGCELLSIZE - 1, LRGCELLSIZE - 1);
 					 g->DrawRectangle(blackBrush, lrggridsrect);
