@@ -1,13 +1,13 @@
 #pragma once
-<<<<<<< HEAD
+//<<<<<<< HEAD
 #include <cstdlib>
 #include <ctime>
 #include "player.h"
-=======
+//=======
 #include <stdlib.h>
 #include "player.h"
 
->>>>>>> origin/master
+//>>>>>>> origin/master
 namespace Project1 {
 
 	using namespace System;
@@ -56,7 +56,7 @@ namespace Project1 {
 		//array <player^, 2>^ PLAYER_GRID;
 
 	/////GRAPHICS//////////////	 
-		Graphics^ g;
+		//Graphics^ g;
 		Pen^ blackBrush;
 
 
@@ -157,7 +157,7 @@ namespace Project1 {
 		int numrow = 40;
 		int numcol = 40;
 	private: System::Void MyForm_Load(System::Object^  sender, System::EventArgs^  e) {
-<<<<<<< HEAD
+//<<<<<<< HEAD
 				 g = pictureBox1->CreateGraphics();
 				 Box1 = gcnew array<player^, 2>(40, 40);
 				 for (int row = 0; row < numrow; row++)
@@ -175,7 +175,7 @@ namespace Project1 {
 				 }
 	
 	
-=======
+//=======
 
 				 g = pictureBox1->CreateGraphics();
 				 blackBrush = gcnew System::Drawing::Pen(Color::Black);
@@ -207,7 +207,7 @@ private: System::Void button1_Click(System::Object^  sender, System::EventArgs^ 
 					 g->DrawRectangle(blackBrush, lrggridsrect);
 				 }
 			 }
->>>>>>> origin/master
+//>>>>>>> origin/master
 }
 };
 }
@@ -218,7 +218,7 @@ System::Void Computer_move()
 	srand(time(NULL));
 	int x = rand() % 40 + 0;
 	int y = rand() % 40 + 0;
-	Box1[x, y]->status = 'r';
+//	Box1[x, y]->status = 'r';
 
 
 /*
