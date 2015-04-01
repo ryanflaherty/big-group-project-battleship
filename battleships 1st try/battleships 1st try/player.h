@@ -1,4 +1,7 @@
+<<<<<<< HEAD
 /*//<<<<<<< HEAD
+=======
+>>>>>>> origin/master
 #pragma once;
 using namespace System::Drawing;
 ref class player
@@ -11,7 +14,10 @@ public:
 	char status;
 
 };
+<<<<<<< HEAD
 */
+=======
+>>>>>>> origin/master
 #pragma once
 
 ref class player{
@@ -32,7 +38,5 @@ public:
 
 	bool get_ship();
 	void set_ship(bool);
-
-
 
 };
