@@ -1,23 +1,11 @@
 #pragma once
-<<<<<<< HEAD
 
 #include <cstdlib>
 #include <ctime>
-=======
-//<<<<<<< HEAD
-#include <cstdlib>
-#include <ctime>
-#include "player.h"
-//=======
->>>>>>> origin/master
 #include <stdlib.h>
 #include "player.h"
 #include "5cellship.h"
 
-<<<<<<< HEAD
-=======
-//>>>>>>> origin/master
->>>>>>> origin/master
 namespace Project1 {
 
 	using namespace System;
@@ -68,10 +56,8 @@ namespace Project1 {
 	/////GRAPHICS//////////////	 
 		Graphics^ g;
 		Pen^ blackBrush;
-<<<<<<< HEAD
 		//Bitmap^ Ship_5 = gcnew Bitmap("Graphics/(250x50)_Colony_CarrierShip_[5Cells].png");
 		Bitmap^ MapGrid = gcnew Bitmap("Graphics/(480x480)_Starfield[Grid].png");
-=======
 		Bitmap^ Ship_5 = gcnew Bitmap("Graphics\(250x50)_Colony_CarrierShip_[5Cells].png");
 
 		/////////////////////////////////////////////////////////////////
@@ -98,7 +84,6 @@ namespace Project1 {
 		////////////////////////////////////////////////////////////////////////////
 		////////////////////////////////////////////////////////////////////////////
 
->>>>>>> origin/master
 
 	/////////////////////
 
@@ -196,14 +181,11 @@ namespace Project1 {
 	
 		int numrow = 40;
 		int numcol = 40;
-<<<<<<< HEAD
 	private: System::Void MyForm_Load(System::Object^  sender, System::EventArgs^  e) {
 
 				 /*
-=======
 	private: System::Void MyForm_Load(System::Object^  sender, System::EventArgs^  e) 
 	{
->>>>>>> origin/master
 				 g = pictureBox1->CreateGraphics();
 				 Box1 = gcnew array<player^, 2>(40, 40);
 				 for (int row = 0; row < numrow; row++)
@@ -219,11 +201,8 @@ namespace Project1 {
 
 					 }
 				 }
-<<<<<<< HEAD
 	
 				 */
-=======
->>>>>>> origin/master
 
 				 g = pictureBox1->CreateGraphics();
 				 blackBrush = gcnew System::Drawing::Pen(Color::Black);
@@ -293,13 +272,10 @@ Void draw_grid(){
 
 
 
-<<<<<<< HEAD
 }
 
 */
 
-=======
->>>>>>> origin/master
 //notes
 /*
 large cell size == 40
