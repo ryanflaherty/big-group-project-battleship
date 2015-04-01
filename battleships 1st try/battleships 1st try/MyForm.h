@@ -1,14 +1,11 @@
 #pragma once
-<<<<<<< HEAD
+
 #include <cstdlib>
 #include <ctime>
-#include "player.h"
-=======
 #include <stdlib.h>
 #include "player.h"
 #include "5cellship.h"
 
->>>>>>> origin/master
 namespace Project1 {
 
 	using namespace System;
@@ -23,8 +20,8 @@ namespace Project1 {
 	/// </summary>
 	public ref class MyForm : public System::Windows::Forms::Form
 	{
-		Graphics^ g;
-		array <player^, 2>^ Box1;
+		//Graphics^ g;
+		//array <player^, 2>^ Box1;
 	public:
 		MyForm(void)
 		{
@@ -59,7 +56,8 @@ namespace Project1 {
 	/////GRAPHICS//////////////	 
 		Graphics^ g;
 		Pen^ blackBrush;
-		Bitmap^ Ship_5 = gcnew Bitmap("Graphics/(250x50)_Colony_CarrierShip_[5Cells].png");
+		//Bitmap^ Ship_5 = gcnew Bitmap("Graphics/(250x50)_Colony_CarrierShip_[5Cells].png");
+		Bitmap^ MapGrid = gcnew Bitmap("Graphics/(480x480)_Starfield[Grid].png");
 
 	/////////////////////
 
@@ -158,7 +156,8 @@ namespace Project1 {
 		int numrow = 40;
 		int numcol = 40;
 	private: System::Void MyForm_Load(System::Object^  sender, System::EventArgs^  e) {
-<<<<<<< HEAD
+
+				 /*
 				 g = pictureBox1->CreateGraphics();
 				 Box1 = gcnew array<player^, 2>(40, 40);
 				 for (int row = 0; row < numrow; row++)
@@ -175,8 +174,7 @@ namespace Project1 {
 					 }
 				 }
 	
-	
-=======
+				 */
 
 				 g = pictureBox1->CreateGraphics();
 				 blackBrush = gcnew System::Drawing::Pen(Color::Black);
@@ -211,22 +209,24 @@ private: System::Void button1_Click(System::Object^  sender, System::EventArgs^ 
 
 					 
 
-					 Rectangle lrggridsrect = Rectangle(x, y, LRGCELLSIZE - 1, LRGCELLSIZE - 1);
-					 g->DrawRectangle(blackBrush, lrggridsrect);
+					 //Rectangle lrggridsrect = Rectangle(x, y, LRGCELLSIZE - 1, LRGCELLSIZE - 1);
+					 //g->DrawRectangle(blackBrush, lrggridsrect);
+
+					 g->DrawImage(MapGrid, 0, 0, 480, 480);
 				 }
 			 }
->>>>>>> origin/master
 }
 };
 }
 
+/*
 System::Void Computer_move()
 {
 
 	srand(time(NULL));
 	int x = rand() % 40 + 0;
 	int y = rand() % 40 + 0;
-	Box1[x, y]->status = 'r';
+	//Box1[x, y]->status = 'r';
 
 
 /*
@@ -242,23 +242,15 @@ Void draw_grid(){
 		}
 	}
 }
-*/
+
 
 
 }
 
-
+*/
 
 //notes
 /*
 large cell size == 40
 small cell size == 20
 */
-
-
-
-
-
-
-
-

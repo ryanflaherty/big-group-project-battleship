@@ -1,4 +1,4 @@
-<<<<<<< HEAD
+/*//<<<<<<< HEAD
 #pragma once;
 using namespace System::Drawing;
 ref class player
@@ -11,7 +11,7 @@ public:
 	char status;
 
 };
-=======
+*/
 #pragma once
 
 ref class player{
@@ -36,8 +36,3 @@ public:
 
 
 };
-<<<<<<< HEAD
-=======
-*/
->>>>>>> origin/master
->>>>>>> origin/master
