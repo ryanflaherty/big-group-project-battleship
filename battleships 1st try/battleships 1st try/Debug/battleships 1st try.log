@@ -1,21 +1,8 @@
-<<<<<<< HEAD
-﻿Build started 3/30/2015 2:29:36 PM.
+﻿Build started 4/2/2015 4:33:44 PM.
      1>Project "C:\Users\jhuang\Documents\GitHub\big-group-project-battleship\battleships 1st try\battleships 1st try\battleships 1st try.vcxproj" on node 2 (Build target(s)).
      1>ClCompile:
          C:\Program Files\Microsoft Visual Studio 12.0\VC\bin\CL.exe /c /AI"C:\Program Files\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.5\\" /AI"C:\Program Files\Windows Kits\8.1\References\CommonConfiguration\Neutral" /AI"C:\Program Files\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.5\Facades\\" /Zi /clr /nologo /W3 /WX- /Od /Oy- /D WIN32 /D _DEBUG /D _UNICODE /D UNICODE /EHa /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Debug\\" /Fd"Debug\vc120.pdb" /TP /FU"C:\Program Files\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.5\mscorlib.dll" /FU"C:\Program Files\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.5\System.Data.dll" /FU"C:\Program Files\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.5\System.dll" /FU"C:\Program Files\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.5\System.Drawing.dll" /FU"C:\Program Files\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.5\System.Windows.Forms.dll" /FU"C:\Program Files\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.5\System.Xml.dll" /analyze- /errorReport:prompt /clr:nostdlib MyForm.cpp
          MyForm.cpp
-     1>c:\users\jhuang\documents\github\big-group-project-battleship\battleships 1st try\battleships 1st try\MyForm.h(67): warning C4129: '(' : unrecognized character escape sequence
-     1>c:\users\jhuang\documents\github\big-group-project-battleship\battleships 1st try\battleships 1st try\MyForm.h(69): warning C4129: '(' : unrecognized character escape sequence
-     1>c:\users\jhuang\documents\github\big-group-project-battleship\battleships 1st try\battleships 1st try\MyForm.h(71): warning C4129: '(' : unrecognized character escape sequence
-     1>c:\users\jhuang\documents\github\big-group-project-battleship\battleships 1st try\battleships 1st try\MyForm.h(72): warning C4129: '(' : unrecognized character escape sequence
-     1>c:\users\jhuang\documents\github\big-group-project-battleship\battleships 1st try\battleships 1st try\MyForm.h(74): warning C4129: '(' : unrecognized character escape sequence
-     1>c:\users\jhuang\documents\github\big-group-project-battleship\battleships 1st try\battleships 1st try\MyForm.h(75): warning C4129: '(' : unrecognized character escape sequence
-     1>c:\users\jhuang\documents\github\big-group-project-battleship\battleships 1st try\battleships 1st try\MyForm.h(77): warning C4129: '(' : unrecognized character escape sequence
-     1>c:\users\jhuang\documents\github\big-group-project-battleship\battleships 1st try\battleships 1st try\MyForm.h(78): warning C4129: '(' : unrecognized character escape sequence
-     1>c:\users\jhuang\documents\github\big-group-project-battleship\battleships 1st try\battleships 1st try\MyForm.h(80): warning C4129: '(' : unrecognized character escape sequence
-     1>c:\users\jhuang\documents\github\big-group-project-battleship\battleships 1st try\battleships 1st try\MyForm.h(81): warning C4129: '(' : unrecognized character escape sequence
-     1>c:\users\jhuang\documents\github\big-group-project-battleship\battleships 1st try\battleships 1st try\MyForm.h(83): warning C4129: '(' : unrecognized character escape sequence
-     1>c:\users\jhuang\documents\github\big-group-project-battleship\battleships 1st try\battleships 1st try\MyForm.h(84): warning C4129: '(' : unrecognized character escape sequence
        Link:
          C:\Program Files\Microsoft Visual Studio 12.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"C:\Users\jhuang\Documents\GitHub\big-group-project-battleship\battleships 1st try\Debug\battleships 1st try.exe" /INCREMENTAL /NOLOGO /ASSEMBLYRESOURCE:Debug\battleships_1st_try.MyForm.resources /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"C:\Users\jhuang\Documents\GitHub\big-group-project-battleship\battleships 1st try\Debug\battleships 1st try.pdb" /ASSEMBLYDEBUG /SUBSYSTEM:WINDOWS /TLBID:1 /ENTRY:"main" /DYNAMICBASE /FIXED:NO /NXCOMPAT /MACHINE:X86 Debug\MyForm.obj
          Debug\player.obj
@@ -26,85 +13,3 @@
 Build succeeded.
 
 Time Elapsed 00:00:00.73
-=======
-<<<<<<< HEAD
-﻿Build started 3/27/2015 2:27:43 PM.
-     1>Project "C:\Users\rflaherty\Documents\GitHub\big-group-project-battleship\battleships 1st try\battleships 1st try\battleships 1st try.vcxproj" on node 2 (Build target(s)).
-=======
-﻿Build started 3/27/2015 2:25:12 PM.
-     1>Project "C:\Users\camarello\Documents\GitHub\big-group-project-battleship\battleships 1st try\battleships 1st try\battleships 1st try.vcxproj" on node 2 (Build target(s)).
->>>>>>> origin/master
-     1>ClCompile:
-         C:\Program Files\Microsoft Visual Studio 12.0\VC\bin\CL.exe /c /AI"C:\Program Files\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.5\\" /AI"C:\Program Files\Windows Kits\8.1\References\CommonConfiguration\Neutral" /AI"C:\Program Files\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.5\Facades\\" /Zi /clr /nologo /W3 /WX- /Od /Oy- /D WIN32 /D _DEBUG /D _UNICODE /D UNICODE /EHa /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Debug\\" /Fd"Debug\vc120.pdb" /TP /FU"C:\Program Files\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.5\mscorlib.dll" /FU"C:\Program Files\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.5\System.Data.dll" /FU"C:\Program Files\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.5\System.dll" /FU"C:\Program Files\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.5\System.Drawing.dll" /FU"C:\Program Files\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.5\System.Windows.Forms.dll" /FU"C:\Program Files\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.5\System.Xml.dll" /analyze- /errorReport:prompt /clr:nostdlib MyForm.cpp
-         MyForm.cpp
-<<<<<<< HEAD
-       Link:
-         C:\Program Files\Microsoft Visual Studio 12.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"C:\Users\rflaherty\Documents\GitHub\big-group-project-battleship\battleships 1st try\Debug\battleships 1st try.exe" /INCREMENTAL /NOLOGO /ASSEMBLYRESOURCE:Debug\battleships_1st_try.MyForm.resources /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"C:\Users\rflaherty\Documents\GitHub\big-group-project-battleship\battleships 1st try\Debug\battleships 1st try.pdb" /ASSEMBLYDEBUG /SUBSYSTEM:WINDOWS /TLBID:1 /ENTRY:"main" /DYNAMICBASE /FIXED:NO /NXCOMPAT /MACHINE:X86 Debug\MyForm.obj
-         Debug\player.obj
-         "Debug\.NETFramework,Version=v4.5.AssemblyAttributes.obj"
-         battleships 1st try.vcxproj -> C:\Users\rflaherty\Documents\GitHub\big-group-project-battleship\battleships 1st try\Debug\battleships 1st try.exe
-     1>Done Building Project "C:\Users\rflaherty\Documents\GitHub\big-group-project-battleship\battleships 1st try\battleships 1st try\battleships 1st try.vcxproj" (Build target(s)).
-=======
-     1>c:\users\camarello\documents\github\big-group-project-battleship\battleships 1st try\battleships 1st try\player.h(15): error C2011: 'player' : 'class' type redefinition
-                 c:\users\camarello\documents\github\big-group-project-battleship\battleships 1st try\battleships 1st try\player.h(4) : see declaration of 'player'
-     1>c:\users\camarello\documents\github\big-group-project-battleship\battleships 1st try\battleships 1st try\MyForm.h(60): error C2086: 'System::Drawing::Graphics ^Project1::MyForm::g' : redefinition
-                 c:\users\camarello\documents\github\big-group-project-battleship\battleships 1st try\battleships 1st try\MyForm.h(26) : see declaration of 'Project1::MyForm::g'
-     1>c:\users\camarello\documents\github\big-group-project-battleship\battleships 1st try\battleships 1st try\MyForm.h(62): warning C4129: '(' : unrecognized character escape sequence
-     1>c:\users\camarello\documents\github\big-group-project-battleship\battleships 1st try\battleships 1st try\MyForm.h(67): warning C4129: '(' : unrecognized character escape sequence
-     1>c:\users\camarello\documents\github\big-group-project-battleship\battleships 1st try\battleships 1st try\MyForm.h(69): warning C4129: '(' : unrecognized character escape sequence
-     1>c:\users\camarello\documents\github\big-group-project-battleship\battleships 1st try\battleships 1st try\MyForm.h(71): warning C4129: '(' : unrecognized character escape sequence
-     1>c:\users\camarello\documents\github\big-group-project-battleship\battleships 1st try\battleships 1st try\MyForm.h(72): warning C4129: '(' : unrecognized character escape sequence
-     1>c:\users\camarello\documents\github\big-group-project-battleship\battleships 1st try\battleships 1st try\MyForm.h(74): warning C4129: '(' : unrecognized character escape sequence
-     1>c:\users\camarello\documents\github\big-group-project-battleship\battleships 1st try\battleships 1st try\MyForm.h(75): warning C4129: '(' : unrecognized character escape sequence
-     1>c:\users\camarello\documents\github\big-group-project-battleship\battleships 1st try\battleships 1st try\MyForm.h(77): warning C4129: '(' : unrecognized character escape sequence
-     1>c:\users\camarello\documents\github\big-group-project-battleship\battleships 1st try\battleships 1st try\MyForm.h(78): warning C4129: '(' : unrecognized character escape sequence
-     1>c:\users\camarello\documents\github\big-group-project-battleship\battleships 1st try\battleships 1st try\MyForm.h(80): warning C4129: '(' : unrecognized character escape sequence
-     1>c:\users\camarello\documents\github\big-group-project-battleship\battleships 1st try\battleships 1st try\MyForm.h(81): warning C4129: '(' : unrecognized character escape sequence
-     1>c:\users\camarello\documents\github\big-group-project-battleship\battleships 1st try\battleships 1st try\MyForm.h(83): warning C4129: '(' : unrecognized character escape sequence
-     1>c:\users\camarello\documents\github\big-group-project-battleship\battleships 1st try\battleships 1st try\MyForm.h(84): warning C4129: '(' : unrecognized character escape sequence
-     1>c:\users\camarello\documents\github\big-group-project-battleship\battleships 1st try\battleships 1st try\MyForm.h(247): warning C4244: 'argument' : conversion from 'time_t' to 'unsigned int', possible loss of data
-     1>c:\users\camarello\documents\github\big-group-project-battleship\battleships 1st try\battleships 1st try\MyForm.h(250): error C2065: 'Box1' : undeclared identifier
-     1>c:\users\camarello\documents\github\big-group-project-battleship\battleships 1st try\battleships 1st try\MyForm.h(250): error C2227: left of '->status' must point to class/struct/union/generic type
-         player.cpp
-     1>c:\users\camarello\documents\github\big-group-project-battleship\battleships 1st try\battleships 1st try\player.h(15): error C2011: 'player' : 'class' type redefinition
-                 c:\users\camarello\documents\github\big-group-project-battleship\battleships 1st try\battleships 1st try\player.h(4) : see declaration of 'player'
-     1>player.cpp(5): error C2027: use of undefined type 'player'
-                 c:\users\camarello\documents\github\big-group-project-battleship\battleships 1st try\battleships 1st try\player.h(4) : see declaration of 'player'
-     1>player.cpp(5): error C2059: syntax error : ')'
-     1>player.cpp(6): error C2143: syntax error : missing ';' before '{'
-     1>player.cpp(6): error C2447: '{' : missing function header (old-style formal list?)
-     1>player.cpp(9): error C2027: use of undefined type 'player'
-                 c:\users\camarello\documents\github\big-group-project-battleship\battleships 1st try\battleships 1st try\player.h(4) : see declaration of 'player'
-     1>player.cpp(9): error C2062: type 'int' unexpected
-     1>player.cpp(10): error C2143: syntax error : missing ';' before '{'
-     1>player.cpp(10): error C2447: '{' : missing function header (old-style formal list?)
-     1>player.cpp(17): error C2027: use of undefined type 'player'
-                 c:\users\camarello\documents\github\big-group-project-battleship\battleships 1st try\battleships 1st try\player.h(4) : see declaration of 'player'
-     1>player.cpp(19): error C2065: 'x' : undeclared identifier
-     1>player.cpp(21): error C2027: use of undefined type 'player'
-                 c:\users\camarello\documents\github\big-group-project-battleship\battleships 1st try\battleships 1st try\player.h(4) : see declaration of 'player'
-     1>player.cpp(23): error C2065: 'y' : undeclared identifier
-     1>player.cpp(26): error C2027: use of undefined type 'player'
-                 c:\users\camarello\documents\github\big-group-project-battleship\battleships 1st try\battleships 1st try\player.h(4) : see declaration of 'player'
-     1>player.cpp(28): error C2065: 'x' : undeclared identifier
-     1>player.cpp(30): error C2027: use of undefined type 'player'
-                 c:\users\camarello\documents\github\big-group-project-battleship\battleships 1st try\battleships 1st try\player.h(4) : see declaration of 'player'
-     1>player.cpp(32): error C2065: 'y' : undeclared identifier
-     1>player.cpp(36): error C2027: use of undefined type 'player'
-                 c:\users\camarello\documents\github\big-group-project-battleship\battleships 1st try\battleships 1st try\player.h(4) : see declaration of 'player'
-     1>player.cpp(38): error C2065: 'has_ship' : undeclared identifier
-     1>player.cpp(40): error C2027: use of undefined type 'player'
-                 c:\users\camarello\documents\github\big-group-project-battleship\battleships 1st try\battleships 1st try\player.h(4) : see declaration of 'player'
-     1>player.cpp(42): error C2065: 'has_ship' : undeclared identifier
-         Generating Code...
-     1>Done Building Project "C:\Users\camarello\Documents\GitHub\big-group-project-battleship\battleships 1st try\battleships 1st try\battleships 1st try.vcxproj" (Build target(s)) -- FAILED.
->>>>>>> origin/master
-
-Build succeeded.
-
-<<<<<<< HEAD
-Time Elapsed 00:00:00.87
-=======
-Time Elapsed 00:00:00.57
->>>>>>> origin/master
->>>>>>> 8126dd4e36c7a72cc83c803e162f6cd4a0c72a1b
