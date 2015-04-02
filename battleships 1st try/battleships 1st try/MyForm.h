@@ -20,7 +20,6 @@ namespace Project1 {
 	/// </summary>
 	public ref class MyForm : public System::Windows::Forms::Form
 	{
-		//Graphics^ g;
 		//array <player^, 2>^ Box1;
 	public:
 		MyForm(void)
@@ -55,6 +54,7 @@ namespace Project1 {
 
 	/////GRAPHICS//////////////	 
 		Graphics^ g;
+		Graphics^ g2; //[Added 4/2/2015]
 		Pen^ blackBrush;
 		Brush^ WhiteBrush;
 		///Bitmap^ MapGrid = gcnew Bitmap("Graphics/(50x250)_Colony_CarrierShip_[5Cells].png");
@@ -92,6 +92,11 @@ namespace Project1 {
 		static const int NUMROWS = 12;
 		static const int NUMCOLS = 12;
 		static const int LRGCELLSIZE = 40;
+
+		const char isEmpty = '0'; // [Update added 4/2/2015]
+		const char isHit = 'X'; // [Update added 4/2/2015]
+		const char isShip = 'S'; // [Update added 4/2/2015]
+
 	private: System::Windows::Forms::Button^  button1;
 	private: System::Windows::Forms::MenuStrip^  menuStrip1;
 	private: System::Windows::Forms::ToolStripMenuItem^  fileToolStripMenuItem;
@@ -255,7 +260,7 @@ namespace Project1 {
 			this->Controls->Add(this->menuStrip1);
 			this->MainMenuStrip = this->menuStrip1;
 			this->Name = L"MyForm";
-			this->Text = L"MyForm";
+			this->Text = L"Battle Starships!";
 			this->Load += gcnew System::EventHandler(this, &MyForm::MyForm_Load);
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pictureBox1))->EndInit();
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pictureBox2))->EndInit();
@@ -270,7 +275,12 @@ namespace Project1 {
 		int numrow = 40;
 		int numcol = 40;
 
+<<<<<<< HEAD
 	private: System::Void MyForm_Load(System::Object^  sender, System::EventArgs^  e) {
+=======
+	private: System::Void MyForm_Load(System::Object^  sender, System::EventArgs^  e) 
+	{
+>>>>>>> origin/master
 
 				 /*
 				 g = pictureBox1->CreateGraphics();
@@ -291,7 +301,10 @@ namespace Project1 {
 	
 				 */
 
-				 g = pictureBox1->CreateGraphics();
+				 g = pictureBox1->CreateGraphics(); //Large Picture Box for the Starfield Grid
+
+				 g2 = pictureBox2->CreateGraphics();  //Smaller Picture Box on the Right for the Empty Starfield Grid [Added 4/2/2015]
+
 				 blackBrush = gcnew System::Drawing::Pen(Color::Black);
 
 				 WhiteBrush = gcnew System::Drawing::SolidBrush(Color::White);
@@ -307,8 +320,11 @@ namespace Project1 {
 	{
 	}
 
-private: System::Void button1_Click(System::Object^  sender, System::EventArgs^  e) {
+private: System::Void button1_Click(System::Object^  sender, System::EventArgs^  e) //START GAME
+		{
+			 g2->DrawImage(starfieldempty_png, 0, 0, 240, 240); //[Added 4/2/2015]
 
+<<<<<<< HEAD
 }
 private: System::Void MouseD(System::Object^  sender, System::Windows::Forms::MouseEventArgs^  e) {
 			 Rectangle WhiteRect = Rectangle(e->X - (e->X % LRGCELLSIZE), e->Y - (e->Y % LRGCELLSIZE), LRGCELLSIZE - 1, LRGCELLSIZE - 1);
@@ -327,6 +343,29 @@ private: System::Void newGameToolStripMenuItem_Click(System::Object^  sender, Sy
 			 button1->Show();
 
 }
+=======
+			 for (int row = 0; row < NUMROWS; row++)
+			 {
+				 for (int col = 0; col < NUMCOLS; col++)
+				 {
+					 int x = col * LRGCELLSIZE;
+					 int y = row * LRGCELLSIZE;
+
+
+					 //Rectangle lrggridsrect = Rectangle(x, y, LRGCELLSIZE - 1, LRGCELLSIZE - 1);
+					 //g->DrawRectangle(blackBrush, lrggridsrect);
+
+					 g->DrawImage(starfieldgrid_png, 0, 0, 480, 480);
+				 }
+			 }
+		}
+private: System::Void MouseD(System::Object^  sender, System::Windows::Forms::MouseEventArgs^  e) 
+		{
+			 Rectangle WhiteRect = Rectangle(e->X - (e->X % LRGCELLSIZE), e->Y - (e->Y % LRGCELLSIZE), LRGCELLSIZE - 1, LRGCELLSIZE - 1);
+			 g->DrawImage(starfieldgrid_png, 0, 0, 480, 480);
+			 g->FillRectangle(WhiteBrush, WhiteRect);
+		}
+>>>>>>> origin/master
 };
 }
 
