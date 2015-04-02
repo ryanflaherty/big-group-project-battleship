@@ -57,8 +57,8 @@ namespace Project1 {
 		Graphics^ g;
 		Pen^ blackBrush;
 		Brush^ WhiteBrush;
-		Bitmap^ MapGrid = gcnew Bitmap("Graphics/(50x250)_Colony_CarrierShip_[5Cells].png");
-		//*******//Bitmap^ Ship_5 = gcnew Bitmap("Graphics/(250x50)_Colony_CarrierShip_[5Cells].png");
+		///Bitmap^ MapGrid = gcnew Bitmap("Graphics/(50x250)_Colony_CarrierShip_[5Cells].png");
+		//Bitmap^ Ship_5 = gcnew Bitmap("Graphics/(250x50)_Colony_CarrierShip_[5Cells].png");
 		
 		///////////////////// Put Graphics Here /////////////////////////
 		Bitmap^ starfieldempty_png = gcnew Bitmap("Graphics/(480x480)_Starfield[Empty].png"); //Empty Grid Picture
@@ -88,14 +88,19 @@ namespace Project1 {
 		////////////////////////////////////////////////////////////////////////////
 
 
-	/////////////////////
-
 	/////CONST INTS//////
 		static const int NUMROWS = 12;
 		static const int NUMCOLS = 12;
 		static const int LRGCELLSIZE = 40;
 	private: System::Windows::Forms::Button^  button1;
-			 /////////////////////
+	private: System::Windows::Forms::MenuStrip^  menuStrip1;
+	private: System::Windows::Forms::ToolStripMenuItem^  fileToolStripMenuItem;
+	private: System::Windows::Forms::ToolStripMenuItem^  newGameToolStripMenuItem;
+	private: System::Windows::Forms::ToolStripMenuItem^  saveGameToolStripMenuItem;
+	private: System::Windows::Forms::ToolStripMenuItem^  difficultyToolStripMenuItem;
+	private: System::Windows::Forms::ToolStripMenuItem^  easyToolStripMenuItem;
+	private: System::Windows::Forms::ToolStripMenuItem^  hardToolStripMenuItem;
+	private: System::Windows::Forms::ToolStripMenuItem^  hardAsBallsToolStripMenuItem;
 
 	private:
 		/// <summary>
@@ -115,8 +120,17 @@ namespace Project1 {
 			this->textBox2 = (gcnew System::Windows::Forms::TextBox());
 			this->textBox3 = (gcnew System::Windows::Forms::TextBox());
 			this->button1 = (gcnew System::Windows::Forms::Button());
+			this->menuStrip1 = (gcnew System::Windows::Forms::MenuStrip());
+			this->fileToolStripMenuItem = (gcnew System::Windows::Forms::ToolStripMenuItem());
+			this->newGameToolStripMenuItem = (gcnew System::Windows::Forms::ToolStripMenuItem());
+			this->saveGameToolStripMenuItem = (gcnew System::Windows::Forms::ToolStripMenuItem());
+			this->difficultyToolStripMenuItem = (gcnew System::Windows::Forms::ToolStripMenuItem());
+			this->easyToolStripMenuItem = (gcnew System::Windows::Forms::ToolStripMenuItem());
+			this->hardToolStripMenuItem = (gcnew System::Windows::Forms::ToolStripMenuItem());
+			this->hardAsBallsToolStripMenuItem = (gcnew System::Windows::Forms::ToolStripMenuItem());
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pictureBox1))->BeginInit();
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pictureBox2))->BeginInit();
+			this->menuStrip1->SuspendLayout();
 			this->SuspendLayout();
 			// 
 			// pictureBox1
@@ -162,6 +176,72 @@ namespace Project1 {
 			this->button1->UseVisualStyleBackColor = true;
 			this->button1->Click += gcnew System::EventHandler(this, &MyForm::button1_Click);
 			// 
+			// menuStrip1
+			// 
+			this->menuStrip1->BackColor = System::Drawing::SystemColors::ControlLightLight;
+			this->menuStrip1->Items->AddRange(gcnew cli::array< System::Windows::Forms::ToolStripItem^  >(2) {
+				this->fileToolStripMenuItem,
+					this->difficultyToolStripMenuItem
+			});
+			this->menuStrip1->Location = System::Drawing::Point(0, 0);
+			this->menuStrip1->Name = L"menuStrip1";
+			this->menuStrip1->RenderMode = System::Windows::Forms::ToolStripRenderMode::System;
+			this->menuStrip1->Size = System::Drawing::Size(884, 24);
+			this->menuStrip1->TabIndex = 6;
+			this->menuStrip1->Text = L"menuStrip1";
+			// 
+			// fileToolStripMenuItem
+			// 
+			this->fileToolStripMenuItem->DropDownItems->AddRange(gcnew cli::array< System::Windows::Forms::ToolStripItem^  >(2) {
+				this->newGameToolStripMenuItem,
+					this->saveGameToolStripMenuItem
+			});
+			this->fileToolStripMenuItem->Name = L"fileToolStripMenuItem";
+			this->fileToolStripMenuItem->Size = System::Drawing::Size(37, 20);
+			this->fileToolStripMenuItem->Text = L"File";
+			// 
+			// newGameToolStripMenuItem
+			// 
+			this->newGameToolStripMenuItem->Name = L"newGameToolStripMenuItem";
+			this->newGameToolStripMenuItem->Size = System::Drawing::Size(132, 22);
+			this->newGameToolStripMenuItem->Text = L"New Game";
+			this->newGameToolStripMenuItem->Click += gcnew System::EventHandler(this, &MyForm::newGameToolStripMenuItem_Click);
+			// 
+			// saveGameToolStripMenuItem
+			// 
+			this->saveGameToolStripMenuItem->Name = L"saveGameToolStripMenuItem";
+			this->saveGameToolStripMenuItem->Size = System::Drawing::Size(132, 22);
+			this->saveGameToolStripMenuItem->Text = L"Save Game";
+			// 
+			// difficultyToolStripMenuItem
+			// 
+			this->difficultyToolStripMenuItem->DropDownItems->AddRange(gcnew cli::array< System::Windows::Forms::ToolStripItem^  >(3) {
+				this->easyToolStripMenuItem,
+					this->hardToolStripMenuItem, this->hardAsBallsToolStripMenuItem
+			});
+			this->difficultyToolStripMenuItem->Name = L"difficultyToolStripMenuItem";
+			this->difficultyToolStripMenuItem->Size = System::Drawing::Size(67, 20);
+			this->difficultyToolStripMenuItem->Text = L"Difficulty";
+			// 
+			// easyToolStripMenuItem
+			// 
+			this->easyToolStripMenuItem->Name = L"easyToolStripMenuItem";
+			this->easyToolStripMenuItem->Size = System::Drawing::Size(141, 22);
+			this->easyToolStripMenuItem->Text = L"Easy";
+			this->easyToolStripMenuItem->Click += gcnew System::EventHandler(this, &MyForm::easyToolStripMenuItem_Click);
+			// 
+			// hardToolStripMenuItem
+			// 
+			this->hardToolStripMenuItem->Name = L"hardToolStripMenuItem";
+			this->hardToolStripMenuItem->Size = System::Drawing::Size(141, 22);
+			this->hardToolStripMenuItem->Text = L"Hard";
+			// 
+			// hardAsBallsToolStripMenuItem
+			// 
+			this->hardAsBallsToolStripMenuItem->Name = L"hardAsBallsToolStripMenuItem";
+			this->hardAsBallsToolStripMenuItem->Size = System::Drawing::Size(141, 22);
+			this->hardAsBallsToolStripMenuItem->Text = L"Hard as Balls";
+			// 
 			// MyForm
 			// 
 			this->AutoScaleDimensions = System::Drawing::SizeF(6, 13);
@@ -172,11 +252,15 @@ namespace Project1 {
 			this->Controls->Add(this->textBox2);
 			this->Controls->Add(this->pictureBox2);
 			this->Controls->Add(this->pictureBox1);
+			this->Controls->Add(this->menuStrip1);
+			this->MainMenuStrip = this->menuStrip1;
 			this->Name = L"MyForm";
 			this->Text = L"MyForm";
 			this->Load += gcnew System::EventHandler(this, &MyForm::MyForm_Load);
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pictureBox1))->EndInit();
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pictureBox2))->EndInit();
+			this->menuStrip1->ResumeLayout(false);
+			this->menuStrip1->PerformLayout();
 			this->ResumeLayout(false);
 			this->PerformLayout();
 
@@ -185,13 +269,10 @@ namespace Project1 {
 	
 		int numrow = 40;
 		int numcol = 40;
-	//private: System::Void MyForm_Load(System::Object^  sender, System::EventArgs^  e) {
-	//}
+
 	private: System::Void MyForm_Load(System::Object^  sender, System::EventArgs^  e) {
 
 				 /*
-	private: System::Void MyForm_Load(System::Object^  sender, System::EventArgs^  e) 
-	{
 				 g = pictureBox1->CreateGraphics();
 				 Box1 = gcnew array<player^, 2>(40, 40);
 				 for (int row = 0; row < numrow; row++)
@@ -215,17 +296,11 @@ namespace Project1 {
 
 				 WhiteBrush = gcnew System::Drawing::SolidBrush(Color::White);
 
-				/* PLAYER_GRID = gcnew array<player^, 2>(NUMCOLS, NUMROWS);
-				 for (int row = 0; row < NUMROWS; row++)
-				 for (int col = 0; col < NUMCOLS; col++)
-					 PLAYER_GRID[col, row] = gcnew player(col, row, false);
-					 */
-				// player5cell(false);
-
+				 button1->Hide();
+				 textBox2->Hide();
+				 textBox3->Hide();
 					
 
-
-				// draw_grid();
 				 
 	}
 	private: System::Void textBox2_TextChanged(System::Object^  sender, System::EventArgs^  e) 
@@ -234,26 +309,23 @@ namespace Project1 {
 
 private: System::Void button1_Click(System::Object^  sender, System::EventArgs^  e) {
 
-			 for (int row = 0; row < NUMROWS; row++){
-				 for (int col = 0; col < NUMCOLS; col++){
-					 int x = col * LRGCELLSIZE;
-					 int y = row * LRGCELLSIZE;
-
-
-
-					 
-
-					 //Rectangle lrggridsrect = Rectangle(x, y, LRGCELLSIZE - 1, LRGCELLSIZE - 1);
-					 //g->DrawRectangle(blackBrush, lrggridsrect);
-
-					 g->DrawImage(starfieldgrid_png, 0, 0, 480, 480);
-				 }
-			 }
 }
 private: System::Void MouseD(System::Object^  sender, System::Windows::Forms::MouseEventArgs^  e) {
 			 Rectangle WhiteRect = Rectangle(e->X - (e->X % LRGCELLSIZE), e->Y - (e->Y % LRGCELLSIZE), LRGCELLSIZE - 1, LRGCELLSIZE - 1);
 			 g->DrawImage(starfieldgrid_png, 0, 0, 480, 480);
 			 g->FillRectangle(WhiteBrush, WhiteRect);
+}
+private: System::Void easyToolStripMenuItem_Click(System::Object^  sender, System::EventArgs^  e) {
+}
+
+
+
+private: System::Void newGameToolStripMenuItem_Click(System::Object^  sender, System::EventArgs^  e) {
+
+			 g->DrawImage(starfieldgrid_png, 0, 0, 480, 480);
+
+			 button1->Show();
+
 }
 };
 }
@@ -267,25 +339,6 @@ System::Void Computer_move()
 	int y = rand() % 40 + 0;
 	//Box1[x, y]->status = 'r';
 
-/*
-Void draw_grid(){
-
-	for (int row = 0; row < NUMROWS; row++){
-		for (int col = 0; col < NUMCOLS; col++){
-			int x = col * LRGCELLSIZE;
-			int y = row * LRGCELLSIZE;
-
-			Rectangle grids = Rectangle(x, y, LRGCELLSIZE - 1, LRGCELLSIZE - 1);
-			g->DrawRectangle(blackBrush, grids);
-		}
-	}
-}
-
-
-
-
-
-*/
 
 //notes
 /*

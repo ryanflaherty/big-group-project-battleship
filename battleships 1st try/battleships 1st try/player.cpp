@@ -43,7 +43,7 @@ void player::set_ship(bool ship)
 }
 
 
-//
+/*
 player5cell::player5cell()
 {
 
@@ -55,4 +55,4 @@ player5cell::player5cell(bool hit)
 	Cell3Hit = hit;
 	Cell4Hit = hit;
 	Cell5Hit = hit;
-}
+}  */

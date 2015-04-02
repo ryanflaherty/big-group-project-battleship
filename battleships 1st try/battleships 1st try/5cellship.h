@@ -1,5 +1,6 @@
 #pragma once
 
+/*
 ref class player5cell{
 
 private:
@@ -13,3 +14,4 @@ public:
 
 	
 };
+*/
