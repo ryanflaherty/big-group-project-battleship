@@ -51,36 +51,38 @@ namespace Project1 {
 	private:
 
 	////////Player Array////
-		array <player^, 2>^ PLAYER_GRID;
+		//array <player^, 2>^ PLAYER_GRID;
 
 	/////GRAPHICS//////////////	 
 		Graphics^ g;
 		Pen^ blackBrush;
+		Brush^ WhiteBrush;
+		//Bitmap^ Ship_5 = gcnew Bitmap("Graphics/(250x50)_Colony_CarrierShip_[5Cells].png");
+
 		//Bitmap^ Ship_5 = gcnew Bitmap("Graphics/(250x50)_Colony_CarrierShip_[5Cells].png");
 		Bitmap^ MapGrid = gcnew Bitmap("Graphics/(480x480)_Starfield[Grid].png");
-		Bitmap^ Ship_5 = gcnew Bitmap("Graphics\(250x50)_Colony_CarrierShip_[5Cells].png");
-
-		/////////////////////////////////////////////////////////////////
+		//*******//Bitmap^ Ship_5 = gcnew Bitmap("Graphics/(250x50)_Colony_CarrierShip_[5Cells].png");
+		
 		///////////////////// Put Graphics Here /////////////////////////
-		Bitmap^ starfieldempty_png = gcnew Bitmap("Graphics\480x480)_Starfield[Empty].png"); //Empty Grid Picture
-		Bitmap^ starfieldgrid_png = gcnew Bitmap("Graphics\(480x480)_Starfield[Grid].png"); //Picture with Grid
+		Bitmap^ starfieldempty_png = gcnew Bitmap("Graphics/(480x480)_Starfield[Empty].png"); //Empty Grid Picture
+		Bitmap^ starfieldgrid_png = gcnew Bitmap("Graphics/(480x480)_Starfield[Grid].png"); //Picture with Grid
 		// Logo
-		Bitmap^ logo_png = gcnew Bitmap("Graphics\(300x150)BattleStarShips_Logo.png"); //Game Logo
+		Bitmap^ logo_png = gcnew Bitmap("Graphics/(300x150)BattleStarShips_Logo.png"); //Game Logo
 		// Frigate PNG
-		Bitmap^ Ship_1_verticalpng = gcnew Bitmap("Graphics\(50x50)_Colony_FrigateShip_[1Cell].png"); //1 Cell Frigate Ship Facing Vertically
-		Bitmap^ Ship_1_horizontalpng = gcnew Bitmap("Graphics\(50x50)_Colony_FrigateShip_[1Cell]_RightFace.png"); //1 Cell Frigate Ship Facing Horizontally
+		Bitmap^ Ship_1_verticalpng = gcnew Bitmap("Graphics/(50x50)_Colony_FrigateShip_[1Cell].png"); //1 Cell Frigate Ship Facing Vertically
+		Bitmap^ Ship_1_horizontalpng = gcnew Bitmap("Graphics/(50x50)_Colony_FrigateShip_[1Cell]_RightFace.png"); //1 Cell Frigate Ship Facing Horizontally
 		// Stealth PNG
-		Bitmap^ Ship_2_verticalpng = gcnew Bitmap("Graphics\(50x100)_Colony_StealthShip_[2Cells].png"); //2 Cell Stealth Ship Facing Vertically
-		Bitmap^ Ship_2_horizontalpng = gcnew Bitmap("Graphics\(50x100)_Colony_StealthShip_[2Cells]_RightFace.png"); //2 Cell Stealth Ship Facing Horizontally
+		Bitmap^ Ship_2_verticalpng = gcnew Bitmap("Graphics/(50x100)_Colony_StealthShip_[2Cells].png"); //2 Cell Stealth Ship Facing Vertically
+		//******//Bitmap^ Ship_2_horizontalpng = gcnew Bitmap("Graphics/(50x100)_Colony_StealthShip_[2Cells]_RightFace.png"); //2 Cell Stealth Ship Facing Horizontally
 		// Cruiser PNG
-		Bitmap^ Ship_3_verticalpng = gcnew Bitmap("Graphics\(50x150)_Colony_CruiserShip_[3Cells].png"); //3 Cell Cruiser Ship Facing Vertically
-		Bitmap^ Ship_3_horizontalpng = gcnew Bitmap("Graphics\(50x100)_(150x50)_Colony_CruiserShip_[3Cells]_RightFace.png"); //3 Cell Cruiser Ship Facing Horizontally
+		Bitmap^ Ship_3_verticalpng = gcnew Bitmap("Graphics/(50x150)_Colony_CruiserShip_[3Cells].png"); //3 Cell Cruiser Ship Facing Vertically
+		//******//Bitmap^ Ship_3_horizontalpng = gcnew Bitmap("Graphics/(50x100)_(150x50)_Colony_CruiserShip_[3Cells]_RightFace.png"); //3 Cell Cruiser Ship Facing Horizontally
 		// Battleship PNG
-		Bitmap^ Ship_4_verticalpng = gcnew Bitmap("Graphics\(50x200)_Colony_BattleShip_[4Cells].png"); //4 Cell Battleship Ship Facing Vertically
-		Bitmap^ Ship_4_horizontalpng = gcnew Bitmap("Graphics\(200x50)_Colony_BattleShip_[4Cells]_[RightFace].png"); //4 Cell Battleship Ship Facing Horizontally
+		Bitmap^ Ship_4_verticalpng = gcnew Bitmap("Graphics/(50x200)_Colony_BattleShip_[4Cells].png"); //4 Cell Battleship Ship Facing Vertically
+		Bitmap^ Ship_4_horizontalpng = gcnew Bitmap("Graphics/(200x50)_Colony_BattleShip_[4Cells]_[RightFace].png"); //4 Cell Battleship Ship Facing Horizontally
 		// Carrier PNG
-		Bitmap^ Ship_5_verticalpng = gcnew Bitmap("Graphics\(50x250)_Colony_CarrierShip_[5Cells].png"); //5 Cell Carrier Ship Facing Vertically
-		Bitmap^ Ship_5_horizontalpng = gcnew Bitmap("Graphics\(250x50)_Colony_CarrierShip_[5Cells]_RightFace.png"); //5 Cell Carrier Ship Facing Horizontally
+		Bitmap^ Ship_5_verticalpng = gcnew Bitmap("Graphics/(50x250)_Colony_CarrierShip_[5Cells].png"); //5 Cell Carrier Ship Facing Vertically
+		Bitmap^ Ship_5_horizontalpng = gcnew Bitmap("Graphics/(250x50)_Colony_CarrierShip_[5Cells]_RightFace.png"); //5 Cell Carrier Ship Facing Horizontally
 		////////////////////////////////////////////////////////////////////////////
 		////////////////////////////////////////////////////////////////////////////
 
@@ -124,6 +126,7 @@ namespace Project1 {
 			this->pictureBox1->Size = System::Drawing::Size(480, 480);
 			this->pictureBox1->TabIndex = 0;
 			this->pictureBox1->TabStop = false;
+			this->pictureBox1->MouseDown += gcnew System::Windows::Forms::MouseEventHandler(this, &MyForm::MouseD);
 			// 
 			// pictureBox2
 			// 
@@ -181,6 +184,8 @@ namespace Project1 {
 	
 		int numrow = 40;
 		int numcol = 40;
+	//private: System::Void MyForm_Load(System::Object^  sender, System::EventArgs^  e) {
+	//}
 	private: System::Void MyForm_Load(System::Object^  sender, System::EventArgs^  e) {
 
 				 /*
@@ -207,14 +212,14 @@ namespace Project1 {
 				 g = pictureBox1->CreateGraphics();
 				 blackBrush = gcnew System::Drawing::Pen(Color::Black);
 
-				 
+				 WhiteBrush = gcnew System::Drawing::SolidBrush(Color::White);
 
-				 PLAYER_GRID = gcnew array<player^, 2>(NUMCOLS, NUMROWS);
+				/* PLAYER_GRID = gcnew array<player^, 2>(NUMCOLS, NUMROWS);
 				 for (int row = 0; row < NUMROWS; row++)
 				 for (int col = 0; col < NUMCOLS; col++)
 					 PLAYER_GRID[col, row] = gcnew player(col, row, false);
-
-				 player5cell(false);
+					 */
+				// player5cell(false);
 
 					
 
@@ -244,6 +249,11 @@ private: System::Void button1_Click(System::Object^  sender, System::EventArgs^ 
 				 }
 			 }
 }
+private: System::Void MouseD(System::Object^  sender, System::Windows::Forms::MouseEventArgs^  e) {
+			 Rectangle WhiteRect = Rectangle(e->X - (e->X % LRGCELLSIZE), e->Y - (e->Y % LRGCELLSIZE), LRGCELLSIZE - 1, LRGCELLSIZE - 1);
+			 g->DrawImage(MapGrid, 0, 0, 480, 480);
+			 g->FillRectangle(WhiteBrush, WhiteRect);
+}
 };
 }
 
@@ -272,7 +282,7 @@ Void draw_grid(){
 
 
 
-}
+
 
 */
 

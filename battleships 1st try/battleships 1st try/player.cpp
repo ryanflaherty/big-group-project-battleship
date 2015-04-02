@@ -6,11 +6,11 @@ player::player()
 {
 
 }
-player::player(int yCord, int xCord, bool ship)
+player::player(int yCord, int xCord, char ship)
 {
 	x = xCord;
 	y = yCord;
-	has_ship = ship;
+	status = ship;
 }
 
 //x, y get/seters
