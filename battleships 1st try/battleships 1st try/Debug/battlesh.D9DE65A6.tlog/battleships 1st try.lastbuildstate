@@ -1,2 +1,10 @@
 #TargetFrameworkVersion=v4.5:PlatformToolSet=v120:EnableManagedIncrementalBuild=true:VCToolArchitecture=Native32Bit
+<<<<<<< HEAD
 Debug|Win32|C:\Users\jhuang\Documents\GitHub\big-group-project-battleship\battleships 1st try\|
+=======
+<<<<<<< HEAD
+Debug|Win32|C:\Users\rflaherty\Documents\GitHub\big-group-project-battleship\battleships 1st try\|
+=======
+Debug|Win32|C:\Users\camarello\Documents\GitHub\big-group-project-battleship\battleships 1st try\|
+>>>>>>> origin/master
+>>>>>>> 8126dd4e36c7a72cc83c803e162f6cd4a0c72a1b

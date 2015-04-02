@@ -10,8 +10,14 @@ public:
 	player(int , int , char);
 	char status;
 
+<<<<<<< HEAD
 //};
 //#pragma once
+=======
+};
+
+#pragma once
+>>>>>>> 8126dd4e36c7a72cc83c803e162f6cd4a0c72a1b
 
 //ref class player{
 private:

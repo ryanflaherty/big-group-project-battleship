@@ -1,13 +1,15 @@
 #pragma once
-//<<<<<<< HEAD
+
 #include <cstdlib>
 #include <ctime>
+<<<<<<< HEAD
 //=======
+=======
+>>>>>>> 8126dd4e36c7a72cc83c803e162f6cd4a0c72a1b
 #include <stdlib.h>
 #include "player.h"
 #include "5cellship.h"
 
-//>>>>>>> origin/master
 namespace Project1 {
 
 	using namespace System;
@@ -22,8 +24,8 @@ namespace Project1 {
 	/// </summary>
 	public ref class MyForm : public System::Windows::Forms::Form
 	{
-		Graphics^ g;
-		array <player^, 2>^ Box1;
+		//Graphics^ g;
+		//array <player^, 2>^ Box1;
 	public:
 		MyForm(void)
 		{
@@ -58,8 +60,14 @@ namespace Project1 {
 	/////GRAPHICS//////////////	 
 		//Graphics^ g;
 		Pen^ blackBrush;
+<<<<<<< HEAD
 		Pen^ WhiteBrush;
 		//Bitmap^ Ship_5 = gcnew Bitmap("Graphics/(250x50)_Colony_CarrierShip_[5Cells].png");
+=======
+		//Bitmap^ Ship_5 = gcnew Bitmap("Graphics/(250x50)_Colony_CarrierShip_[5Cells].png");
+		Bitmap^ MapGrid = gcnew Bitmap("Graphics/(480x480)_Starfield[Grid].png");
+		Bitmap^ Ship_5 = gcnew Bitmap("Graphics\(250x50)_Colony_CarrierShip_[5Cells].png");
+>>>>>>> 8126dd4e36c7a72cc83c803e162f6cd4a0c72a1b
 
 		/////////////////////////////////////////////////////////////////
 		///////////////////// Put Graphics Here /////////////////////////
@@ -183,11 +191,17 @@ namespace Project1 {
 	
 		int numrow = 40;
 		int numcol = 40;
+<<<<<<< HEAD
 //<<<<<<< HEAD
 	//private: System::Void MyForm_Load(System::Object^  sender, System::EventArgs^  e) {
 	//}
 //<<<<<<< HEAD
 //=======
+=======
+	private: System::Void MyForm_Load(System::Object^  sender, System::EventArgs^  e) {
+
+				 /*
+>>>>>>> 8126dd4e36c7a72cc83c803e162f6cd4a0c72a1b
 	private: System::Void MyForm_Load(System::Object^  sender, System::EventArgs^  e) 
 	{
 //>>>>>>> origin/master
@@ -206,12 +220,17 @@ namespace Project1 {
 
 					 }
 				 }
+<<<<<<< HEAD
 //<<<<<<< HEAD
 	
 	
 //=======
 //=======
 //>>>>>>> origin/master
+=======
+	
+				 */
+>>>>>>> 8126dd4e36c7a72cc83c803e162f6cd4a0c72a1b
 
 				 g = pictureBox1->CreateGraphics();
 				 blackBrush = gcnew System::Drawing::Pen(Color::Black);
@@ -246,8 +265,10 @@ private: System::Void button1_Click(System::Object^  sender, System::EventArgs^ 
 
 					 
 
-					 Rectangle lrggridsrect = Rectangle(x, y, LRGCELLSIZE - 1, LRGCELLSIZE - 1);
-					 g->DrawRectangle(blackBrush, lrggridsrect);
+					 //Rectangle lrggridsrect = Rectangle(x, y, LRGCELLSIZE - 1, LRGCELLSIZE - 1);
+					 //g->DrawRectangle(blackBrush, lrggridsrect);
+
+					 g->DrawImage(MapGrid, 0, 0, 480, 480);
 				 }
 			 }
 //<<<<<<< HEAD
@@ -261,6 +282,17 @@ private: System::Void MouseD(System::Object^  sender, System::Windows::Forms::Mo
 };
 }
 
+<<<<<<< HEAD
+=======
+/*
+System::Void Computer_move()
+{
+
+	srand(time(NULL));
+	int x = rand() % 40 + 0;
+	int y = rand() % 40 + 0;
+	//Box1[x, y]->status = 'r';
+>>>>>>> 8126dd4e36c7a72cc83c803e162f6cd4a0c72a1b
 
 /*
 Void draw_grid(){
@@ -275,21 +307,15 @@ Void draw_grid(){
 		}
 	}
 }
+
+
+
+
+
 */
-
-
-
 
 //notes
 /*
 large cell size == 40
 small cell size == 20
 */
-
-
-
-
-
-
-
-
