@@ -246,13 +246,13 @@ private: System::Void button1_Click(System::Object^  sender, System::EventArgs^ 
 					 //Rectangle lrggridsrect = Rectangle(x, y, LRGCELLSIZE - 1, LRGCELLSIZE - 1);
 					 //g->DrawRectangle(blackBrush, lrggridsrect);
 
-					 g->DrawImage(MapGrid, 0, 0, 480, 480);
+					 g->DrawImage(starfieldgrid_png, 0, 0, 480, 480);
 				 }
 			 }
 }
 private: System::Void MouseD(System::Object^  sender, System::Windows::Forms::MouseEventArgs^  e) {
 			 Rectangle WhiteRect = Rectangle(e->X - (e->X % LRGCELLSIZE), e->Y - (e->Y % LRGCELLSIZE), LRGCELLSIZE - 1, LRGCELLSIZE - 1);
-			 g->DrawImage(MapGrid, 0, 0, 480, 480);
+			 g->DrawImage(starfieldgrid_png, 0, 0, 480, 480);
 			 g->FillRectangle(WhiteBrush, WhiteRect);
 }
 };
