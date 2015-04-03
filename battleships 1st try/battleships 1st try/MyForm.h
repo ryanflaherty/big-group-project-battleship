@@ -4,7 +4,6 @@
 #include <ctime>
 #include <stdlib.h>
 #include "player.h"
-#include "5cellship.h"
 
 namespace Project1 {
 
@@ -49,17 +48,17 @@ namespace Project1 {
 
 	private:
 
-	////////Player Array////
+		////////Player Array////
 		//array <player^, 2>^ PLAYER_GRID;
 
-	/////GRAPHICS//////////////	 
+		/////GRAPHICS//////////////	 
 		Graphics^ g;
 		Graphics^ g2; //[Added 4/2/2015]
 		Pen^ blackBrush;
 		Brush^ WhiteBrush;
 		///Bitmap^ MapGrid = gcnew Bitmap("Graphics/(50x250)_Colony_CarrierShip_[5Cells].png");
 		//Bitmap^ Ship_5 = gcnew Bitmap("Graphics/(250x50)_Colony_CarrierShip_[5Cells].png");
-		
+
 		///////////////////// Put Graphics Here /////////////////////////
 		Bitmap^ starfieldempty_png = gcnew Bitmap("Graphics/(480x480)_Starfield[Empty].png"); //Empty Grid Picture
 		Bitmap^ starfieldgrid_png = gcnew Bitmap("Graphics/(480x480)_Starfield[Grid].png"); //Picture with Grid [[[Commented out because MAPGrid is already used for this picture]]]
@@ -88,7 +87,7 @@ namespace Project1 {
 		////////////////////////////////////////////////////////////////////////////
 
 
-	/////CONST INTS//////
+		/////CONST INTS//////
 		static const int NUMROWS = 12;
 		static const int NUMCOLS = 12;
 		static const int LRGCELLSIZE = 40;
@@ -271,34 +270,29 @@ namespace Project1 {
 
 		}
 #pragma endregion
-	
+
 		int numrow = 40;
 		int numcol = 40;
 
-<<<<<<< HEAD
 	private: System::Void MyForm_Load(System::Object^  sender, System::EventArgs^  e) {
-=======
-	private: System::Void MyForm_Load(System::Object^  sender, System::EventArgs^  e) 
-	{
->>>>>>> origin/master
 
 				 /*
 				 g = pictureBox1->CreateGraphics();
 				 Box1 = gcnew array<player^, 2>(40, 40);
 				 for (int row = 0; row < numrow; row++)
 				 {
-					 for (int col = 0; col < numcol; col++)
-					 {
-						 
-							 Box1[row, col] = gcnew player(row, col, 'b');
-							 
+				 for (int col = 0; col < numcol; col++)
+				 {
+
+				 Box1[row, col] = gcnew player(row, col, 'b');
 
 
-						 
 
-					 }
+
+
 				 }
-	
+				 }
+
 				 */
 
 				 g = pictureBox1->CreateGraphics(); //Large Picture Box for the Starfield Grid
@@ -312,62 +306,61 @@ namespace Project1 {
 				 button1->Hide();
 				 textBox2->Hide();
 				 textBox3->Hide();
-					
 
-				 
+
+
 	}
-	private: System::Void textBox2_TextChanged(System::Object^  sender, System::EventArgs^  e) 
+	private: System::Void textBox2_TextChanged(System::Object^  sender, System::EventArgs^  e)
 	{
 	}
 
-private: System::Void button1_Click(System::Object^  sender, System::EventArgs^  e) //START GAME
-		{
-			 g2->DrawImage(starfieldempty_png, 0, 0, 240, 240); //[Added 4/2/2015]
+	private: System::Void button1_Click(System::Object^  sender, System::EventArgs^  e) //START GAME
+	{
+				 g2->DrawImage(starfieldempty_png, 0, 0, 240, 240); //[Added 4/2/2015]
 
-<<<<<<< HEAD
-}
-private: System::Void MouseD(System::Object^  sender, System::Windows::Forms::MouseEventArgs^  e) {
-			 Rectangle WhiteRect = Rectangle(e->X - (e->X % LRGCELLSIZE), e->Y - (e->Y % LRGCELLSIZE), LRGCELLSIZE - 1, LRGCELLSIZE - 1);
-			 g->DrawImage(starfieldgrid_png, 0, 0, 480, 480);
-			 g->FillRectangle(WhiteBrush, WhiteRect);
-}
-private: System::Void easyToolStripMenuItem_Click(System::Object^  sender, System::EventArgs^  e) {
-}
-
+	}
+	private: System::Void MouseD(System::Object^  sender, System::Windows::Forms::MouseEventArgs^  e) {
+				 Rectangle WhiteRect = Rectangle(e->X - (e->X % LRGCELLSIZE), e->Y - (e->Y % LRGCELLSIZE), LRGCELLSIZE - 1, LRGCELLSIZE - 1);
+				 g->DrawImage(starfieldgrid_png, 0, 0, 480, 480);
+				 g->FillRectangle(WhiteBrush, WhiteRect);
+	}
+	private: System::Void easyToolStripMenuItem_Click(System::Object^  sender, System::EventArgs^  e) {
+	}
 
 
-private: System::Void newGameToolStripMenuItem_Click(System::Object^  sender, System::EventArgs^  e) {
 
-			 g->DrawImage(starfieldgrid_png, 0, 0, 480, 480);
+	private: System::Void newGameToolStripMenuItem_Click(System::Object^  sender, System::EventArgs^  e) {
 
-			 button1->Show();
+				 g->DrawImage(starfieldgrid_png, 0, 0, 480, 480);
 
-}
-=======
-			 for (int row = 0; row < NUMROWS; row++)
-			 {
-				 for (int col = 0; col < NUMCOLS; col++)
+				 button1->Show();
+
+
+				 for (int row = 0; row < NUMROWS; row++)
 				 {
-					 int x = col * LRGCELLSIZE;
-					 int y = row * LRGCELLSIZE;
+					 for (int col = 0; col < NUMCOLS; col++)
+					 {
+						 int x = col * LRGCELLSIZE;
+						 int y = row * LRGCELLSIZE;
 
 
-					 //Rectangle lrggridsrect = Rectangle(x, y, LRGCELLSIZE - 1, LRGCELLSIZE - 1);
-					 //g->DrawRectangle(blackBrush, lrggridsrect);
+						 //Rectangle lrggridsrect = Rectangle(x, y, LRGCELLSIZE - 1, LRGCELLSIZE - 1);
+						 //g->DrawRectangle(blackBrush, lrggridsrect);
 
-					 g->DrawImage(starfieldgrid_png, 0, 0, 480, 480);
+						 g->DrawImage(starfieldgrid_png, 0, 0, 480, 480);
+					 }
 				 }
-			 }
-		}
-private: System::Void MouseD(System::Object^  sender, System::Windows::Forms::MouseEventArgs^  e) 
-		{
-			 Rectangle WhiteRect = Rectangle(e->X - (e->X % LRGCELLSIZE), e->Y - (e->Y % LRGCELLSIZE), LRGCELLSIZE - 1, LRGCELLSIZE - 1);
-			 g->DrawImage(starfieldgrid_png, 0, 0, 480, 480);
-			 g->FillRectangle(WhiteBrush, WhiteRect);
-		}
->>>>>>> origin/master
-};
+	}
+
+
+
+
+
+
+	
+	};
 }
+
 
 /*
 System::Void Computer_move()

@@ -16,7 +16,7 @@ public:
 	player(int , int , char);
 	char status;
 
-	bool getStart;
+	bool getStart();
 	void setStart(bool);
 
 

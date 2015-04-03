@@ -1,24 +1,17 @@
-<<<<<<< HEAD
-﻿Build started 4/2/2015 5:28:31 PM.
+﻿Build started 4/3/2015 2:50:21 PM.
      1>Project "C:\Users\rflaherty\Documents\GitHub\big-group-project-battleship\battleships 1st try\battleships 1st try\battleships 1st try.vcxproj" on node 2 (Build target(s)).
-=======
-﻿Build started 4/2/2015 5:13:45 PM.
-     1>Project "C:\Users\camarello\Documents\GitHub\big-group-project-battleship\battleships 1st try\battleships 1st try\battleships 1st try.vcxproj" on node 2 (Build target(s)).
->>>>>>> origin/master
      1>ClCompile:
-         C:\Program Files\Microsoft Visual Studio 12.0\VC\bin\CL.exe /c /AI"C:\Program Files\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.5\\" /AI"C:\Program Files\Windows Kits\8.1\References\CommonConfiguration\Neutral" /AI"C:\Program Files\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.5\Facades\\" /Zi /clr /nologo /W3 /WX- /Od /Oy- /D WIN32 /D _DEBUG /D _UNICODE /D UNICODE /EHa /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Debug\\" /Fd"Debug\vc120.pdb" /TP /FU"C:\Program Files\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.5\mscorlib.dll" /FU"C:\Program Files\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.5\System.Data.dll" /FU"C:\Program Files\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.5\System.dll" /FU"C:\Program Files\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.5\System.Drawing.dll" /FU"C:\Program Files\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.5\System.Windows.Forms.dll" /FU"C:\Program Files\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.5\System.Xml.dll" /analyze- /errorReport:prompt /clr:nostdlib MyForm.cpp
+         C:\Program Files\Microsoft Visual Studio 12.0\VC\bin\CL.exe /c /AI"C:\Program Files\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.5\\" /AI"C:\Program Files\Windows Kits\8.1\References\CommonConfiguration\Neutral" /AI"C:\Program Files\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.5\Facades\\" /Zi /clr /nologo /W3 /WX- /Od /Oy- /D WIN32 /D _DEBUG /D _UNICODE /D UNICODE /EHa /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Debug\\" /Fd"Debug\vc120.pdb" /TP /FU"C:\Program Files\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.5\mscorlib.dll" /FU"C:\Program Files\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.5\System.Data.dll" /FU"C:\Program Files\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.5\System.dll" /FU"C:\Program Files\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.5\System.Drawing.dll" /FU"C:\Program Files\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.5\System.Windows.Forms.dll" /FU"C:\Program Files\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.5\System.Xml.dll" /analyze- /errorReport:prompt /clr:nostdlib MyForm.cpp player.cpp
          MyForm.cpp
+         player.cpp
+         Generating Code...
        Link:
-         C:\Program Files\Microsoft Visual Studio 12.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"C:\Users\camarello\Documents\GitHub\big-group-project-battleship\battleships 1st try\Debug\battleships 1st try.exe" /INCREMENTAL /NOLOGO /ASSEMBLYRESOURCE:Debug\battleships_1st_try.MyForm.resources /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"C:\Users\camarello\Documents\GitHub\big-group-project-battleship\battleships 1st try\Debug\battleships 1st try.pdb" /ASSEMBLYDEBUG /SUBSYSTEM:WINDOWS /TLBID:1 /ENTRY:"main" /DYNAMICBASE /FIXED:NO /NXCOMPAT /MACHINE:X86 Debug\MyForm.obj
+         C:\Program Files\Microsoft Visual Studio 12.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"C:\Users\rflaherty\Documents\GitHub\big-group-project-battleship\battleships 1st try\Debug\battleships 1st try.exe" /INCREMENTAL /NOLOGO /ASSEMBLYRESOURCE:Debug\battleships_1st_try.MyForm.resources /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"C:\Users\rflaherty\Documents\GitHub\big-group-project-battleship\battleships 1st try\Debug\battleships 1st try.pdb" /ASSEMBLYDEBUG /SUBSYSTEM:WINDOWS /TLBID:1 /ENTRY:"main" /DYNAMICBASE /FIXED:NO /NXCOMPAT /MACHINE:X86 Debug\MyForm.obj
          Debug\player.obj
          "Debug\.NETFramework,Version=v4.5.AssemblyAttributes.obj"
-         battleships 1st try.vcxproj -> C:\Users\camarello\Documents\GitHub\big-group-project-battleship\battleships 1st try\Debug\battleships 1st try.exe
-     1>Done Building Project "C:\Users\camarello\Documents\GitHub\big-group-project-battleship\battleships 1st try\battleships 1st try\battleships 1st try.vcxproj" (Build target(s)).
+         battleships 1st try.vcxproj -> C:\Users\rflaherty\Documents\GitHub\big-group-project-battleship\battleships 1st try\Debug\battleships 1st try.exe
+     1>Done Building Project "C:\Users\rflaherty\Documents\GitHub\big-group-project-battleship\battleships 1st try\battleships 1st try\battleships 1st try.vcxproj" (Build target(s)).
 
 Build succeeded.
 
-<<<<<<< HEAD
-Time Elapsed 00:00:00.91
-=======
-Time Elapsed 00:00:00.71
->>>>>>> origin/master
+Time Elapsed 00:00:01.35
