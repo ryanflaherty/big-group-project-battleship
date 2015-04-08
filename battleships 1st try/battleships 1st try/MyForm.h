@@ -53,7 +53,8 @@ namespace Project1 {
 
 		/////GRAPHICS//////////////	 
 		Graphics^ g;
-		Graphics^ g2; //[Added 4/2/2015]
+		Graphics^ g2; //[Added 4/2/2015] Picture Box 2
+		Graphics^ gselect; //[Added 4/6/2015] This is for the Cursor
 		Pen^ blackBrush;
 		Brush^ WhiteBrush;
 		///Bitmap^ MapGrid = gcnew Bitmap("Graphics/(50x250)_Colony_CarrierShip_[5Cells].png");
@@ -83,14 +84,20 @@ namespace Project1 {
 		Bitmap^ hit_png = gcnew Bitmap("Graphics/(50x50)_Hit_Cell.png"); //5 Cell Carrier Ship Facing Vertically
 		// MISS Graphic PNG [Update added 4/2/2015]
 		Bitmap^ miss_png = gcnew Bitmap("Graphics/(50x50)_Miss_Cell.png"); //5 Cell Carrier Ship Facing Horizontally
+		// Cursor Target Select - FillRectangle
+		Bitmap^ select_png = gcnew Bitmap("Graphics/(50x50)Target_Select_Cell[Cursor_FillRectangle].png");
 		////////////////////////////////////////////////////////////////////////////
 		////////////////////////////////////////////////////////////////////////////
+
 
 
 		/////CONST INTS//////
+		static const int LrgGridSize = 480;
+		static const int SmallGridSize = 240;
 		static const int NUMROWS = 12;
 		static const int NUMCOLS = 12;
 		static const int LRGCELLSIZE = 40;
+		static const int smallCELLSIZE = 20;
 
 		const char isEmpty = '0'; // [Update added 4/2/2015]
 		const char isHit = 'X'; // [Update added 4/2/2015]
@@ -193,6 +200,7 @@ namespace Project1 {
 			this->menuStrip1->Size = System::Drawing::Size(884, 24);
 			this->menuStrip1->TabIndex = 6;
 			this->menuStrip1->Text = L"menuStrip1";
+			this->menuStrip1->ItemClicked += gcnew System::Windows::Forms::ToolStripItemClickedEventHandler(this, &MyForm::menuStrip1_ItemClicked);
 			// 
 			// fileToolStripMenuItem
 			// 
@@ -271,6 +279,9 @@ namespace Project1 {
 		}
 #pragma endregion
 
+		player PlayerClass;
+
+
 		int numrow = 40;
 		int numcol = 40;
 
@@ -298,6 +309,8 @@ namespace Project1 {
 				 g = pictureBox1->CreateGraphics(); //Large Picture Box for the Starfield Grid
 
 				 g2 = pictureBox2->CreateGraphics();  //Smaller Picture Box on the Right for the Empty Starfield Grid [Added 4/2/2015]
+				
+				 gselect = pictureBox1->CreateGraphics(); //[Added 4/6/2015] creates target in pictureBox1
 
 				 blackBrush = gcnew System::Drawing::Pen(Color::Black);
 
@@ -307,7 +320,7 @@ namespace Project1 {
 				 textBox2->Hide();
 				 textBox3->Hide();
 
-
+				 PlayerClass.setStart(false);
 
 	}
 	private: System::Void textBox2_TextChanged(System::Object^  sender, System::EventArgs^  e)
@@ -316,13 +329,26 @@ namespace Project1 {
 
 	private: System::Void button1_Click(System::Object^  sender, System::EventArgs^  e) //START GAME
 	{
-				 g2->DrawImage(starfieldempty_png, 0, 0, 240, 240); //[Added 4/2/2015]
+				 g2->DrawImage(starfieldempty_png, 0, 0, SmallGridSize, SmallGridSize); //[Added 4/2/2015]
 
 	}
-	private: System::Void MouseD(System::Object^  sender, System::Windows::Forms::MouseEventArgs^  e) {
-				 Rectangle WhiteRect = Rectangle(e->X - (e->X % LRGCELLSIZE), e->Y - (e->Y % LRGCELLSIZE), LRGCELLSIZE - 1, LRGCELLSIZE - 1);
-				 g->DrawImage(starfieldgrid_png, 0, 0, 480, 480);
-				 g->FillRectangle(WhiteBrush, WhiteRect);
+	private: System::Void MouseD(System::Object^  sender, System::Windows::Forms::MouseEventArgs^  e) 
+	{
+				 if (PlayerClass.getStart())
+				 {
+
+					 int new_x = e->X - (e->X % LRGCELLSIZE);
+					 int new_y = e->Y - (e->Y % LRGCELLSIZE);
+					 
+					 if (new_x >= LRGCELLSIZE && new_y >= LRGCELLSIZE)
+					 {
+						 Rectangle WhiteRect = Rectangle(new_x + 1, new_y + 1, LRGCELLSIZE - 1, LRGCELLSIZE - 1);
+						 g->DrawImage(starfieldgrid_png, 0, 0, LrgGridSize, LrgGridSize);
+						 gselect->DrawImage(select_png, new_x + 1, new_y + 1, LRGCELLSIZE, LRGCELLSIZE); //[Added 4/6/2015] creates target on the cell clicked
+						 //g->FillRectangle(WhiteBrush, WhiteRect); //Commented out to replace whitebrush with target
+					 }
+				 }
+
 	}
 	private: System::Void easyToolStripMenuItem_Click(System::Object^  sender, System::EventArgs^  e) {
 	}
@@ -331,34 +357,22 @@ namespace Project1 {
 
 	private: System::Void newGameToolStripMenuItem_Click(System::Object^  sender, System::EventArgs^  e) {
 
-				 g->DrawImage(starfieldgrid_png, 0, 0, 480, 480);
+				 g->DrawImage(starfieldgrid_png, 0, 0, LrgGridSize, LrgGridSize);
+				 g2->DrawImage(starfieldempty_png, 0, 0, 240, 240); //[Added 4/6/2015] Creates Empty starfield in PictureBox 2
+				 g2->DrawImage(Ship_1_horizontalpng, 160, 285, 25, 25); //[Added 4/6/2015] Creates Frigate underneath starfield in PictureBox 2
+				 g2->DrawImage(Ship_2_horizontalpng, 150, 250, 50, 25); //[Added 4/6/2015] Creates Stealth Ship underneath starfield in PictureBox 2
+				 g2->DrawImage(Ship_3_horizontalpng, 25, 250, 75, 25); //[Added 4/6/2015] Creates Cruiser underneath starfield in PictureBox 2
+				 g2->DrawImage(Ship_4_horizontalpng, 25, 283, 100, 25); //[Added 4/6/2015] Creates BattleShip underneath starfield in PictureBox 2
+				 g2->DrawImage(Ship_5_horizontalpng, 25, 315, 125, 25); //[Added 4/6/2015] Creates Carrier underneath starfield in PictureBox 2
 
 				 button1->Show();
-
-
-				 for (int row = 0; row < NUMROWS; row++)
-				 {
-					 for (int col = 0; col < NUMCOLS; col++)
-					 {
-						 int x = col * LRGCELLSIZE;
-						 int y = row * LRGCELLSIZE;
-
-
-						 //Rectangle lrggridsrect = Rectangle(x, y, LRGCELLSIZE - 1, LRGCELLSIZE - 1);
-						 //g->DrawRectangle(blackBrush, lrggridsrect);
-
-						 g->DrawImage(starfieldgrid_png, 0, 0, 480, 480);
-					 }
-				 }
+				 PlayerClass.setStart(true);
 	}
 
-
-
-
-
-
 	
-	};
+	private: System::Void menuStrip1_ItemClicked(System::Object^  sender, System::Windows::Forms::ToolStripItemClickedEventArgs^  e) {
+	}
+};
 }
 
 
