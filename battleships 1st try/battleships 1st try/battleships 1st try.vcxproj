@@ -83,7 +83,6 @@
     <ClCompile Include="player.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="5cellship.h" />
     <ClInclude Include="computer.h" />
     <ClInclude Include="MyForm.h">
       <FileType>CppForm</FileType>

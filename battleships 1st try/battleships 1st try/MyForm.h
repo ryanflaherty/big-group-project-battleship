@@ -345,14 +345,14 @@ namespace Project1 {
 
 				 g = pictureBox1->CreateGraphics();
 				 g2 = pictureBox2->CreateGraphics();
-				 g3 = pictureBox3->CreateGraphics();
+				 //g3 = pictureBox3->CreateGraphics();
 				 
 
 				 
 
 				 g = pictureBox1->CreateGraphics(); //Large Picture Box for the Starfield Grid
 
-				 g2 = pictureBox2->CreateGraphics();  //Smaller Picture Box on the Right for the Empty Starfield Grid [Added 4/2/2015]
+				 //g2 = pictureBox2->CreateGraphics();  //Smaller Picture Box on the Right for the Empty Starfield Grid [Added 4/2/2015]
 				
 				 gselect = pictureBox1->CreateGraphics(); //[Added 4/6/2015] creates target in pictureBox1
 
@@ -372,35 +372,17 @@ namespace Project1 {
 	}
 
 private: System::Void button1_Click(System::Object^  sender, System::EventArgs^  e) {
-			 /*
-			 S = 1; 
-			 Box1 = gcnew array<player^, 2>(12, 12);
-			 for (int row = 0; row < numrow; row++)
-			 {
-				 for (int col = 0; col < numcol; col++)
-				 {
-					 Rectangle rect1(row * 50, col * 50, 49, 49);
-					 Box1[row, col] = gcnew player(row, col, 'b');
-					 g->FillRectangle(yellowBrush, rect1);
-
-
-
-				 }
-			 }
-			
-			
-			 g2->DrawImage(Ship_1_verticalpng, 0, 0);
-			 g2->DrawImage(Ship_2_verticalpng, 0, 51);
-			 g2->DrawImage(Ship_3_verticalpng, 0, 151);
-			 g2->DrawImage(Ship_4_verticalpng, 0, 301);
-			 g2->DrawImage(Ship_5_verticalpng, 51, 0);*/
-			 /*
-			 g2->DrawImage(B12, 102, 0);
-			 g2->DrawImage(B32, 102, 51);
-			 g2->DrawImage(B42, 102, 101);
-			 g2->DrawImage(B52, 102, 151);*/
+			 
 }
 	private: System::Void MouseD(System::Object^  sender, System::Windows::Forms::MouseEventArgs^  e) {
+				 ///////////////////////
+				 /*
+
+				 draws selected ship on pb1 on mouse event click
+
+				 */
+				 /////////////////////
+
 				 /* Rectangle WhiteRect = Rectangle(e->X - (e->X % LRGCELLSIZE), e->Y - (e->Y % LRGCELLSIZE), LRGCELLSIZE - 1, LRGCELLSIZE - 1);
 				  g->DrawImage(MapGrid, 0, 0, 480, 480);
 				  g->FillRectangle(yellowBrush, WhiteRect);*/
@@ -697,6 +679,16 @@ private: System::Void button1_Click(System::Object^  sender, System::EventArgs^ 
 			 
 
 private: System::Void MD(System::Object^  sender, System::Windows::Forms::MouseEventArgs^  e) {
+			 /////////////
+			 /*
+			 
+			 mouse event for selection grid
+
+			 also rotates selected ship
+			 
+			 */
+			 /////////////
+
 			 getX = e->X - (e->X % 50);
 			 getY = e->Y - (e->Y % 50);
 			 t++;
@@ -786,6 +778,16 @@ private: System::Void MM(System::Object^  sender, System::Windows::Forms::MouseE
 
 }
 private: System::Void MM2(System::Object^  sender, System::Windows::Forms::MouseEventArgs^  e) {
+			 ///////////
+			 /*
+			 
+			 mouse move event
+			 uses selected ship as mouse cursor on pb1 grid
+			 
+			 */
+			 ////////////
+
+
 			 if (S != 0)
 			 {
 				 x1 = getX / 50;
@@ -1247,19 +1249,18 @@ private: System::Void MM2(System::Object^  sender, System::Windows::Forms::Mouse
 			 }
 
 }
-	private: System::Void newGameToolStripMenuItem_Click(System::Object^  sender, System::EventArgs^  e) {
-				 /*
-				 g->DrawImage(starfieldgrid_png, 0, 0, LrgGridSize, LrgGridSize);
-				 g2->DrawImage(starfieldempty_png, 0, 0, 240, 240); //[Added 4/6/2015] Creates Empty starfield in PictureBox 2
-				 g2->DrawImage(Ship_1_horizontalpng, 160, 285, 25, 25); //[Added 4/6/2015] Creates Frigate underneath starfield in PictureBox 2
-				 g2->DrawImage(Ship_2_horizontalpng, 150, 250, 50, 25); //[Added 4/6/2015] Creates Stealth Ship underneath starfield in PictureBox 2
-				 g2->DrawImage(Ship_3_horizontalpng, 25, 250, 75, 25); //[Added 4/6/2015] Creates Cruiser underneath starfield in PictureBox 2
-				 g2->DrawImage(Ship_4_horizontalpng, 25, 283, 100, 25); //[Added 4/6/2015] Creates BattleShip underneath starfield in PictureBox 2
-				 g2->DrawImage(Ship_5_horizontalpng, 25, 315, 125, 25); //[Added 4/6/2015] Creates Carrier underneath starfield in PictureBox 2
 
-				 button1->Show();
-				 //PlayerClass.setStart(true);
+
+	private: System::Void newGameToolStripMenuItem_Click(System::Object^  sender, System::EventArgs^  e) {
+				 //////////////////
+				 /*
+				 
+				 starts new game from menu
+				 
 				 */
+				 /////////////////////
+
+
 
 				 S = 1;
 				 Box1 = gcnew array<player^, 2>(12, 12);
