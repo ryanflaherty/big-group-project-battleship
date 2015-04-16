@@ -4,7 +4,6 @@
 #include <ctime>
 #include <stdlib.h>
 #include "player.h"
-#include "5cellship.h"
 
 namespace Project1 {
 
@@ -20,7 +19,6 @@ namespace Project1 {
 	/// </summary>
 	public ref class MyForm : public System::Windows::Forms::Form
 	{
-		//Graphics^ g;
 		//array <player^, 2>^ Box1;
 	public:
 		MyForm(void)
@@ -50,6 +48,7 @@ namespace Project1 {
 
 	private:
 
+<<<<<<< HEAD
 	////////Player Array////
 		array <player^, 2>^ Box1;
 
@@ -57,15 +56,23 @@ namespace Project1 {
 		Graphics^ g,^g2,^g3;
 		Pen^ blackBrush;
 		Brush^ yellowBrush;
+=======
+		////////Player Array////
+		//array <player^, 2>^ PLAYER_GRID;
+
+		/////GRAPHICS//////////////	 
+		Graphics^ g;
+		Graphics^ g2; //[Added 4/2/2015] Picture Box 2
+		Graphics^ gselect; //[Added 4/6/2015] This is for the Cursor
+		Pen^ blackBrush;
+		Brush^ WhiteBrush;
+		///Bitmap^ MapGrid = gcnew Bitmap("Graphics/(50x250)_Colony_CarrierShip_[5Cells].png");
+>>>>>>> origin/master
 		//Bitmap^ Ship_5 = gcnew Bitmap("Graphics/(250x50)_Colony_CarrierShip_[5Cells].png");
 
-		//Bitmap^ Ship_5 = gcnew Bitmap("Graphics/(250x50)_Colony_CarrierShip_[5Cells].png");
-		Bitmap^ MapGrid = gcnew Bitmap("Graphics/(480x480)_Starfield[Grid].png");
-		//*******//Bitmap^ Ship_5 = gcnew Bitmap("Graphics/(250x50)_Colony_CarrierShip_[5Cells].png");
-		
 		///////////////////// Put Graphics Here /////////////////////////
 		Bitmap^ starfieldempty_png = gcnew Bitmap("Graphics/(480x480)_Starfield[Empty].png"); //Empty Grid Picture
-		Bitmap^ starfieldgrid_png = gcnew Bitmap("Graphics/(480x480)_Starfield[Grid].png"); //Picture with Grid
+		Bitmap^ starfieldgrid_png = gcnew Bitmap("Graphics/(480x480)_Starfield[Grid].png"); //Picture with Grid [[[Commented out because MAPGrid is already used for this picture]]]
 		// Logo
 		Bitmap^ logo_png = gcnew Bitmap("Graphics/(300x150)BattleStarShips_Logo.png"); //Game Logo
 		// Frigate PNG
@@ -83,19 +90,43 @@ namespace Project1 {
 		// Carrier PNG
 		Bitmap^ Ship_5_verticalpng = gcnew Bitmap("Graphics/(50x250)_Colony_CarrierShip_[5Cells].png"); //5 Cell Carrier Ship Facing Vertically
 		Bitmap^ Ship_5_horizontalpng = gcnew Bitmap("Graphics/(250x50)_Colony_CarrierShip_[5Cells]_RightFace.png"); //5 Cell Carrier Ship Facing Horizontally
+		// HIT SHIP Graphic PNG [Update added 4/2/2015]
+		Bitmap^ hit_png = gcnew Bitmap("Graphics/(50x50)_Hit_Cell.png"); //5 Cell Carrier Ship Facing Vertically
+		// MISS Graphic PNG [Update added 4/2/2015]
+		Bitmap^ miss_png = gcnew Bitmap("Graphics/(50x50)_Miss_Cell.png"); //5 Cell Carrier Ship Facing Horizontally
+		// Cursor Target Select - FillRectangle
+		Bitmap^ select_png = gcnew Bitmap("Graphics/(50x50)Target_Select_Cell[Cursor_FillRectangle].png");
 		////////////////////////////////////////////////////////////////////////////
 		////////////////////////////////////////////////////////////////////////////
 
 
-	/////////////////////
 
-	/////CONST INTS//////
+		/////CONST INTS//////
+		static const int LrgGridSize = 480;
+		static const int SmallGridSize = 240;
 		static const int NUMROWS = 12;
 		static const int NUMCOLS = 12;
 		static const int LRGCELLSIZE = 40;
+		static const int smallCELLSIZE = 20;
+
+		const char isEmpty = '0'; // [Update added 4/2/2015]
+		const char isHit = 'X'; // [Update added 4/2/2015]
+		const char isShip = 'S'; // [Update added 4/2/2015]
+
 	private: System::Windows::Forms::Button^  button1;
+<<<<<<< HEAD
 	private: System::Windows::Forms::PictureBox^  pictureBox3;
 			 /////////////////////
+=======
+	private: System::Windows::Forms::MenuStrip^  menuStrip1;
+	private: System::Windows::Forms::ToolStripMenuItem^  fileToolStripMenuItem;
+	private: System::Windows::Forms::ToolStripMenuItem^  newGameToolStripMenuItem;
+	private: System::Windows::Forms::ToolStripMenuItem^  saveGameToolStripMenuItem;
+	private: System::Windows::Forms::ToolStripMenuItem^  difficultyToolStripMenuItem;
+	private: System::Windows::Forms::ToolStripMenuItem^  easyToolStripMenuItem;
+	private: System::Windows::Forms::ToolStripMenuItem^  hardToolStripMenuItem;
+	private: System::Windows::Forms::ToolStripMenuItem^  hardAsBallsToolStripMenuItem;
+>>>>>>> origin/master
 
 	private:
 		/// <summary>
@@ -115,10 +146,24 @@ namespace Project1 {
 			this->textBox2 = (gcnew System::Windows::Forms::TextBox());
 			this->textBox3 = (gcnew System::Windows::Forms::TextBox());
 			this->button1 = (gcnew System::Windows::Forms::Button());
+<<<<<<< HEAD
 			this->pictureBox3 = (gcnew System::Windows::Forms::PictureBox());
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pictureBox1))->BeginInit();
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pictureBox2))->BeginInit();
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pictureBox3))->BeginInit();
+=======
+			this->menuStrip1 = (gcnew System::Windows::Forms::MenuStrip());
+			this->fileToolStripMenuItem = (gcnew System::Windows::Forms::ToolStripMenuItem());
+			this->newGameToolStripMenuItem = (gcnew System::Windows::Forms::ToolStripMenuItem());
+			this->saveGameToolStripMenuItem = (gcnew System::Windows::Forms::ToolStripMenuItem());
+			this->difficultyToolStripMenuItem = (gcnew System::Windows::Forms::ToolStripMenuItem());
+			this->easyToolStripMenuItem = (gcnew System::Windows::Forms::ToolStripMenuItem());
+			this->hardToolStripMenuItem = (gcnew System::Windows::Forms::ToolStripMenuItem());
+			this->hardAsBallsToolStripMenuItem = (gcnew System::Windows::Forms::ToolStripMenuItem());
+			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pictureBox1))->BeginInit();
+			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pictureBox2))->BeginInit();
+			this->menuStrip1->SuspendLayout();
+>>>>>>> origin/master
 			this->SuspendLayout();
 			// 
 			// pictureBox1
@@ -167,6 +212,7 @@ namespace Project1 {
 			this->button1->UseVisualStyleBackColor = true;
 			this->button1->Click += gcnew System::EventHandler(this, &MyForm::button1_Click);
 			// 
+<<<<<<< HEAD
 			// pictureBox3
 			// 
 			this->pictureBox3->Location = System::Drawing::Point(734, 75);
@@ -174,6 +220,74 @@ namespace Project1 {
 			this->pictureBox3->Size = System::Drawing::Size(250, 250);
 			this->pictureBox3->TabIndex = 6;
 			this->pictureBox3->TabStop = false;
+=======
+			// menuStrip1
+			// 
+			this->menuStrip1->BackColor = System::Drawing::SystemColors::ControlLightLight;
+			this->menuStrip1->Items->AddRange(gcnew cli::array< System::Windows::Forms::ToolStripItem^  >(2) {
+				this->fileToolStripMenuItem,
+					this->difficultyToolStripMenuItem
+			});
+			this->menuStrip1->Location = System::Drawing::Point(0, 0);
+			this->menuStrip1->Name = L"menuStrip1";
+			this->menuStrip1->RenderMode = System::Windows::Forms::ToolStripRenderMode::System;
+			this->menuStrip1->Size = System::Drawing::Size(884, 24);
+			this->menuStrip1->TabIndex = 6;
+			this->menuStrip1->Text = L"menuStrip1";
+			this->menuStrip1->ItemClicked += gcnew System::Windows::Forms::ToolStripItemClickedEventHandler(this, &MyForm::menuStrip1_ItemClicked);
+			// 
+			// fileToolStripMenuItem
+			// 
+			this->fileToolStripMenuItem->DropDownItems->AddRange(gcnew cli::array< System::Windows::Forms::ToolStripItem^  >(2) {
+				this->newGameToolStripMenuItem,
+					this->saveGameToolStripMenuItem
+			});
+			this->fileToolStripMenuItem->Name = L"fileToolStripMenuItem";
+			this->fileToolStripMenuItem->Size = System::Drawing::Size(37, 20);
+			this->fileToolStripMenuItem->Text = L"File";
+			// 
+			// newGameToolStripMenuItem
+			// 
+			this->newGameToolStripMenuItem->Name = L"newGameToolStripMenuItem";
+			this->newGameToolStripMenuItem->Size = System::Drawing::Size(132, 22);
+			this->newGameToolStripMenuItem->Text = L"New Game";
+			this->newGameToolStripMenuItem->Click += gcnew System::EventHandler(this, &MyForm::newGameToolStripMenuItem_Click);
+			// 
+			// saveGameToolStripMenuItem
+			// 
+			this->saveGameToolStripMenuItem->Name = L"saveGameToolStripMenuItem";
+			this->saveGameToolStripMenuItem->Size = System::Drawing::Size(132, 22);
+			this->saveGameToolStripMenuItem->Text = L"Save Game";
+			// 
+			// difficultyToolStripMenuItem
+			// 
+			this->difficultyToolStripMenuItem->DropDownItems->AddRange(gcnew cli::array< System::Windows::Forms::ToolStripItem^  >(3) {
+				this->easyToolStripMenuItem,
+					this->hardToolStripMenuItem, this->hardAsBallsToolStripMenuItem
+			});
+			this->difficultyToolStripMenuItem->Name = L"difficultyToolStripMenuItem";
+			this->difficultyToolStripMenuItem->Size = System::Drawing::Size(67, 20);
+			this->difficultyToolStripMenuItem->Text = L"Difficulty";
+			// 
+			// easyToolStripMenuItem
+			// 
+			this->easyToolStripMenuItem->Name = L"easyToolStripMenuItem";
+			this->easyToolStripMenuItem->Size = System::Drawing::Size(141, 22);
+			this->easyToolStripMenuItem->Text = L"Easy";
+			this->easyToolStripMenuItem->Click += gcnew System::EventHandler(this, &MyForm::easyToolStripMenuItem_Click);
+			// 
+			// hardToolStripMenuItem
+			// 
+			this->hardToolStripMenuItem->Name = L"hardToolStripMenuItem";
+			this->hardToolStripMenuItem->Size = System::Drawing::Size(141, 22);
+			this->hardToolStripMenuItem->Text = L"Hard";
+			// 
+			// hardAsBallsToolStripMenuItem
+			// 
+			this->hardAsBallsToolStripMenuItem->Name = L"hardAsBallsToolStripMenuItem";
+			this->hardAsBallsToolStripMenuItem->Size = System::Drawing::Size(141, 22);
+			this->hardAsBallsToolStripMenuItem->Text = L"Hard as Balls";
+>>>>>>> origin/master
 			// 
 			// MyForm
 			// 
@@ -186,17 +300,25 @@ namespace Project1 {
 			this->Controls->Add(this->textBox2);
 			this->Controls->Add(this->pictureBox2);
 			this->Controls->Add(this->pictureBox1);
+			this->Controls->Add(this->menuStrip1);
+			this->MainMenuStrip = this->menuStrip1;
 			this->Name = L"MyForm";
-			this->Text = L"MyForm";
+			this->Text = L"Battle Starships!";
 			this->Load += gcnew System::EventHandler(this, &MyForm::MyForm_Load);
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pictureBox1))->EndInit();
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pictureBox2))->EndInit();
+<<<<<<< HEAD
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pictureBox3))->EndInit();
+=======
+			this->menuStrip1->ResumeLayout(false);
+			this->menuStrip1->PerformLayout();
+>>>>>>> origin/master
 			this->ResumeLayout(false);
 			this->PerformLayout();
 
 		}
 #pragma endregion
+<<<<<<< HEAD
 		int S = 0;
 		int numrow = 12;
 		int numcol = 12;
@@ -215,19 +337,32 @@ namespace Project1 {
 				 /*
 	private: System::Void MyForm_Load(System::Object^  sender, System::EventArgs^  e) 
 	{*/
+=======
+
+		player PlayerClass;
+
+
+		int numrow = 40;
+		int numcol = 40;
+
+	private: System::Void MyForm_Load(System::Object^  sender, System::EventArgs^  e) {
+
+				 /*
+>>>>>>> origin/master
 				 g = pictureBox1->CreateGraphics();
 				 Box1 = gcnew array<player^, 2>(12, 12);
 				 for (int row = 0; row < numrow; row++)
 				 {
-					 for (int col = 0; col < numcol; col++)
-					 {
-						 
-							 Box1[row, col] = gcnew player(row, col, 'b');
-							 
+				 for (int col = 0; col < numcol; col++)
+				 {
+
+				 Box1[row, col] = gcnew player(row, col, 'b');
 
 
-						 
 
+
+
+<<<<<<< HEAD
 					 }
 				 }/*
 	
@@ -236,27 +371,35 @@ namespace Project1 {
 				 g = pictureBox1->CreateGraphics();
 				 g2 = pictureBox2->CreateGraphics();
 				 g3 = pictureBox3->CreateGraphics();
+=======
+				 }
+				 }
+
+				 */
+
+				 g = pictureBox1->CreateGraphics(); //Large Picture Box for the Starfield Grid
+
+				 g2 = pictureBox2->CreateGraphics();  //Smaller Picture Box on the Right for the Empty Starfield Grid [Added 4/2/2015]
+				
+				 gselect = pictureBox1->CreateGraphics(); //[Added 4/6/2015] creates target in pictureBox1
+
+>>>>>>> origin/master
 				 blackBrush = gcnew System::Drawing::Pen(Color::Black);
 
 				 yellowBrush = gcnew System::Drawing::SolidBrush(Color::White);
 
-				/* PLAYER_GRID = gcnew array<player^, 2>(NUMCOLS, NUMROWS);
-				 for (int row = 0; row < NUMROWS; row++)
-				 for (int col = 0; col < NUMCOLS; col++)
-					 PLAYER_GRID[col, row] = gcnew player(col, row, false);
-					 */
-				// player5cell(false);
+				 button1->Hide();
+				 textBox2->Hide();
+				 textBox3->Hide();
 
-					
+				 PlayerClass.setStart(false);
 
-
-				// draw_grid();
-				 
 	}
-	private: System::Void textBox2_TextChanged(System::Object^  sender, System::EventArgs^  e) 
+	private: System::Void textBox2_TextChanged(System::Object^  sender, System::EventArgs^  e)
 	{
 	}
 
+<<<<<<< HEAD
 private: System::Void button1_Click(System::Object^  sender, System::EventArgs^  e) {
 			 S = 1; 
 			 Box1 = gcnew array<player^, 2>(12, 12);
@@ -546,6 +689,33 @@ private: System::Void MouseD(System::Object^  sender, System::Windows::Forms::Mo
 						 Box1[11 - 4, y1]->status = 'c';
 					 }
 				 }
+=======
+	private: System::Void button1_Click(System::Object^  sender, System::EventArgs^  e) //START GAME
+	{
+				 g2->DrawImage(starfieldempty_png, 0, 0, SmallGridSize, SmallGridSize); //[Added 4/2/2015]
+
+	}
+	private: System::Void MouseD(System::Object^  sender, System::Windows::Forms::MouseEventArgs^  e) 
+	{
+				 if (PlayerClass.getStart())
+				 {
+
+					 int new_x = e->X - (e->X % LRGCELLSIZE);
+					 int new_y = e->Y - (e->Y % LRGCELLSIZE);
+					 
+					 if (new_x >= LRGCELLSIZE && new_y >= LRGCELLSIZE)
+					 {
+						 Rectangle WhiteRect = Rectangle(new_x + 1, new_y + 1, LRGCELLSIZE - 1, LRGCELLSIZE - 1);
+						 g->DrawImage(starfieldgrid_png, 0, 0, LrgGridSize, LrgGridSize);
+						 gselect->DrawImage(select_png, new_x + 1, new_y + 1, LRGCELLSIZE, LRGCELLSIZE); //[Added 4/6/2015] creates target on the cell clicked
+						 //g->FillRectangle(WhiteBrush, WhiteRect); //Commented out to replace whitebrush with target
+					 }
+				 }
+
+	}
+	private: System::Void easyToolStripMenuItem_Click(System::Object^  sender, System::EventArgs^  e) {
+	}
+>>>>>>> origin/master
 
 			 }
 }
@@ -568,6 +738,7 @@ private: System::Void MD(System::Object^  sender, System::Windows::Forms::MouseE
 				 }
 
 
+<<<<<<< HEAD
 			 }
 			 if (getX == 0 && getY >= 50 && getY <= 100)
 			 {
@@ -1101,8 +1272,28 @@ private: System::Void MM2(System::Object^  sender, System::Windows::Forms::Mouse
 			 }
 
 }
+=======
+	private: System::Void newGameToolStripMenuItem_Click(System::Object^  sender, System::EventArgs^  e) {
+
+				 g->DrawImage(starfieldgrid_png, 0, 0, LrgGridSize, LrgGridSize);
+				 g2->DrawImage(starfieldempty_png, 0, 0, 240, 240); //[Added 4/6/2015] Creates Empty starfield in PictureBox 2
+				 g2->DrawImage(Ship_1_horizontalpng, 160, 285, 25, 25); //[Added 4/6/2015] Creates Frigate underneath starfield in PictureBox 2
+				 g2->DrawImage(Ship_2_horizontalpng, 150, 250, 50, 25); //[Added 4/6/2015] Creates Stealth Ship underneath starfield in PictureBox 2
+				 g2->DrawImage(Ship_3_horizontalpng, 25, 250, 75, 25); //[Added 4/6/2015] Creates Cruiser underneath starfield in PictureBox 2
+				 g2->DrawImage(Ship_4_horizontalpng, 25, 283, 100, 25); //[Added 4/6/2015] Creates BattleShip underneath starfield in PictureBox 2
+				 g2->DrawImage(Ship_5_horizontalpng, 25, 315, 125, 25); //[Added 4/6/2015] Creates Carrier underneath starfield in PictureBox 2
+
+				 button1->Show();
+				 PlayerClass.setStart(true);
+	}
+
+	
+	private: System::Void menuStrip1_ItemClicked(System::Object^  sender, System::Windows::Forms::ToolStripItemClickedEventArgs^  e) {
+	}
+>>>>>>> origin/master
 };
 }
+
 
 /*
 System::Void Computer_move()
@@ -1113,25 +1304,6 @@ System::Void Computer_move()
 	int y = rand() % 40 + 0;
 	//Box1[x, y]->status = 'r';
 
-/*
-Void draw_grid(){
-
-	for (int row = 0; row < NUMROWS; row++){
-		for (int col = 0; col < NUMCOLS; col++){
-			int x = col * LRGCELLSIZE;
-			int y = row * LRGCELLSIZE;
-
-			Rectangle grids = Rectangle(x, y, LRGCELLSIZE - 1, LRGCELLSIZE - 1);
-			g->DrawRectangle(blackBrush, grids);
-		}
-	}
-}
-
-
-
-
-
-*/
 
 //notes
 /*

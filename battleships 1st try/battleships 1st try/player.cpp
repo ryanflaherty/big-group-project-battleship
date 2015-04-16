@@ -43,16 +43,11 @@ void player::set_ship(bool ship)
 }
 
 
-//
-player5cell::player5cell()
+bool player::getStart()
 {
-
+	return gameStart;
 }
-player5cell::player5cell(bool hit)
+void player::setStart(bool start)
 {
-	Cell1Hit = hit;
-	Cell2Hit = hit;
-	Cell3Hit = hit;
-	Cell4Hit = hit;
-	Cell5Hit = hit;
+	gameStart = start;
 }

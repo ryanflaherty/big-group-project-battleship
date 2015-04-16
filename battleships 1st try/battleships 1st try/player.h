@@ -4,15 +4,20 @@ using namespace System::Drawing;
 ref class player
 {
 private:
+	bool gameStart;
+
+
 	int x;
 	int y;
 	bool has_ship;
+
 public:
 	player();
 	player(int , int , char);
 	char status;
 
-
+	bool getStart();
+	void setStart(bool);
 
 
 	int get_x();
