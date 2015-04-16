@@ -33,7 +33,7 @@ namespace Project1 {
 		/// <summary>
 		/// Clean up any resources being used.
 		/// </summary>
-		MyForm()
+		~MyForm()
 		{
 			if (components)
 			{
@@ -59,10 +59,10 @@ namespace Project1 {
 		//array <player^, 2>^ PLAYER_GRID;
 
 		/////GRAPHICS//////////////	 
-		Graphics^ g;
-		Graphics^ g2; //[Added 4/2/2015] Picture Box 2
+		//Graphics^ g;
+		//Graphics^ g2; //[Added 4/2/2015] Picture Box 2
 		Graphics^ gselect; //[Added 4/6/2015] This is for the Cursor
-		Pen^ blackBrush;
+		//Pen^ blackBrush;
 		Brush^ WhiteBrush;
 		///Bitmap^ MapGrid = gcnew Bitmap("Graphics/(50x250)_Colony_CarrierShip_[5Cells].png");
 		//Bitmap^ Ship_5 = gcnew Bitmap("Graphics/(250x50)_Colony_CarrierShip_[5Cells].png");
@@ -372,6 +372,7 @@ namespace Project1 {
 	}
 
 private: System::Void button1_Click(System::Object^  sender, System::EventArgs^  e) {
+			 /*
 			 S = 1; 
 			 Box1 = gcnew array<player^, 2>(12, 12);
 			 for (int row = 0; row < numrow; row++)
@@ -392,7 +393,7 @@ private: System::Void button1_Click(System::Object^  sender, System::EventArgs^ 
 			 g2->DrawImage(Ship_2_verticalpng, 0, 51);
 			 g2->DrawImage(Ship_3_verticalpng, 0, 151);
 			 g2->DrawImage(Ship_4_verticalpng, 0, 301);
-			 g2->DrawImage(Ship_5_verticalpng, 51, 0);
+			 g2->DrawImage(Ship_5_verticalpng, 51, 0);*/
 			 /*
 			 g2->DrawImage(B12, 102, 0);
 			 g2->DrawImage(B32, 102, 51);
@@ -663,11 +664,13 @@ private: System::Void button1_Click(System::Object^  sender, System::EventArgs^ 
 				 }
 	}
 			 
-	private: System::Void button1_Click(System::Object^  sender, System::EventArgs^  e) //START GAME
-	{
-				 g2->DrawImage(starfieldempty_png, 0, 0, SmallGridSize, SmallGridSize); //[Added 4/2/2015]
+	//private: System::Void button1_Click(System::Object^  sender, System::EventArgs^  e) //START GAME
+	//{
+	//			 g2->DrawImage(starfieldempty_png, 0, 0, SmallGridSize, SmallGridSize); //[Added 4/2/2015]
 
-	}
+	//}
+
+	/*
 	private: System::Void MouseD(System::Object^  sender, System::Windows::Forms::MouseEventArgs^  e) 
 	{
 				 if (PlayerClass.getStart())
@@ -685,7 +688,9 @@ private: System::Void button1_Click(System::Object^  sender, System::EventArgs^ 
 					 }
 				 }
 
-	}
+	}*/
+
+
 	private: System::Void easyToolStripMenuItem_Click(System::Object^  sender, System::EventArgs^  e) {
 	}
 
@@ -1243,7 +1248,7 @@ private: System::Void MM2(System::Object^  sender, System::Windows::Forms::Mouse
 
 }
 	private: System::Void newGameToolStripMenuItem_Click(System::Object^  sender, System::EventArgs^  e) {
-
+				 /*
 				 g->DrawImage(starfieldgrid_png, 0, 0, LrgGridSize, LrgGridSize);
 				 g2->DrawImage(starfieldempty_png, 0, 0, 240, 240); //[Added 4/6/2015] Creates Empty starfield in PictureBox 2
 				 g2->DrawImage(Ship_1_horizontalpng, 160, 285, 25, 25); //[Added 4/6/2015] Creates Frigate underneath starfield in PictureBox 2
@@ -1254,6 +1259,29 @@ private: System::Void MM2(System::Object^  sender, System::Windows::Forms::Mouse
 
 				 button1->Show();
 				 //PlayerClass.setStart(true);
+				 */
+
+				 S = 1;
+				 Box1 = gcnew array<player^, 2>(12, 12);
+				 for (int row = 0; row < numrow; row++)
+				 {
+					 for (int col = 0; col < numcol; col++)
+					 {
+						 Rectangle rect1(row * 50, col * 50, 49, 49);
+						 Box1[row, col] = gcnew player(row, col, 'b');
+						 g->FillRectangle(yellowBrush, rect1);
+
+
+
+					 }
+				 }
+
+
+				 g2->DrawImage(Ship_1_verticalpng, 0, 0);
+				 g2->DrawImage(Ship_2_verticalpng, 0, 51);
+				 g2->DrawImage(Ship_3_verticalpng, 0, 151);
+				 g2->DrawImage(Ship_4_verticalpng, 0, 301);
+				 g2->DrawImage(Ship_5_verticalpng, 51, 0);
 	}
 
 	
