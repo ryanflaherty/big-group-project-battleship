@@ -48,6 +48,15 @@ namespace Project1 {
 
 	private:
 
+<<<<<<< HEAD
+	////////Player Array////
+		array <player^, 2>^ Box1;
+
+	/////GRAPHICS//////////////	 
+		Graphics^ g,^g2,^g3;
+		Pen^ blackBrush;
+		Brush^ yellowBrush;
+=======
 		////////Player Array////
 		//array <player^, 2>^ PLAYER_GRID;
 
@@ -58,6 +67,7 @@ namespace Project1 {
 		Pen^ blackBrush;
 		Brush^ WhiteBrush;
 		///Bitmap^ MapGrid = gcnew Bitmap("Graphics/(50x250)_Colony_CarrierShip_[5Cells].png");
+>>>>>>> origin/master
 		//Bitmap^ Ship_5 = gcnew Bitmap("Graphics/(250x50)_Colony_CarrierShip_[5Cells].png");
 
 		///////////////////// Put Graphics Here /////////////////////////
@@ -104,6 +114,10 @@ namespace Project1 {
 		const char isShip = 'S'; // [Update added 4/2/2015]
 
 	private: System::Windows::Forms::Button^  button1;
+<<<<<<< HEAD
+	private: System::Windows::Forms::PictureBox^  pictureBox3;
+			 /////////////////////
+=======
 	private: System::Windows::Forms::MenuStrip^  menuStrip1;
 	private: System::Windows::Forms::ToolStripMenuItem^  fileToolStripMenuItem;
 	private: System::Windows::Forms::ToolStripMenuItem^  newGameToolStripMenuItem;
@@ -112,6 +126,7 @@ namespace Project1 {
 	private: System::Windows::Forms::ToolStripMenuItem^  easyToolStripMenuItem;
 	private: System::Windows::Forms::ToolStripMenuItem^  hardToolStripMenuItem;
 	private: System::Windows::Forms::ToolStripMenuItem^  hardAsBallsToolStripMenuItem;
+>>>>>>> origin/master
 
 	private:
 		/// <summary>
@@ -131,6 +146,12 @@ namespace Project1 {
 			this->textBox2 = (gcnew System::Windows::Forms::TextBox());
 			this->textBox3 = (gcnew System::Windows::Forms::TextBox());
 			this->button1 = (gcnew System::Windows::Forms::Button());
+<<<<<<< HEAD
+			this->pictureBox3 = (gcnew System::Windows::Forms::PictureBox());
+			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pictureBox1))->BeginInit();
+			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pictureBox2))->BeginInit();
+			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pictureBox3))->BeginInit();
+=======
 			this->menuStrip1 = (gcnew System::Windows::Forms::MenuStrip());
 			this->fileToolStripMenuItem = (gcnew System::Windows::Forms::ToolStripMenuItem());
 			this->newGameToolStripMenuItem = (gcnew System::Windows::Forms::ToolStripMenuItem());
@@ -142,29 +163,33 @@ namespace Project1 {
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pictureBox1))->BeginInit();
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pictureBox2))->BeginInit();
 			this->menuStrip1->SuspendLayout();
+>>>>>>> origin/master
 			this->SuspendLayout();
 			// 
 			// pictureBox1
 			// 
-			this->pictureBox1->BackColor = System::Drawing::Color::White;
-			this->pictureBox1->Location = System::Drawing::Point(75, 75);
+			this->pictureBox1->BackColor = System::Drawing::Color::PowderBlue;
+			this->pictureBox1->Location = System::Drawing::Point(12, 60);
 			this->pictureBox1->Name = L"pictureBox1";
-			this->pictureBox1->Size = System::Drawing::Size(480, 480);
+			this->pictureBox1->Size = System::Drawing::Size(600, 600);
 			this->pictureBox1->TabIndex = 0;
 			this->pictureBox1->TabStop = false;
 			this->pictureBox1->MouseDown += gcnew System::Windows::Forms::MouseEventHandler(this, &MyForm::MouseD);
+			this->pictureBox1->MouseMove += gcnew System::Windows::Forms::MouseEventHandler(this, &MyForm::MM2);
 			// 
 			// pictureBox2
 			// 
-			this->pictureBox2->Location = System::Drawing::Point(589, 215);
+			this->pictureBox2->Location = System::Drawing::Point(628, 75);
 			this->pictureBox2->Name = L"pictureBox2";
-			this->pictureBox2->Size = System::Drawing::Size(240, 340);
+			this->pictureBox2->Size = System::Drawing::Size(100, 500);
 			this->pictureBox2->TabIndex = 1;
 			this->pictureBox2->TabStop = false;
+			this->pictureBox2->MouseDown += gcnew System::Windows::Forms::MouseEventHandler(this, &MyForm::MD);
+			this->pictureBox2->MouseMove += gcnew System::Windows::Forms::MouseEventHandler(this, &MyForm::MM);
 			// 
 			// textBox2
 			// 
-			this->textBox2->Location = System::Drawing::Point(589, 75);
+			this->textBox2->Location = System::Drawing::Point(368, 12);
 			this->textBox2->Name = L"textBox2";
 			this->textBox2->Size = System::Drawing::Size(150, 20);
 			this->textBox2->TabIndex = 3;
@@ -172,14 +197,14 @@ namespace Project1 {
 			// 
 			// textBox3
 			// 
-			this->textBox3->Location = System::Drawing::Point(589, 151);
+			this->textBox3->Location = System::Drawing::Point(368, 38);
 			this->textBox3->Name = L"textBox3";
 			this->textBox3->Size = System::Drawing::Size(150, 20);
 			this->textBox3->TabIndex = 4;
 			// 
 			// button1
 			// 
-			this->button1->Location = System::Drawing::Point(241, 561);
+			this->button1->Location = System::Drawing::Point(681, 621);
 			this->button1->Name = L"button1";
 			this->button1->Size = System::Drawing::Size(108, 39);
 			this->button1->TabIndex = 5;
@@ -187,6 +212,15 @@ namespace Project1 {
 			this->button1->UseVisualStyleBackColor = true;
 			this->button1->Click += gcnew System::EventHandler(this, &MyForm::button1_Click);
 			// 
+<<<<<<< HEAD
+			// pictureBox3
+			// 
+			this->pictureBox3->Location = System::Drawing::Point(734, 75);
+			this->pictureBox3->Name = L"pictureBox3";
+			this->pictureBox3->Size = System::Drawing::Size(250, 250);
+			this->pictureBox3->TabIndex = 6;
+			this->pictureBox3->TabStop = false;
+=======
 			// menuStrip1
 			// 
 			this->menuStrip1->BackColor = System::Drawing::SystemColors::ControlLightLight;
@@ -253,12 +287,14 @@ namespace Project1 {
 			this->hardAsBallsToolStripMenuItem->Name = L"hardAsBallsToolStripMenuItem";
 			this->hardAsBallsToolStripMenuItem->Size = System::Drawing::Size(141, 22);
 			this->hardAsBallsToolStripMenuItem->Text = L"Hard as Balls";
+>>>>>>> origin/master
 			// 
 			// MyForm
 			// 
 			this->AutoScaleDimensions = System::Drawing::SizeF(6, 13);
 			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::Font;
-			this->ClientSize = System::Drawing::Size(884, 612);
+			this->ClientSize = System::Drawing::Size(987, 666);
+			this->Controls->Add(this->pictureBox3);
 			this->Controls->Add(this->button1);
 			this->Controls->Add(this->textBox3);
 			this->Controls->Add(this->textBox2);
@@ -271,13 +307,37 @@ namespace Project1 {
 			this->Load += gcnew System::EventHandler(this, &MyForm::MyForm_Load);
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pictureBox1))->EndInit();
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pictureBox2))->EndInit();
+<<<<<<< HEAD
+			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pictureBox3))->EndInit();
+=======
 			this->menuStrip1->ResumeLayout(false);
 			this->menuStrip1->PerformLayout();
+>>>>>>> origin/master
 			this->ResumeLayout(false);
 			this->PerformLayout();
 
 		}
 #pragma endregion
+<<<<<<< HEAD
+		int S = 0;
+		int numrow = 12;
+		int numcol = 12;
+		int getX;
+		int getY;
+		int t=0;
+		int p;
+		int x1;
+		int y1;
+		int x2;
+		int y2;
+	//private: System::Void MyForm_Load(System::Object^  sender, System::EventArgs^  e) {
+	//}
+	private: System::Void MyForm_Load(System::Object^  sender, System::EventArgs^  e) {
+
+				 /*
+	private: System::Void MyForm_Load(System::Object^  sender, System::EventArgs^  e) 
+	{*/
+=======
 
 		player PlayerClass;
 
@@ -288,8 +348,9 @@ namespace Project1 {
 	private: System::Void MyForm_Load(System::Object^  sender, System::EventArgs^  e) {
 
 				 /*
+>>>>>>> origin/master
 				 g = pictureBox1->CreateGraphics();
-				 Box1 = gcnew array<player^, 2>(40, 40);
+				 Box1 = gcnew array<player^, 2>(12, 12);
 				 for (int row = 0; row < numrow; row++)
 				 {
 				 for (int col = 0; col < numcol; col++)
@@ -301,6 +362,16 @@ namespace Project1 {
 
 
 
+<<<<<<< HEAD
+					 }
+				 }/*
+	
+				 */
+
+				 g = pictureBox1->CreateGraphics();
+				 g2 = pictureBox2->CreateGraphics();
+				 g3 = pictureBox3->CreateGraphics();
+=======
 				 }
 				 }
 
@@ -312,9 +383,10 @@ namespace Project1 {
 				
 				 gselect = pictureBox1->CreateGraphics(); //[Added 4/6/2015] creates target in pictureBox1
 
+>>>>>>> origin/master
 				 blackBrush = gcnew System::Drawing::Pen(Color::Black);
 
-				 WhiteBrush = gcnew System::Drawing::SolidBrush(Color::White);
+				 yellowBrush = gcnew System::Drawing::SolidBrush(Color::White);
 
 				 button1->Hide();
 				 textBox2->Hide();
@@ -327,6 +399,297 @@ namespace Project1 {
 	{
 	}
 
+<<<<<<< HEAD
+private: System::Void button1_Click(System::Object^  sender, System::EventArgs^  e) {
+			 S = 1; 
+			 Box1 = gcnew array<player^, 2>(12, 12);
+			 for (int row = 0; row < numrow; row++)
+			 {
+				 for (int col = 0; col < numcol; col++)
+				 {
+					 Rectangle rect1(row * 50, col * 50, 49, 49);
+					 Box1[row, col] = gcnew player(row, col, 'b');
+					 g->FillRectangle(yellowBrush, rect1);
+
+
+
+				 }
+			 }
+			
+			
+			 g2->DrawImage(Ship_1_verticalpng, 0, 0);
+			 g2->DrawImage(Ship_2_verticalpng, 0, 51);
+			 g2->DrawImage(Ship_3_verticalpng, 0, 151);
+			 g2->DrawImage(Ship_4_verticalpng, 0, 301);
+			 g2->DrawImage(Ship_5_verticalpng, 51, 0);
+			 /*
+			 g2->DrawImage(B12, 102, 0);
+			 g2->DrawImage(B32, 102, 51);
+			 g2->DrawImage(B42, 102, 101);
+			 g2->DrawImage(B52, 102, 151);*/
+}
+private: System::Void MouseD(System::Object^  sender, System::Windows::Forms::MouseEventArgs^  e) {
+			/* Rectangle WhiteRect = Rectangle(e->X - (e->X % LRGCELLSIZE), e->Y - (e->Y % LRGCELLSIZE), LRGCELLSIZE - 1, LRGCELLSIZE - 1);
+			 g->DrawImage(MapGrid, 0, 0, 480, 480);
+			 g->FillRectangle(yellowBrush, WhiteRect);*/
+			 getX = e->X - (e->X % 50);
+			 getY = e->Y - (e->Y % 50);
+			 x1 = getX / 50;
+			 y1 = getY / 50;
+			 y2 = getY / 50 + 1;
+			 x2 = getX / 50 + 1;
+			 //	 S =0;
+			 if (Box1[x1, y1]->status == 'b')
+			 {
+				 if (p == 1)
+				 {
+					 Rectangle rect2(getX, getY, 49, 49);
+					 g->FillRectangle(yellowBrush, rect2);
+					 g->DrawImage(Ship_1_verticalpng, getX, getY);
+					 Box1[x1, y1]->status = 'c';
+				 }
+				 if (p == 12)
+				 {
+					 Rectangle rect2(getX, getY, 49, 49);
+					 g->FillRectangle(yellowBrush, rect2);
+					 g->DrawImage(Ship_1_horizontalpng, getX, getY);
+					 Box1[x1, y1]->status = 'c';
+				 }
+			 }
+
+			 if (p == 2)
+			 {
+				 if (y1 + 1 < 12)
+				 {
+					 if (Box1[x1, y1]->status == 'b'&&Box1[x1, y1 + 1]->status == 'b')
+					 {
+						 Rectangle rect2(getX, getY, 49, 49);
+						 g->FillRectangle(yellowBrush, rect2);
+						 g->DrawImage(Ship_2_verticalpng, getX, getY);
+						 Box1[x1, y1]->status = 'c';
+
+						 Box1[x1, y2]->status = 'c';
+					 }
+				 }
+				 else
+				 {
+					 if (Box1[x1, y1]->status == 'b'&&Box1[x1, y1 - 1]->status == 'b')
+					 {
+						 Rectangle rect2(getX, getY, 49, 49);
+						 g->FillRectangle(yellowBrush, rect2);
+						 g->DrawImage(Ship_2_verticalpng, getX, getY - 50);
+						 Box1[x1, y1]->status = 'c';
+
+						 Box1[x1, y1 - 1]->status = 'c';
+					 }
+				 }
+
+			 }
+			 if (p == 22)
+			 {
+				 if (x1 + 1 < 12)
+				 {
+					 if (Box1[x1, y1]->status == 'b'&&Box1[x1 + 1, y1]->status == 'b')
+					 {
+						 Rectangle rect2(getX, getY, 49, 49);
+						 g->FillRectangle(yellowBrush, rect2);
+						 g->DrawImage(Ship_2_horizontalpng, getX, getY);
+						 Box1[x1, y1]->status = 'c';
+						 Box1[x2, y1]->status = 'c';
+					 }
+				 }
+				 else
+				 {
+					 if (Box1[x1, y1]->status == 'b'&&Box1[x1 - 1, y1]->status == 'b')
+					 {
+						 Rectangle rect2(getX, getY, 49, 49);
+						 g->FillRectangle(yellowBrush, rect2);
+						 g->DrawImage(Ship_2_horizontalpng, getX - 50, getY);
+						 Box1[x1, y1]->status = 'c';
+						 Box1[x1 - 1, y1]->status = 'c';
+					 }
+				 }
+
+			 }
+			 if (p == 3)
+			 {
+				 if (y1 + 2 < 12)
+				 {
+					 if (Box1[x1, y1]->status == 'b'&&Box1[x1, y1 + 1]->status == 'b'&&Box1[x1, y1 + 2]->status == 'b')
+					 {
+						 Rectangle rect2(getX, getY, 49, 49);
+						 g->FillRectangle(yellowBrush, rect2);
+						 g->DrawImage(Ship_3_verticalpng, getX, getY);
+						 Box1[x1, y1]->status = 'c';
+						 Box1[x1, y1 + 1]->status = 'c';
+						 Box1[x1, y1 + 2]->status = 'c';
+					 }
+				 }
+				 else
+				 {
+					 if (Box1[x1, 11]->status == 'b'&&Box1[x1, 11 - 1]->status == 'b'&&Box1[x1, 11 - 2]->status == 'b')
+					 {
+						 Rectangle rect2(getX, getY, 49, 49);
+						 g->FillRectangle(yellowBrush, rect2);
+						 g->DrawImage(Ship_3_verticalpng, getX, 450);
+						 Box1[x1, 11]->status = 'c';
+						 Box1[x1, 9]->status = 'c';
+						 Box1[x1, 10]->status = 'c';
+					 }
+				 }
+
+			 }
+			 if (p == 32)
+			 {
+				 if (x1 + 2 < 12)
+				 {
+					 if (Box1[x1, y1]->status == 'b'&&Box1[x1 + 1, y1]->status == 'b'&&Box1[x1 + 2, y1]->status == 'b')
+					 {
+						 Rectangle rect2(getX, getY, 49, 49);
+						 g->FillRectangle(yellowBrush, rect2);
+						 g->DrawImage(Ship_3_horizontalpng, getX, getY);
+						 Box1[x1, y1]->status = 'c';
+						 Box1[x1 + 1, y1]->status = 'c';
+						 Box1[x1 + 2, y1]->status = 'c';
+					 }
+				 }
+				 else
+				 {
+					 if (Box1[11, y1]->status == 'b'&&Box1[11 - 1, y1]->status == 'b'&&Box1[11 - 2, y1]->status == 'b')
+					 {
+						 Rectangle rect2(getX, getY, 49, 49);
+						 g->FillRectangle(yellowBrush, rect2);
+						 g->DrawImage(Ship_3_horizontalpng, 450, getY);
+						 Box1[11, y1]->status = 'c';
+						 Box1[11 - 1, y1]->status = 'c';
+						 Box1[11 - 2, y1]->status = 'c';
+					 }
+				 }
+
+			 }
+			 if (p == 4)
+			 {
+				 if (y1 + 3 < 12)
+				 {
+					 if (Box1[x1, y1]->status == 'b'&&Box1[x1, y1 + 1]->status == 'b'&&Box1[x1, y1 + 2]->status == 'b'&&Box1[x1, y1 + 3]->status == 'b')
+					 {
+						 Rectangle rect2(getX, getY, 49, 49);
+						 g->FillRectangle(yellowBrush, rect2);
+						 g->DrawImage(Ship_4_verticalpng, getX, getY);
+						 Box1[x1, y1]->status = 'c';
+						 Box1[x1, y1 + 1]->status = 'c';
+						 Box1[x1, y1 + 2]->status = 'c';
+						 Box1[x1, y1 + 3]->status = 'c';
+					 }
+				 }
+				 else
+				 {
+					 if (Box1[x1, 11]->status == 'b'&&Box1[x1, 11 - 1]->status == 'b'&&Box1[x1, 11 - 2]->status == 'b'&&Box1[x1, 11 - 3]->status == 'b')
+					 {
+						 Rectangle rect2(getX, getY, 49, 49);
+						 g->FillRectangle(yellowBrush, rect2);
+						 g->DrawImage(Ship_4_verticalpng, getX, 400);
+						 Box1[x1, 11]->status = 'c';
+						 Box1[x1, 11 - 1]->status = 'c';
+						 Box1[x1, 11 - 2]->status = 'c';
+						 Box1[x1, 11 - 3]->status = 'c';
+					 }
+				 }
+
+			 }
+			 if (p == 42)
+			 {
+				 if (x1 + 3 < 12)
+				 {
+					 if (Box1[x1, y1]->status == 'b'&&Box1[x1 + 1, y1]->status == 'b'&&Box1[x1 + 2, y1]->status == 'b'&&Box1[x1 + 3, y1]->status == 'b')
+					 {
+						 Rectangle rect2(getX, getY, 49, 49);
+						 g->FillRectangle(yellowBrush, rect2);
+						 g->DrawImage(Ship_4_horizontalpng, getX, getY);
+						 Box1[x1, y1]->status = 'c';
+						 Box1[x1 + 1, y1]->status = 'c';
+						 Box1[x1 + 2, y1]->status = 'c';
+						 Box1[x1 + 3, y1]->status = 'c';
+					 }
+				 }
+				 else
+				 {
+					 if (Box1[11, y1]->status == 'b'&&Box1[11 - 1, y1]->status == 'b'&&Box1[11 - 2, y1]->status == 'b'&&Box1[11 - 3, y1]->status == 'b')
+					 {
+						 Rectangle rect2(getX, getY, 49, 49);
+						 g->FillRectangle(yellowBrush, rect2);
+						 g->DrawImage(Ship_4_horizontalpng, 400, getY);
+						 Box1[11, y1]->status = 'c';
+						 Box1[11 - 1, y1]->status = 'c';
+						 Box1[11 - 2, y1]->status = 'c';
+						 Box1[11 - 3, y1]->status = 'c';
+					 }
+				 }
+
+			 }
+			 if (p == 5)
+			 {
+				 if (y1 + 4 < 12)
+				 {
+					 if (Box1[x1, y1]->status == 'b'&&Box1[x1, y1 + 1]->status == 'b'&&Box1[x1, y1 + 2]->status == 'b'&&Box1[x1, y1 + 3]->status == 'b'&&Box1[x1, y1 + 4]->status == 'b')
+					 {
+						 Rectangle rect2(getX, getY, 49, 49);
+						 g->FillRectangle(yellowBrush, rect2);
+						 g->DrawImage(Ship_5_verticalpng, getX, getY);
+						 Box1[x1, y1]->status = 'c';
+						 Box1[x1, y1 + 1]->status = 'c';
+						 Box1[x1, y1 + 2]->status = 'c';
+						 Box1[x1, y1 + 3]->status = 'c';
+						 Box1[x1, y1 + 4]->status = 'c';
+					 }
+				 }
+				 else
+				 {
+					 if (Box1[x1, 11]->status == 'b'&&Box1[x1, 11 - 1]->status == 'b'&&Box1[x1, 11 - 2]->status == 'b'&&Box1[x1, 11 - 3]->status == 'b'&&Box1[x1, 11 - 4]->status == 'b')
+					 {
+						 Rectangle rect2(getX, getY, 49, 49);
+						 g->FillRectangle(yellowBrush, rect2);
+						 g->DrawImage(Ship_5_verticalpng, getX, 350);
+						 Box1[x1, 11]->status = 'c';
+						 Box1[x1, 11 - 1]->status = 'c';
+						 Box1[x1, 11 - 2]->status = 'c';
+						 Box1[x1, 11 - 3]->status = 'c';
+						 Box1[x1, 11 - 4]->status = 'c';
+					 }
+				 }
+
+			 }
+			 if (p == 52)
+			 {
+				 if (x1 + 4 < 12)
+				 {
+					 if (Box1[x1, y1]->status == 'b'&&Box1[x1 + 1, y1]->status == 'b'&&Box1[x1 + 2, y1]->status == 'b'&&Box1[x1 + 3, y1]->status == 'b'&&Box1[x1 + 4, y1]->status == 'b')
+					 {
+						 Rectangle rect2(getX, getY, 49, 49);
+						 g->FillRectangle(yellowBrush, rect2);
+						 g->DrawImage(Ship_5_horizontalpng, getX, getY);
+						 Box1[x1, y1]->status = 'c';
+						 Box1[x1 + 1, y1]->status = 'c';
+						 Box1[x1 + 2, y1]->status = 'c';
+						 Box1[x1 + 3, y1]->status = 'c';
+						 Box1[x1 + 4, y1]->status = 'c';
+					 }
+				 }
+				 else
+				 {
+					 if (Box1[11, y1]->status == 'b'&&Box1[11 - 1, y1]->status == 'b'&&Box1[11 - 2, y1]->status == 'b'&&Box1[11 - 3, y1]->status == 'b'&&Box1[11 - 4, y1]->status == 'b')
+					 {
+						 Rectangle rect2(getX, getY, 49, 49);
+						 g->FillRectangle(yellowBrush, rect2);
+						 g->DrawImage(Ship_5_horizontalpng, 350, getY);
+						 Box1[11, y1]->status = 'c';
+						 Box1[11 - 1, y1]->status = 'c';
+						 Box1[11 - 2, y1]->status = 'c';
+						 Box1[11 - 3, y1]->status = 'c';
+						 Box1[11 - 4, y1]->status = 'c';
+					 }
+				 }
+=======
 	private: System::Void button1_Click(System::Object^  sender, System::EventArgs^  e) //START GAME
 	{
 				 g2->DrawImage(starfieldempty_png, 0, 0, SmallGridSize, SmallGridSize); //[Added 4/2/2015]
@@ -352,9 +715,564 @@ namespace Project1 {
 	}
 	private: System::Void easyToolStripMenuItem_Click(System::Object^  sender, System::EventArgs^  e) {
 	}
+>>>>>>> origin/master
+
+			 }
+}
+private: System::Void MD(System::Object^  sender, System::Windows::Forms::MouseEventArgs^  e) {
+			 getX = e->X - (e->X % 50);
+			 getY = e->Y - (e->Y % 50);
+			 t++;
+			 pictureBox3->Refresh();
+			 if (getX == 0 && getY == 0)
+			 {
+				 if (t % 2 == 1)
+				 {
+					 g3->DrawImage(Ship_1_verticalpng, getX, getY);
+					 p = 1;
+				 }
+				 else
+				 {
+					 g3->DrawImage(Ship_1_horizontalpng, 0, 0);
+					 p = 12;
+				 }
+
+
+<<<<<<< HEAD
+			 }
+			 if (getX == 0 && getY >= 50 && getY <= 100)
+			 {
+				 if (t % 2 == 1)
+				 {
+					 g3->DrawImage(Ship_2_verticalpng, getX, getY);
+					 p = 2;
+				 }
+				 else
+				 {
+					 g3->DrawImage(Ship_2_horizontalpng, 0, 0);
+					 p = 22;
+				 }
+
+				 // Ship_1_horizontalpng
+			 }
+			 if (getX == 0 && getY >= 150 && getY <= 250)
+			 {
+				 if (t % 2 == 1)
+				 {
+					 g3->DrawImage(Ship_3_verticalpng, getX, 0);
+					 p = 3;
+				 }
+				 else
+				 {
+					 g3->DrawImage(Ship_3_horizontalpng, 0, 0);
+					 p = 32;
+				 }
+
+
+			 }
+			 if (getX == 0 && getY >= 300)
+			 {
+				 if (t % 2 == 1)
+				 {
+					 g3->DrawImage(Ship_4_verticalpng, getX, 0);
+					 p = 4;
+				 }
+				 else
+				 {
+					 g3->DrawImage(Ship_4_horizontalpng, 0, 0);
+					 p = 42;
+				 }
+
+
+			 }
+			 if (getX >= 50)
+			 {
+				 if (t % 2 == 1)
+				 {
+					 g3->DrawImage(Ship_5_verticalpng, 0, 0);
+					 p = 5;
+				 }
+				 else
+				 {
+					 g3->DrawImage(Ship_5_horizontalpng, 0, 0);
+					 p = 52;
+				 }
+
+
+			 }
+		//	 g3->DrawImage(Ship_1_verticalpng, 0, 0);
+}
+private: System::Void MM(System::Object^  sender, System::Windows::Forms::MouseEventArgs^  e) {
+			/* getX = e->X - (e->X % 50);
+			 getY = e->Y - (e->Y % 50);
+			 textBox2->Text = Convert::ToString(getX);*/
+			
+
+
+}
+private: System::Void MM2(System::Object^  sender, System::Windows::Forms::MouseEventArgs^  e) {
+			 if (S != 0)
+			 {
+				 x1 = getX / 50;
+				 y1 = getY / 50;
+
+				 /* Rectangle rect1(getX, getY, 49, 49);
+				 g->FillRectangle(yellowBrush, rect1);
+				 Rectangle rect2(e->X - (e->X %50), e->Y - (e->Y % 50), 49, 49);
+				 g->FillRectangle(WhiteBrush, rect2);
+
+				 getX = e->X - (e->X % 50);
+				 getY = e->Y - (e->Y % 50);*/
+
+				 if (p == 1)
+				 {
+					 if (Box1[x1, y1]->status == 'b'&& Box1[x1, y1]->status != 'c')
+					 {
+						 Rectangle rect1(getX, getY, 49, 49);
+
+
+						 g->FillRectangle(yellowBrush, rect1);
+						 if (Box1[(e->X - (e->X % 50)) / 50, (e->Y - (e->Y % 50)) / 50]->status == 'b')
+						 {
+							 g->DrawImage(Ship_1_verticalpng, e->X - (e->X % 50), e->Y - (e->Y % 50));
+						 }
+					 }
+
+
+				 }
+				 if (p == 12)
+				 {
+					 if (Box1[x1, y1]->status == 'b'&& Box1[x1, y1]->status != 'c')
+					 {
+						 Rectangle rect1(getX, getY, 49, 49);
+
+
+						 g->FillRectangle(yellowBrush, rect1);
+						 if (Box1[(e->X - (e->X % 50)) / 50, (e->Y - (e->Y % 50)) / 50]->status == 'b')
+						 {
+							 g->DrawImage(Ship_1_horizontalpng, e->X - (e->X % 50), e->Y - (e->Y % 50));
+
+						 }
+					 }
+				 }
+
+
+				 if (p == 2)
+				 {
+					 if (y1 + 1 < 12)
+					 {
+						 if (Box1[x1, y1]->status == 'b'&&Box1[x1, y1 + 1]->status == 'b')
+						 {
+							 Rectangle rect1(getX, getY, 49, 49);
+							 Rectangle rect2(getX, getY + 50, 49, 49);
+							 g->FillRectangle(yellowBrush, rect1);
+							 g->FillRectangle(yellowBrush, rect2);
+						 }
+					 }
+					 else
+					 {
+						 if (Box1[x1, y1]->status == 'b'&&Box1[x1, y1 - 1]->status == 'b')
+						 {
+							 Rectangle rect1(getX, getY, 49, 49);
+							 Rectangle rect2(getX, getY - 50, 49, 49);
+							 g->FillRectangle(yellowBrush, rect1);
+							 g->FillRectangle(yellowBrush, rect2);
+						 }
+					 }
+					 if (e->Y < 550)
+					 {
+
+						 if (Box1[(e->X - (e->X % 50)) / 50, (e->Y - (e->Y % 50)) / 50]->status == 'b'&&Box1[(e->X - (e->X % 50)) / 50, (e->Y - (e->Y % 50)) / 50 + 1]->status == 'b')
+						 {
+							 g->DrawImage(Ship_2_verticalpng, e->X - (e->X % 50), e->Y - (e->Y % 50));
+						 }
+					 }
+					 else
+					 {
+						 if (Box1[(e->X - (e->X % 50)) / 50, (e->Y - (e->Y % 50)) / 50]->status == 'b'&&Box1[(e->X - (e->X % 50)) / 50, (e->Y - (e->Y % 50)) / 50 - 1]->status == 'b')
+						 {
+							 g->DrawImage(Ship_2_verticalpng, e->X - (e->X % 50), 500);
+						 }
+
+					 }
 
 
 
+
+
+
+
+				 }
+
+				 if (p == 22)
+				 {
+					 if (x1 + 1 < 12)
+					 {
+						 if (Box1[x1 + 1, y1]->status == 'b'&&Box1[x1, y1]->status == 'b')
+						 {
+
+
+							 Rectangle rect2(getX, getY, 49, 49);
+							 g->FillRectangle(yellowBrush, rect2);
+							 Rectangle rect1(getX + 50, getY, 49, 49);
+							 g->FillRectangle(yellowBrush, rect1);
+
+						 }
+
+					 }
+					 else
+					 {
+						 if (Box1[x1 - 1, y1]->status == 'b'&&Box1[x1, y1]->status == 'b')
+						 {
+
+
+							 Rectangle rect2(getX, getY, 49, 49);
+							 g->FillRectangle(yellowBrush, rect2);
+							 Rectangle rect1(getX - 50, getY, 49, 49);
+							 g->FillRectangle(yellowBrush, rect1);
+
+						 }
+					 }
+					 if (e->X < 550)
+					 {
+						 if (Box1[(e->X - (e->X % 50)) / 50 + 1, (e->Y - (e->Y % 50)) / 50]->status == 'b'&&Box1[(e->X - (e->X % 50)) / 50, (e->Y - (e->Y % 50)) / 50]->status == 'b')
+						 {
+							 g->DrawImage(Ship_2_horizontalpng, e->X - (e->X % 50), e->Y - (e->Y % 50));
+						 }
+
+					 }
+					 else
+					 {
+						 if (Box1[(e->X - (e->X % 50)) / 50 - 1, (e->Y - (e->Y % 50)) / 50]->status == 'b'&&Box1[(e->X - (e->X % 50)) / 50, (e->Y - (e->Y % 50)) / 50]->status == 'b')
+						 {
+							 g->DrawImage(Ship_2_horizontalpng, 500, e->Y - (e->Y % 50));
+						 }
+
+					 }
+
+
+
+
+
+				 }
+
+
+				 if (p == 3)
+				 {
+					 if (y1 + 2 < 12)
+					 {
+
+						 if (Box1[x1, y1]->status == 'b'&& Box1[x1, y1 + 1]->status == 'b'&&Box1[x1, y1 + 2]->status == 'b')
+						 {
+							 Rectangle rect1(getX, getY, 49, 49);
+							 g->FillRectangle(yellowBrush, rect1);
+							 Rectangle rect2(getX, getY + 50, 49, 49);
+							 g->FillRectangle(yellowBrush, rect2);
+							 Rectangle rect3(getX, getY + 100, 49, 49);
+							 g->FillRectangle(yellowBrush, rect3);
+						 }
+					 }
+					 else
+					 {
+						 if (Box1[x1, 11]->status == 'b'&& Box1[x1, 10]->status == 'b'&&Box1[x1, 9]->status == 'b')
+						 {
+							 Rectangle rect1(getX, 450, 49, 49);
+							 g->FillRectangle(yellowBrush, rect1);
+							 Rectangle rect2(getX, 500, 49, 49);
+							 g->FillRectangle(yellowBrush, rect2);
+							 Rectangle rect3(getX, 550, 49, 49);
+							 g->FillRectangle(yellowBrush, rect3);
+						 }
+					 }
+					 if (e->Y < 500)
+					 {
+						 if (Box1[(e->X - (e->X % 50)) / 50, (e->Y - (e->Y % 50)) / 50 + 1]->status == 'b'&&Box1[(e->X - (e->X % 50)) / 50, (e->Y - (e->Y % 50)) / 50]->status == 'b'&&Box1[(e->X - (e->X % 50)) / 50, (e->Y - (e->Y % 50)) / 50 + 2]->status == 'b')
+						 {
+							 g->DrawImage(Ship_3_verticalpng, e->X - (e->X % 50), e->Y - (e->Y % 50));
+						 }
+
+					 }
+					 else
+					 {
+						 if (Box1[(e->X - (e->X % 50)) / 50, 11]->status == 'b'&&Box1[(e->X - (e->X % 50)) / 50, 10]->status == 'b'&&Box1[(e->X - (e->X % 50)) / 50, 9]->status == 'b')
+						 {
+							 g->DrawImage(Ship_3_verticalpng, e->X - (e->X % 50), 450);
+						 }
+
+					 }
+
+
+
+				 }
+				 if (p == 32)
+				 {
+					 if (x1 + 2 < 12)
+					 {
+
+						 if (Box1[x1, y1]->status == 'b'&& Box1[x1 + 1, y1]->status == 'b'&&Box1[x1 + 2, y1]->status == 'b')
+						 {
+							 Rectangle rect1(getX, getY, 49, 49);
+							 g->FillRectangle(yellowBrush, rect1);
+							 Rectangle rect2(getX + 50, getY, 49, 49);
+							 g->FillRectangle(yellowBrush, rect2);
+							 Rectangle rect3(getX + 100, getY, 49, 49);
+							 g->FillRectangle(yellowBrush, rect3);
+						 }
+					 }
+					 else
+					 {
+						 if (Box1[10, y1]->status == 'b'&& Box1[11, y1]->status == 'b'&&Box1[9, y1]->status == 'b')
+						 {
+							 Rectangle rect1(450, getY, 49, 49);
+							 g->FillRectangle(yellowBrush, rect1);
+							 Rectangle rect2(500, getY, 49, 49);
+							 g->FillRectangle(yellowBrush, rect2);
+							 Rectangle rect3(550, getY, 49, 49);
+							 g->FillRectangle(yellowBrush, rect3);
+						 }
+					 }
+					 if (e->X < 500)
+					 {
+						 if (Box1[(e->X - (e->X % 50)) / 50 + 1, (e->Y - (e->Y % 50)) / 50]->status == 'b'&&Box1[(e->X - (e->X % 50)) / 50, (e->Y - (e->Y % 50)) / 50]->status == 'b'&&Box1[(e->X - (e->X % 50)) / 50 + 2, (e->Y - (e->Y % 50)) / 50]->status == 'b')
+						 {
+							 g->DrawImage(Ship_3_horizontalpng, e->X - (e->X % 50), e->Y - (e->Y % 50));
+						 }
+
+					 }
+					 else
+					 {
+						 if (Box1[11, (e->Y - (e->Y % 50)) / 50]->status == 'b'&&Box1[10, (e->Y - (e->Y % 50)) / 50]->status == 'b'&&Box1[9, (e->Y - (e->Y % 50)) / 50]->status == 'b')
+						 {
+							 g->DrawImage(Ship_3_horizontalpng, 450, e->Y - (e->Y % 50));
+						 }
+
+					 }
+
+
+
+				 }
+				 if (p == 4)
+				 {
+					 if (y1 + 3 < 12)
+					 {
+
+						 if (Box1[x1, y1]->status == 'b'&& Box1[x1, y1 + 1]->status == 'b'&&Box1[x1, y1 + 2]->status == 'b'&&Box1[x1, y1 + 3]->status == 'b')
+						 {
+							 Rectangle rect1(getX, getY, 49, 49);
+							 g->FillRectangle(yellowBrush, rect1);
+							 Rectangle rect2(getX, getY + 50, 49, 49);
+							 g->FillRectangle(yellowBrush, rect2);
+							 Rectangle rect3(getX, getY + 100, 49, 49);
+							 g->FillRectangle(yellowBrush, rect3);
+							 Rectangle rect4(getX, getY + 150, 49, 49);
+							 g->FillRectangle(yellowBrush, rect4);
+						 }
+					 }
+					 else
+					 {
+						 if (Box1[x1, 11]->status == 'b'&& Box1[x1, 10]->status == 'b'&&Box1[x1, 9]->status == 'b'&&Box1[x1, 8]->status == 'b')
+						 {
+							 Rectangle rect1(getX, 450, 49, 49);
+							 g->FillRectangle(yellowBrush, rect1);
+							 Rectangle rect2(getX, 500, 49, 49);
+							 g->FillRectangle(yellowBrush, rect2);
+							 Rectangle rect3(getX, 550, 49, 49);
+							 g->FillRectangle(yellowBrush, rect3);
+							 Rectangle rect4(getX, 400, 49, 49);
+							 g->FillRectangle(yellowBrush, rect4);
+						 }
+					 }
+					 if (e->Y < 450)
+					 {
+						 if (Box1[(e->X - (e->X % 50)) / 50, (e->Y - (e->Y % 50)) / 50 + 1]->status == 'b'&&Box1[(e->X - (e->X % 50)) / 50, (e->Y - (e->Y % 50)) / 50]->status == 'b'&&Box1[(e->X - (e->X % 50)) / 50, (e->Y - (e->Y % 50)) / 50 + 2]->status == 'b'&&Box1[(e->X - (e->X % 50)) / 50, (e->Y - (e->Y % 50)) / 50 + 3]->status == 'b')
+						 {
+							 g->DrawImage(Ship_4_verticalpng, e->X - (e->X % 50), e->Y - (e->Y % 50));
+						 }
+
+					 }
+					 else
+					 {
+						 if (Box1[(e->X - (e->X % 50)) / 50, 11]->status == 'b'&&Box1[(e->X - (e->X % 50)) / 50, 10]->status == 'b'&&Box1[(e->X - (e->X % 50)) / 50, 9]->status == 'b'&&Box1[(e->X - (e->X % 50)) / 50, 8]->status == 'b')
+						 {
+							 g->DrawImage(Ship_4_verticalpng, e->X - (e->X % 50), 400);
+						 }
+
+					 }
+
+
+
+				 }
+				 if (p == 42)
+				 {
+					 if (x1 + 3 < 12)
+					 {
+
+						 if (Box1[x1, y1]->status == 'b'&& Box1[x1 + 1, y1]->status == 'b'&&Box1[x1 + 2, y1]->status == 'b'&&Box1[x1 + 3, y1]->status == 'b')
+						 {
+							 Rectangle rect1(getX, getY, 49, 49);
+							 g->FillRectangle(yellowBrush, rect1);
+							 Rectangle rect2(getX + 50, getY, 49, 49);
+							 g->FillRectangle(yellowBrush, rect2);
+							 Rectangle rect3(getX + 100, getY, 49, 49);
+							 g->FillRectangle(yellowBrush, rect3);
+							 Rectangle rect4(getX + 150, getY, 49, 49);
+							 g->FillRectangle(yellowBrush, rect4);
+						 }
+					 }
+					 else
+					 {
+						 if (Box1[10, y1]->status == 'b'&& Box1[11, y1]->status == 'b'&&Box1[9, y1]->status == 'b'&&Box1[8, y1]->status == 'b')
+						 {
+							 Rectangle rect1(450, getY, 49, 49);
+							 g->FillRectangle(yellowBrush, rect1);
+							 Rectangle rect2(500, getY, 49, 49);
+							 g->FillRectangle(yellowBrush, rect2);
+							 Rectangle rect3(550, getY, 49, 49);
+							 g->FillRectangle(yellowBrush, rect3);
+							 Rectangle rect4(400, getY, 49, 49);
+							 g->FillRectangle(yellowBrush, rect4);
+						 }
+					 }
+					 if (e->X < 450)
+					 {
+						 if (Box1[(e->X - (e->X % 50)) / 50 + 1, (e->Y - (e->Y % 50)) / 50]->status == 'b'&&Box1[(e->X - (e->X % 50)) / 50, (e->Y - (e->Y % 50)) / 50]->status == 'b'&&Box1[(e->X - (e->X % 50)) / 50 + 2, (e->Y - (e->Y % 50)) / 50]->status == 'b'&&Box1[(e->X - (e->X % 50)) / 50 + 3, (e->Y - (e->Y % 50)) / 50]->status == 'b')
+						 {
+							 g->DrawImage(Ship_4_horizontalpng, e->X - (e->X % 50), e->Y - (e->Y % 50));
+						 }
+
+					 }
+					 else
+					 {
+						 if (Box1[11, (e->Y - (e->Y % 50)) / 50]->status == 'b'&&Box1[10, (e->Y - (e->Y % 50)) / 50]->status == 'b'&&Box1[9, (e->Y - (e->Y % 50)) / 50]->status == 'b'&&Box1[8, (e->Y - (e->Y % 50)) / 50]->status == 'b')
+						 {
+							 g->DrawImage(Ship_4_horizontalpng, 400, e->Y - (e->Y % 50));
+						 }
+
+					 }
+
+
+
+				 }
+				 if (p == 5)
+				 {
+					 if (y1 + 4 < 12)
+					 {
+
+						 if (Box1[x1, y1]->status == 'b'&& Box1[x1, y1 + 1]->status == 'b'&&Box1[x1, y1 + 2]->status == 'b'&&Box1[x1, y1 + 3]->status == 'b'&&Box1[x1, y1 + 4]->status == 'b')
+						 {
+							 Rectangle rect1(getX, getY, 49, 49);
+							 g->FillRectangle(yellowBrush, rect1);
+							 Rectangle rect2(getX, getY + 50, 49, 49);
+							 g->FillRectangle(yellowBrush, rect2);
+							 Rectangle rect3(getX, getY + 100, 49, 49);
+							 g->FillRectangle(yellowBrush, rect3);
+							 Rectangle rect4(getX, getY + 150, 49, 49);
+							 g->FillRectangle(yellowBrush, rect4);
+							 Rectangle rect5(getX, getY + 200, 49, 49);
+							 g->FillRectangle(yellowBrush, rect5);
+						 }
+					 }
+					 else
+					 {
+						 if (Box1[x1, 11]->status == 'b'&& Box1[x1, 10]->status == 'b'&&Box1[x1, 9]->status == 'b'&&Box1[x1, 8]->status == 'b'&&Box1[x1, 7]->status == 'b')
+						 {
+							 Rectangle rect1(getX, 450, 49, 49);
+							 g->FillRectangle(yellowBrush, rect1);
+							 Rectangle rect2(getX, 500, 49, 49);
+							 g->FillRectangle(yellowBrush, rect2);
+							 Rectangle rect3(getX, 550, 49, 49);
+							 g->FillRectangle(yellowBrush, rect3);
+							 Rectangle rect4(getX, 400, 49, 49);
+							 g->FillRectangle(yellowBrush, rect4);
+							 Rectangle rect5(getX, 350, 49, 49);
+							 g->FillRectangle(yellowBrush, rect5);
+						 }
+					 }
+					 if (e->Y < 400)
+					 {
+						 if (Box1[(e->X - (e->X % 50)) / 50, (e->Y - (e->Y % 50)) / 50 + 1]->status == 'b'&&Box1[(e->X - (e->X % 50)) / 50, (e->Y - (e->Y % 50)) / 50]->status == 'b'&&Box1[(e->X - (e->X % 50)) / 50, (e->Y - (e->Y % 50)) / 50 + 2]->status == 'b'&&Box1[(e->X - (e->X % 50)) / 50, (e->Y - (e->Y % 50)) / 50 + 3]->status == 'b'&&Box1[(e->X - (e->X % 50)) / 50, (e->Y - (e->Y % 50)) / 50 + 4]->status == 'b')
+						 {
+							 g->DrawImage(Ship_5_verticalpng, e->X - (e->X % 50), e->Y - (e->Y % 50));
+						 }
+
+					 }
+					 else
+					 {
+						 if (Box1[(e->X - (e->X % 50)) / 50, 11]->status == 'b'&&Box1[(e->X - (e->X % 50)) / 50, 10]->status == 'b'&&Box1[(e->X - (e->X % 50)) / 50, 9]->status == 'b'&&Box1[(e->X - (e->X % 50)) / 50, 8]->status == 'b'&&Box1[(e->X - (e->X % 50)) / 50, 7]->status == 'b')
+						 {
+							 g->DrawImage(Ship_5_verticalpng, e->X - (e->X % 50), 350);
+						 }
+
+					 }
+
+
+
+				 }
+				 if (p == 52)
+				 {
+					 if (x1 + 4 < 12)
+					 {
+
+						 if (Box1[x1, y1]->status == 'b'&& Box1[x1 + 1, y1]->status == 'b'&&Box1[x1 + 2, y1]->status == 'b'&&Box1[x1 + 3, y1]->status == 'b'&&Box1[x1 + 4, y1]->status == 'b')
+						 {
+							 Rectangle rect1(getX, getY, 49, 49);
+							 g->FillRectangle(yellowBrush, rect1);
+							 Rectangle rect2(getX + 50, getY, 49, 49);
+							 g->FillRectangle(yellowBrush, rect2);
+							 Rectangle rect3(getX + 100, getY, 49, 49);
+							 g->FillRectangle(yellowBrush, rect3);
+							 Rectangle rect4(getX + 150, getY, 49, 49);
+							 g->FillRectangle(yellowBrush, rect4);
+							 Rectangle rect5(getX + 200, getY, 49, 49);
+							 g->FillRectangle(yellowBrush, rect5);
+						 }
+					 }
+					 else
+					 {
+						 if (Box1[10, y1]->status == 'b'&& Box1[11, y1]->status == 'b'&&Box1[9, y1]->status == 'b'&&Box1[8, y1]->status == 'b'&&Box1[7, y1]->status == 'b')
+						 {
+							 Rectangle rect1(450, getY, 49, 49);
+							 g->FillRectangle(yellowBrush, rect1);
+							 Rectangle rect2(500, getY, 49, 49);
+							 g->FillRectangle(yellowBrush, rect2);
+							 Rectangle rect3(550, getY, 49, 49);
+							 g->FillRectangle(yellowBrush, rect3);
+							 Rectangle rect4(400, getY, 49, 49);
+							 g->FillRectangle(yellowBrush, rect4);
+							 Rectangle rect5(350, getY, 49, 49);
+							 g->FillRectangle(yellowBrush, rect5);
+						 }
+					 }
+					 if (e->X < 400)
+					 {
+						 if (Box1[(e->X - (e->X % 50)) / 50 + 1, (e->Y - (e->Y % 50)) / 50]->status == 'b'&&Box1[(e->X - (e->X % 50)) / 50, (e->Y - (e->Y % 50)) / 50]->status == 'b'&&Box1[(e->X - (e->X % 50)) / 50 + 2, (e->Y - (e->Y % 50)) / 50]->status == 'b'&&Box1[(e->X - (e->X % 50)) / 50 + 3, (e->Y - (e->Y % 50)) / 50]->status == 'b'&&Box1[(e->X - (e->X % 50)) / 50 + 4, (e->Y - (e->Y % 50)) / 50]->status == 'b')
+						 {
+							 g->DrawImage(Ship_5_horizontalpng, e->X - (e->X % 50), e->Y - (e->Y % 50));
+						 }
+
+					 }
+					 else
+					 {
+						 if (Box1[11, (e->Y - (e->Y % 50)) / 50]->status == 'b'&&Box1[10, (e->Y - (e->Y % 50)) / 50]->status == 'b'&&Box1[9, (e->Y - (e->Y % 50)) / 50]->status == 'b'&&Box1[8, (e->Y - (e->Y % 50)) / 50]->status == 'b'&&Box1[7, (e->Y - (e->Y % 50)) / 50]->status == 'b')
+						 {
+							 g->DrawImage(Ship_5_horizontalpng, 350, e->Y - (e->Y % 50));
+						 }
+
+					 }
+
+
+
+				 }
+				 getX = e->X - (e->X % 50);
+				 getY = e->Y - (e->Y % 50);
+
+
+				 //textBox1->Text = Convert::ToString(x1);
+				 //textBox2->Text = Convert::ToString(y1);
+			 }
+
+}
+=======
 	private: System::Void newGameToolStripMenuItem_Click(System::Object^  sender, System::EventArgs^  e) {
 
 				 g->DrawImage(starfieldgrid_png, 0, 0, LrgGridSize, LrgGridSize);
@@ -372,6 +1290,7 @@ namespace Project1 {
 	
 	private: System::Void menuStrip1_ItemClicked(System::Object^  sender, System::Windows::Forms::ToolStripItemClickedEventArgs^  e) {
 	}
+>>>>>>> origin/master
 };
 }
 
