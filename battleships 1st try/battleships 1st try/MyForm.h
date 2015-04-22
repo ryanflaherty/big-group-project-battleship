@@ -345,7 +345,6 @@ namespace Project1 {
 						 Rectangle WhiteRect = Rectangle(new_x + 1, new_y + 1, LRGCELLSIZE - 1, LRGCELLSIZE - 1);
 						 g->DrawImage(starfieldgrid_png, 0, 0, LrgGridSize, LrgGridSize);
 						 gselect->DrawImage(select_png, new_x + 1, new_y + 1, LRGCELLSIZE, LRGCELLSIZE); //[Added 4/6/2015] creates target on the cell clicked
-						 //g->FillRectangle(WhiteBrush, WhiteRect); //Commented out to replace whitebrush with target
 					 }
 				 }
 
