@@ -57,20 +57,14 @@ namespace Project1 {
 		Graphics^ g,^g2,^g3,^g4;
 		Brush^ blackBrush;
 		Brush^ yellowBrush;
-<<<<<<< HEAD
-=======
 		////////Player Array////
 		//array <player^, 2>^ PLAYER_GRID;
 
 		/////GRAPHICS//////////////	 
 		Graphics^ gselect; //[Added 4/6/2015] This is for the Cursor
 		Brush^ WhiteBrush;
-<<<<<<< HEAD
 		///Bitmap^ MapGrid = gcnew Bitmap("Graphics/(50x250)_Colony_CarrierShip_[5Cells].png");
->>>>>>> origin/master
 		//Bitmap^ Ship_5 = gcnew Bitmap("Graphics/(250x50)_Colony_CarrierShip_[5Cells].png");
-=======
->>>>>>> 8421431719e89968bde0cb03faa2eb1d1ebaa952
 
 		//Bitmap^ Ship_5 = gcnew Bitmap("Graphics/(250x50)_Colony_CarrierShip_[5Cells].png");
 		Bitmap^ MapGrid = gcnew Bitmap("Graphics/(480x480)_Starfield[Grid].png");
@@ -110,8 +104,7 @@ namespace Project1 {
 	private: System::Windows::Forms::PictureBox^  pictureBox3;
 	private: System::Windows::Forms::PictureBox^  pictureBox4;
 			 /////////////////////
-<<<<<<< HEAD
-=======
+
 	private: System::Windows::Forms::MenuStrip^  menuStrip1;
 	private: System::Windows::Forms::ToolStripMenuItem^  fileToolStripMenuItem;
 	private: System::Windows::Forms::ToolStripMenuItem^  newGameToolStripMenuItem;
@@ -120,7 +113,6 @@ namespace Project1 {
 	private: System::Windows::Forms::ToolStripMenuItem^  easyToolStripMenuItem;
 	private: System::Windows::Forms::ToolStripMenuItem^  hardToolStripMenuItem;
 	private: System::Windows::Forms::ToolStripMenuItem^  hardAsBallsToolStripMenuItem;
->>>>>>> origin/master
 
 	private:
 		/// <summary>
@@ -140,22 +132,13 @@ namespace Project1 {
 			this->textBox2 = (gcnew System::Windows::Forms::TextBox());
 			this->textBox3 = (gcnew System::Windows::Forms::TextBox());
 			this->button1 = (gcnew System::Windows::Forms::Button());
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-
->>>>>>> origin/master
 			this->pictureBox3 = (gcnew System::Windows::Forms::PictureBox());
 			this->pictureBox4 = (gcnew System::Windows::Forms::PictureBox());
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pictureBox1))->BeginInit();
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pictureBox2))->BeginInit();
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pictureBox3))->BeginInit();
-<<<<<<< HEAD
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pictureBox4))->BeginInit();
-=======
-=======
 			this->pictureBox3 = (gcnew System::Windows::Forms::PictureBox());
->>>>>>> 8421431719e89968bde0cb03faa2eb1d1ebaa952
 			this->menuStrip1 = (gcnew System::Windows::Forms::MenuStrip());
 			this->fileToolStripMenuItem = (gcnew System::Windows::Forms::ToolStripMenuItem());
 			this->newGameToolStripMenuItem = (gcnew System::Windows::Forms::ToolStripMenuItem());
@@ -168,7 +151,6 @@ namespace Project1 {
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pictureBox2))->BeginInit();
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pictureBox3))->BeginInit();
 			this->menuStrip1->SuspendLayout();
->>>>>>> origin/master
 			this->SuspendLayout();
 			// 
 			// pictureBox1
@@ -231,12 +213,6 @@ namespace Project1 {
 			this->pictureBox3->Size = System::Drawing::Size(250, 250);
 			this->pictureBox3->TabIndex = 6;
 			this->pictureBox3->TabStop = false;
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
-			// 
->>>>>>> 8421431719e89968bde0cb03faa2eb1d1ebaa952
 			// menuStrip1
 			// 
 			this->menuStrip1->BackColor = System::Drawing::Color::Teal;
@@ -286,11 +262,9 @@ namespace Project1 {
 			this->difficultyToolStripMenuItem->Text = L"Difficulty";
 			// 
 			// easyToolStripMenuItem
->>>>>>> origin/master
 			// 
 			// pictureBox4
 			// 
-<<<<<<< HEAD
 			this->pictureBox4->BackColor = System::Drawing::SystemColors::ActiveCaption;
 			this->pictureBox4->Location = System::Drawing::Point(734, 331);
 			this->pictureBox4->Name = L"pictureBox4";
@@ -300,7 +274,6 @@ namespace Project1 {
 			this->pictureBox4->MouseDown += gcnew System::Windows::Forms::MouseEventHandler(this, &MyForm::MD3);
 			this->pictureBox4->MouseLeave += gcnew System::EventHandler(this, &MyForm::ML2);
 			this->pictureBox4->MouseMove += gcnew System::Windows::Forms::MouseEventHandler(this, &MyForm::MM3);
-=======
 			// hardToolStripMenuItem
 			// 
 			this->hardToolStripMenuItem->Name = L"hardToolStripMenuItem";
@@ -312,19 +285,15 @@ namespace Project1 {
 			this->hardAsBallsToolStripMenuItem->Name = L"hardAsBallsToolStripMenuItem";
 			this->hardAsBallsToolStripMenuItem->Size = System::Drawing::Size(141, 22);
 			this->hardAsBallsToolStripMenuItem->Text = L"Hard as Balls";
->>>>>>> origin/master
 			// 
 			// MyForm
 			// 
 			this->AutoScaleDimensions = System::Drawing::SizeF(6, 13);
 			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::Font;
-<<<<<<< HEAD
 			this->ClientSize = System::Drawing::Size(1053, 666);
 			this->Controls->Add(this->pictureBox4);
-=======
 			this->BackColor = System::Drawing::Color::Black;
 			this->ClientSize = System::Drawing::Size(987, 666);
->>>>>>> 8421431719e89968bde0cb03faa2eb1d1ebaa952
 			this->Controls->Add(this->pictureBox3);
 			this->Controls->Add(this->button1);
 			this->Controls->Add(this->textBox3);
@@ -337,21 +306,14 @@ namespace Project1 {
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pictureBox1))->EndInit();
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pictureBox2))->EndInit();
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pictureBox3))->EndInit();
-<<<<<<< HEAD
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pictureBox4))->EndInit();
-=======
 			this->menuStrip1->ResumeLayout(false);
 			this->menuStrip1->PerformLayout();
->>>>>>> origin/master
 			this->ResumeLayout(false);
 			this->PerformLayout();
 
 		}
 #pragma endregion
-<<<<<<< HEAD
-=======
-
->>>>>>> origin/master
 		int S = 0;
 		int numrow = 12;
 		int numcol = 12;
@@ -364,7 +326,6 @@ namespace Project1 {
 		int y1;
 		int x2;
 		int y2;
-<<<<<<< HEAD
 		//////////////to get x and y when ship added
 		int dx1;
 		int dx12;
@@ -401,11 +362,10 @@ namespace Project1 {
 	//private: System::Void MyForm_Load(System::Object^  sender, System::EventArgs^  e) {
 	//}
 	private: System::Void MyForm_Load(System::Object^  sender, System::EventArgs^  e) {
-
+	}
 				 /*
 	private: System::Void MyForm_Load(System::Object^  sender, System::EventArgs^  e) 
 	{*/
-=======
 	
 	private: System::Void MyForm_Load(System::Object^  sender, System::EventArgs^  e) 
 	{
@@ -502,7 +462,7 @@ namespace Project1 {
 	}
 
 private: System::Void button1_Click(System::Object^  sender, System::EventArgs^  e) {
-<<<<<<< HEAD
+
 			 S = 1; 
 			// Box1 = gcnew array<player^, 2>(12, 12);
 			 for (int row = 0; row < numrow; row++)
@@ -513,8 +473,8 @@ private: System::Void button1_Click(System::Object^  sender, System::EventArgs^ 
 					 Box1[row, col] = gcnew player(row, col, 'b');
 					 g->FillRectangle(yellowBrush, rect1);
 
-=======
-			 
+				 }
+			 }
 }
 	private: System::Void MouseD(System::Object^  sender, System::Windows::Forms::MouseEventArgs^  e) {
 				 ///////////////////////
@@ -563,7 +523,7 @@ private: System::Void MouseD(System::Object^  sender, System::Windows::Forms::Mo
 			 //	 S =0;
 			 if (b1 == 1)
 			 {
-=======
+
 				 */
 				 /////////////////////
 
@@ -578,25 +538,21 @@ private: System::Void MouseD(System::Object^  sender, System::Windows::Forms::Mo
 				 y2 = getY / 50 + 1;
 				 x2 = getX / 50 + 1;
 				 //	 S =0;
->>>>>>> origin/master
 				 if (Box1[x1, y1]->status == 'b')
 				 {
 					 if (p == 1)
 					 {
-<<<<<<< HEAD
 						
 						 g->DrawImage(Ship_1_verticalpng, getX, getY);
 						 Box1[x1, y1]->status = 'c';
 						 b1++;
-						 
-=======
+					
 						 Rectangle rect2(getX, getY, 49, 49);
 						 g->FillRectangle(yellowBrush, rect2);
 						 //g->DrawImage(starfieldempty_png, getX, getY, 49, 49);
 						 g->DrawImage(Ship_1_verticalpng, getX, getY);
 
 						 Box1[x1, y1]->status = 'c';
->>>>>>> origin/master
 					 }
 					 if (p == 12)
 					 {
@@ -604,24 +560,18 @@ private: System::Void MouseD(System::Object^  sender, System::Windows::Forms::Mo
 						 g->FillRectangle(yellowBrush, rect2);
 						 g->DrawImage(Ship_1_horizontalpng, getX, getY);
 						 Box1[x1, y1]->status = 'c';
-<<<<<<< HEAD
 						 b1++;
 						
-=======
->>>>>>> origin/master
 					 }
 					 dx1 = x1;
 					 dy1 = y1;
 				 }
 				
 
-<<<<<<< HEAD
 			 }
 			
 			 if (b2 == 1)
 			 {
-=======
->>>>>>> origin/master
 				 if (p == 2)
 				 {
 					 if (y1 + 1 < 12)
@@ -631,25 +581,22 @@ private: System::Void MouseD(System::Object^  sender, System::Windows::Forms::Mo
 							 Rectangle rect2(getX, getY, 49, 49);
 							 g->FillRectangle(yellowBrush, rect2);
 							 g->DrawImage(Ship_2_verticalpng, getX, getY);
-<<<<<<< HEAD
 							 Box1[x1, y1]->status = 'd';
 
 							 Box1[x1, y2]->status = 'd';
 							 b2++;
 							 dx2 = x1;
 							 dy2 = y1;
-=======
+
 							 Box1[x1, y1]->status = 'c';
 
 							 Box1[x1, y2]->status = 'c';
->>>>>>> origin/master
 						 }
 					 }
 					 else
 					 {
 						 if (Box1[x1, y1]->status == 'b'&&Box1[x1, y1 - 1]->status == 'b')
 						 {
-<<<<<<< HEAD
 							
 							 g->DrawImage(Ship_2_verticalpng, getX, getY - 50);
 							 Box1[x1, y1]->status = 'd';
@@ -658,14 +605,12 @@ private: System::Void MouseD(System::Object^  sender, System::Windows::Forms::Mo
 							 b2++;
 							 dx2 = x1;
 							 dy2 = y1 - 1;
-=======
 							 Rectangle rect2(getX, getY, 49, 49);
 							 g->FillRectangle(yellowBrush, rect2);
 							 g->DrawImage(Ship_2_verticalpng, getX, getY - 50);
 							 Box1[x1, y1]->status = 'c';
 
 							 Box1[x1, y1 - 1]->status = 'c';
->>>>>>> origin/master
 						 }
 					 }
 
@@ -679,16 +624,13 @@ private: System::Void MouseD(System::Object^  sender, System::Windows::Forms::Mo
 							 Rectangle rect2(getX, getY, 49, 49);
 							 g->FillRectangle(yellowBrush, rect2);
 							 g->DrawImage(Ship_2_horizontalpng, getX, getY);
-<<<<<<< HEAD
 							 Box1[x1, y1]->status = 'e';
 							 Box1[x2, y1]->status = 'e';
 							 b2++;
 							 dx22 = x1;
 							 dy22 = y1;
-=======
 							 Box1[x1, y1]->status = 'c';
 							 Box1[x2, y1]->status = 'c';
->>>>>>> origin/master
 						 }
 					 }
 					 else
@@ -698,26 +640,20 @@ private: System::Void MouseD(System::Object^  sender, System::Windows::Forms::Mo
 							 Rectangle rect2(getX, getY, 49, 49);
 							 g->FillRectangle(yellowBrush, rect2);
 							 g->DrawImage(Ship_2_horizontalpng, getX - 50, getY);
-<<<<<<< HEAD
 							 Box1[x1, y1]->status = 'e';
 							 Box1[x1 - 1, y1]->status = 'e';
 							 b2++;
 							 dx22 = x1 - 1;
 							 dy22 = y1;
-=======
 							 Box1[x1, y1]->status = 'c';
 							 Box1[x1 - 1, y1]->status = 'c';
->>>>>>> origin/master
 						 }
 					 }
 
 				 }
-<<<<<<< HEAD
 			 }
 			 if (b3 == 1)
 			 {
-=======
->>>>>>> origin/master
 				 if (p == 3)
 				 {
 					 if (y1 + 2 < 12)
@@ -727,7 +663,6 @@ private: System::Void MouseD(System::Object^  sender, System::Windows::Forms::Mo
 							 Rectangle rect2(getX, getY, 49, 49);
 							 g->FillRectangle(yellowBrush, rect2);
 							 g->DrawImage(Ship_3_verticalpng, getX, getY);
-<<<<<<< HEAD
 							 Box1[x1, y1]->status = 'f';
 							 Box1[x1, y1 + 1]->status = 'f';
 							 Box1[x1, y1 + 2]->status = 'f';
@@ -735,13 +670,10 @@ private: System::Void MouseD(System::Object^  sender, System::Windows::Forms::Mo
 							 dx3 = x1;
 							 dy3 = y1;
 						 }
-						
-=======
 							 Box1[x1, y1]->status = 'c';
 							 Box1[x1, y1 + 1]->status = 'c';
 							 Box1[x1, y1 + 2]->status = 'c';
 						 }
->>>>>>> origin/master
 					 }
 					 else
 					 {
@@ -750,18 +682,15 @@ private: System::Void MouseD(System::Object^  sender, System::Windows::Forms::Mo
 							 Rectangle rect2(getX, getY, 49, 49);
 							 g->FillRectangle(yellowBrush, rect2);
 							 g->DrawImage(Ship_3_verticalpng, getX, 450);
-<<<<<<< HEAD
 							 Box1[x1, 11]->status = 'f';
 							 Box1[x1, 9]->status = 'f';
 							 Box1[x1, 10]->status = 'f';
 							 b3++;
 							 dx3 = x1;
 							 dy3 = 9;
-=======
 							 Box1[x1, 11]->status = 'c';
 							 Box1[x1, 9]->status = 'c';
 							 Box1[x1, 10]->status = 'c';
->>>>>>> origin/master
 						 }
 					 }
 
@@ -775,18 +704,15 @@ private: System::Void MouseD(System::Object^  sender, System::Windows::Forms::Mo
 							 Rectangle rect2(getX, getY, 49, 49);
 							 g->FillRectangle(yellowBrush, rect2);
 							 g->DrawImage(Ship_3_horizontalpng, getX, getY);
-<<<<<<< HEAD
 							 Box1[x1, y1]->status = 'g';
 							 Box1[x1 + 1, y1]->status = 'g';
 							 Box1[x1 + 2, y1]->status = 'g';
 							 b3++;
 							 dx32 = x1;
 							 dy32 = y1;
-=======
 							 Box1[x1, y1]->status = 'c';
 							 Box1[x1 + 1, y1]->status = 'c';
 							 Box1[x1 + 2, y1]->status = 'c';
->>>>>>> origin/master
 						 }
 					 }
 					 else
@@ -796,28 +722,22 @@ private: System::Void MouseD(System::Object^  sender, System::Windows::Forms::Mo
 							 Rectangle rect2(getX, getY, 49, 49);
 							 g->FillRectangle(yellowBrush, rect2);
 							 g->DrawImage(Ship_3_horizontalpng, 450, getY);
-<<<<<<< HEAD
 							 Box1[11, y1]->status = 'g';
 							 Box1[11 - 1, y1]->status = 'g';
 							 Box1[11 - 2, y1]->status = 'g';
 							 b3++;
 							 dx32 = 9;
 							 dy32 = y1;
-=======
 							 Box1[11, y1]->status = 'c';
 							 Box1[11 - 1, y1]->status = 'c';
 							 Box1[11 - 2, y1]->status = 'c';
->>>>>>> origin/master
 						 }
 					 }
 
 				 }
-<<<<<<< HEAD
-			 }
+			 
 			 if (b4 == 1)
 			 {
-=======
->>>>>>> origin/master
 				 if (p == 4)
 				 {
 					 if (y1 + 3 < 12)
@@ -827,7 +747,6 @@ private: System::Void MouseD(System::Object^  sender, System::Windows::Forms::Mo
 							 Rectangle rect2(getX, getY, 49, 49);
 							 g->FillRectangle(yellowBrush, rect2);
 							 g->DrawImage(Ship_4_verticalpng, getX, getY);
-<<<<<<< HEAD
 							 Box1[x1, y1]->status = 'h';
 							 Box1[x1, y1 + 1]->status = 'h';
 							 Box1[x1, y1 + 2]->status = 'h';
@@ -835,12 +754,10 @@ private: System::Void MouseD(System::Object^  sender, System::Windows::Forms::Mo
 							 b4++;
 							 dx4 = x1;
 							 dy4 = y1;
-=======
 							 Box1[x1, y1]->status = 'c';
 							 Box1[x1, y1 + 1]->status = 'c';
 							 Box1[x1, y1 + 2]->status = 'c';
 							 Box1[x1, y1 + 3]->status = 'c';
->>>>>>> origin/master
 						 }
 					 }
 					 else
@@ -850,7 +767,6 @@ private: System::Void MouseD(System::Object^  sender, System::Windows::Forms::Mo
 							 Rectangle rect2(getX, getY, 49, 49);
 							 g->FillRectangle(yellowBrush, rect2);
 							 g->DrawImage(Ship_4_verticalpng, getX, 400);
-<<<<<<< HEAD
 							 Box1[x1, 11]->status = 'h';
 							 Box1[x1, 11 - 1]->status = 'h';
 							 Box1[x1, 11 - 2]->status = 'h';
@@ -858,12 +774,10 @@ private: System::Void MouseD(System::Object^  sender, System::Windows::Forms::Mo
 							 b4++;
 							 dx4 = x1;
 							 dy4 = 8;
-=======
 							 Box1[x1, 11]->status = 'c';
 							 Box1[x1, 11 - 1]->status = 'c';
 							 Box1[x1, 11 - 2]->status = 'c';
 							 Box1[x1, 11 - 3]->status = 'c';
->>>>>>> origin/master
 						 }
 					 }
 
@@ -877,7 +791,7 @@ private: System::Void MouseD(System::Object^  sender, System::Windows::Forms::Mo
 							 Rectangle rect2(getX, getY, 49, 49);
 							 g->FillRectangle(yellowBrush, rect2);
 							 g->DrawImage(Ship_4_horizontalpng, getX, getY);
-<<<<<<< HEAD
+
 							 Box1[x1, y1]->status = 'i';
 							 Box1[x1 + 1, y1]->status = 'i';
 							 Box1[x1 + 2, y1]->status = 'i';
@@ -885,12 +799,12 @@ private: System::Void MouseD(System::Object^  sender, System::Windows::Forms::Mo
 							 b4++;
 							 dx42 = x1;
 							 dy42 = y1;
-=======
+
 							 Box1[x1, y1]->status = 'c';
 							 Box1[x1 + 1, y1]->status = 'c';
 							 Box1[x1 + 2, y1]->status = 'c';
 							 Box1[x1 + 3, y1]->status = 'c';
->>>>>>> origin/master
+
 						 }
 					 }
 					 else
@@ -900,7 +814,7 @@ private: System::Void MouseD(System::Object^  sender, System::Windows::Forms::Mo
 							 Rectangle rect2(getX, getY, 49, 49);
 							 g->FillRectangle(yellowBrush, rect2);
 							 g->DrawImage(Ship_4_horizontalpng, 400, getY);
-<<<<<<< HEAD
+
 							 Box1[11, y1]->status = 'i';
 							 Box1[11 - 1, y1]->status = 'i';
 							 Box1[11 - 2, y1]->status = 'i';
@@ -908,22 +822,22 @@ private: System::Void MouseD(System::Object^  sender, System::Windows::Forms::Mo
 							 b4++;
 							 dx42 = 8;
 							 dy42 = y1;
-=======
+
 							 Box1[11, y1]->status = 'c';
 							 Box1[11 - 1, y1]->status = 'c';
 							 Box1[11 - 2, y1]->status = 'c';
 							 Box1[11 - 3, y1]->status = 'c';
->>>>>>> origin/master
+
 						 }
 					 }
 
 				 }
-<<<<<<< HEAD
+
 			 }
 			 if (b5 == 1)
 			 {
-=======
->>>>>>> origin/master
+//=======
+//>>>>>>> origin/master
 				 if (p == 5)
 				 {
 					 if (y1 + 4 < 12)
@@ -933,7 +847,7 @@ private: System::Void MouseD(System::Object^  sender, System::Windows::Forms::Mo
 							 Rectangle rect2(getX, getY, 49, 49);
 							 g->FillRectangle(yellowBrush, rect2);
 							 g->DrawImage(Ship_5_verticalpng, getX, getY);
-<<<<<<< HEAD
+//<<<<<<< HEAD
 							 Box1[x1, y1]->status = 'j';
 							 Box1[x1, y1 + 1]->status = 'j';
 							 Box1[x1, y1 + 2]->status = 'j';
@@ -963,8 +877,8 @@ private: System::Void MouseD(System::Object^  sender, System::Windows::Forms::Mo
 					 }
 
 				 }
-				 if (p == 52)
-=======
+				 if (p == 52){
+//=======
 							 Box1[x1, y1]->status = 'c';
 							 Box1[x1, y1 + 1]->status = 'c';
 							 Box1[x1, y1 + 2]->status = 'c';
@@ -987,7 +901,7 @@ private: System::Void MouseD(System::Object^  sender, System::Windows::Forms::Mo
 						 }
 					 }
 
-				 }
+				 
 				 if (p == 52)
 				 {
 					 if (x1 + 4 < 12)
@@ -1100,7 +1014,7 @@ private: System::Void MouseD(System::Object^  sender, System::Windows::Forms::Mo
 
 			 
 
->>>>>>> origin/master
+//>>>>>>> origin/master
 private: System::Void MD(System::Object^  sender, System::Windows::Forms::MouseEventArgs^  e) {
 			 /////////////
 			 /*
@@ -1131,10 +1045,10 @@ private: System::Void MD(System::Object^  sender, System::Windows::Forms::MouseE
 					 p = 12;
 				 }
 
-<<<<<<< HEAD
+//<<<<<<< HEAD
 
-=======
->>>>>>> origin/master
+//=======
+//>>>>>>> origin/master
 			 }
 			 if (getX == 0 && getY >= 50 && getY <= 100)
 			 {
@@ -1686,7 +1600,6 @@ private: System::Void MM2(System::Object^  sender, System::Windows::Forms::Mouse
 			 }
 
 }
-<<<<<<< HEAD
 private: System::Void ML(System::Object^  sender, System::EventArgs^  e) {
 			 if (p == 1 || p == 12)
 			 {
@@ -1945,8 +1858,8 @@ private: System::Void ML(System::Object^  sender, System::EventArgs^  e) {
 					 }
 				 }
 			 }
-=======
 
+}
 
 	private: System::Void newGameToolStripMenuItem_Click(System::Object^  sender, System::EventArgs^  e) {
 				 //////////////////
@@ -1986,9 +1899,8 @@ private: System::Void ML(System::Object^  sender, System::EventArgs^  e) {
 	
 	private: System::Void menuStrip1_ItemClicked(System::Object^  sender, System::Windows::Forms::ToolStripItemClickedEventArgs^  e) {
 	}
-};
->>>>>>> origin/master
-}
+
+
 private: System::Void DC(System::Object^  sender, System::EventArgs^  e) {
 	/*		 if (Box1[x1, y1]->status == 'b' || Box1[x1, y1]->status == 'c12')
 			 {
