@@ -63,14 +63,14 @@ namespace Project1 {
 		//array <player^, 2>^ PLAYER_GRID;
 
 		/////GRAPHICS//////////////	 
-		//Graphics^ g;
-		//Graphics^ g2; //[Added 4/2/2015] Picture Box 2
 		Graphics^ gselect; //[Added 4/6/2015] This is for the Cursor
-		//Pen^ blackBrush;
 		Brush^ WhiteBrush;
+<<<<<<< HEAD
 		///Bitmap^ MapGrid = gcnew Bitmap("Graphics/(50x250)_Colony_CarrierShip_[5Cells].png");
 >>>>>>> origin/master
 		//Bitmap^ Ship_5 = gcnew Bitmap("Graphics/(250x50)_Colony_CarrierShip_[5Cells].png");
+=======
+>>>>>>> 8421431719e89968bde0cb03faa2eb1d1ebaa952
 
 		//Bitmap^ Ship_5 = gcnew Bitmap("Graphics/(250x50)_Colony_CarrierShip_[5Cells].png");
 		Bitmap^ MapGrid = gcnew Bitmap("Graphics/(480x480)_Starfield[Grid].png");
@@ -141,6 +141,7 @@ namespace Project1 {
 			this->textBox3 = (gcnew System::Windows::Forms::TextBox());
 			this->button1 = (gcnew System::Windows::Forms::Button());
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> origin/master
@@ -152,6 +153,9 @@ namespace Project1 {
 <<<<<<< HEAD
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pictureBox4))->BeginInit();
 =======
+=======
+			this->pictureBox3 = (gcnew System::Windows::Forms::PictureBox());
+>>>>>>> 8421431719e89968bde0cb03faa2eb1d1ebaa952
 			this->menuStrip1 = (gcnew System::Windows::Forms::MenuStrip());
 			this->fileToolStripMenuItem = (gcnew System::Windows::Forms::ToolStripMenuItem());
 			this->newGameToolStripMenuItem = (gcnew System::Windows::Forms::ToolStripMenuItem());
@@ -162,6 +166,7 @@ namespace Project1 {
 			this->hardAsBallsToolStripMenuItem = (gcnew System::Windows::Forms::ToolStripMenuItem());
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pictureBox1))->BeginInit();
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pictureBox2))->BeginInit();
+			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pictureBox3))->BeginInit();
 			this->menuStrip1->SuspendLayout();
 >>>>>>> origin/master
 			this->SuspendLayout();
@@ -182,6 +187,8 @@ namespace Project1 {
 			// 
 			// pictureBox2
 			// 
+			this->pictureBox2->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(0)), static_cast<System::Int32>(static_cast<System::Byte>(64)),
+				static_cast<System::Int32>(static_cast<System::Byte>(64)));
 			this->pictureBox2->Location = System::Drawing::Point(628, 75);
 			this->pictureBox2->Name = L"pictureBox2";
 			this->pictureBox2->Size = System::Drawing::Size(100, 500);
@@ -192,7 +199,7 @@ namespace Project1 {
 			// 
 			// textBox2
 			// 
-			this->textBox2->Location = System::Drawing::Point(368, 12);
+			this->textBox2->Location = System::Drawing::Point(121, 34);
 			this->textBox2->Name = L"textBox2";
 			this->textBox2->Size = System::Drawing::Size(150, 20);
 			this->textBox2->TabIndex = 3;
@@ -200,7 +207,7 @@ namespace Project1 {
 			// 
 			// textBox3
 			// 
-			this->textBox3->Location = System::Drawing::Point(368, 38);
+			this->textBox3->Location = System::Drawing::Point(356, 34);
 			this->textBox3->Name = L"textBox3";
 			this->textBox3->Size = System::Drawing::Size(150, 20);
 			this->textBox3->TabIndex = 4;
@@ -217,16 +224,22 @@ namespace Project1 {
 			// 
 			// pictureBox3
 			// 
+			this->pictureBox3->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(0)), static_cast<System::Int32>(static_cast<System::Byte>(64)),
+				static_cast<System::Int32>(static_cast<System::Byte>(64)));
 			this->pictureBox3->Location = System::Drawing::Point(734, 75);
 			this->pictureBox3->Name = L"pictureBox3";
 			this->pictureBox3->Size = System::Drawing::Size(250, 250);
 			this->pictureBox3->TabIndex = 6;
 			this->pictureBox3->TabStop = false;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+			// 
+>>>>>>> 8421431719e89968bde0cb03faa2eb1d1ebaa952
 			// menuStrip1
 			// 
-			this->menuStrip1->BackColor = System::Drawing::SystemColors::ControlLightLight;
+			this->menuStrip1->BackColor = System::Drawing::Color::Teal;
 			this->menuStrip1->Items->AddRange(gcnew cli::array< System::Windows::Forms::ToolStripItem^  >(2) {
 				this->fileToolStripMenuItem,
 					this->difficultyToolStripMenuItem
@@ -234,7 +247,7 @@ namespace Project1 {
 			this->menuStrip1->Location = System::Drawing::Point(0, 0);
 			this->menuStrip1->Name = L"menuStrip1";
 			this->menuStrip1->RenderMode = System::Windows::Forms::ToolStripRenderMode::System;
-			this->menuStrip1->Size = System::Drawing::Size(884, 24);
+			this->menuStrip1->Size = System::Drawing::Size(987, 24);
 			this->menuStrip1->TabIndex = 6;
 			this->menuStrip1->Text = L"menuStrip1";
 			this->menuStrip1->ItemClicked += gcnew System::Windows::Forms::ToolStripItemClickedEventHandler(this, &MyForm::menuStrip1_ItemClicked);
@@ -305,8 +318,13 @@ namespace Project1 {
 			// 
 			this->AutoScaleDimensions = System::Drawing::SizeF(6, 13);
 			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::Font;
+<<<<<<< HEAD
 			this->ClientSize = System::Drawing::Size(1053, 666);
 			this->Controls->Add(this->pictureBox4);
+=======
+			this->BackColor = System::Drawing::Color::Black;
+			this->ClientSize = System::Drawing::Size(987, 666);
+>>>>>>> 8421431719e89968bde0cb03faa2eb1d1ebaa952
 			this->Controls->Add(this->pictureBox3);
 			this->Controls->Add(this->button1);
 			this->Controls->Add(this->textBox3);
@@ -389,10 +407,10 @@ namespace Project1 {
 	{*/
 =======
 	
-	private: System::Void MyForm_Load(System::Object^  sender, System::EventArgs^  e) {
+	private: System::Void MyForm_Load(System::Object^  sender, System::EventArgs^  e) 
+	{
 
 		player PlayerClass;
-
 
 		int numrow = 40;
 		int numcol = 40;
@@ -432,6 +450,7 @@ namespace Project1 {
 					 }
 				 }
 
+<<<<<<< HEAD
 				 g = pictureBox1->CreateGraphics();
 				 g2 = pictureBox2->CreateGraphics();
 <<<<<<< HEAD
@@ -448,6 +467,11 @@ namespace Project1 {
 
 				 //g2 = pictureBox2->CreateGraphics();  //Smaller Picture Box on the Right for the Empty Starfield Grid [Added 4/2/2015]
 				
+=======
+				 g = pictureBox1->CreateGraphics(); //Main Grid, place ships, -> Game starts enable as enemy grid
+				 g2 = pictureBox2->CreateGraphics(); //Ship Select
+				 g3 = pictureBox3->CreateGraphics(); //Shoip Rotate -> Game Starts and Enables as Player's ship grid
+>>>>>>> 8421431719e89968bde0cb03faa2eb1d1ebaa952
 				 gselect = pictureBox1->CreateGraphics(); //[Added 4/6/2015] creates target in pictureBox1
 
 				 blackBrush = gcnew System::Drawing::Pen(Color::Black);
@@ -546,6 +570,7 @@ private: System::Void MouseD(System::Object^  sender, System::Windows::Forms::Mo
 				 /* Rectangle WhiteRect = Rectangle(e->X - (e->X % LRGCELLSIZE), e->Y - (e->Y % LRGCELLSIZE), LRGCELLSIZE - 1, LRGCELLSIZE - 1);
 				  g->DrawImage(MapGrid, 0, 0, 480, 480);
 				  g->FillRectangle(yellowBrush, WhiteRect);*/
+
 				 getX = e->X - (e->X % 50);
 				 getY = e->Y - (e->Y % 50);
 				 x1 = getX / 50;
@@ -567,7 +592,9 @@ private: System::Void MouseD(System::Object^  sender, System::Windows::Forms::Mo
 =======
 						 Rectangle rect2(getX, getY, 49, 49);
 						 g->FillRectangle(yellowBrush, rect2);
+						 //g->DrawImage(starfieldempty_png, getX, getY, 49, 49);
 						 g->DrawImage(Ship_1_verticalpng, getX, getY);
+
 						 Box1[x1, y1]->status = 'c';
 >>>>>>> origin/master
 					 }
@@ -1025,6 +1052,7 @@ private: System::Void MouseD(System::Object^  sender, System::Windows::Forms::Mo
 					 }
 					 else
 					 {
+<<<<<<< HEAD
 						 if (Box1[11, y1]->status == 'b'&&Box1[11 - 1, y1]->status == 'b'&&Box1[11 - 2, y1]->status == 'b'&&Box1[11 - 3, y1]->status == 'b'&&Box1[11 - 4, y1]->status == 'b')
 						 {
 							 Rectangle rect2(getX, getY, 49, 49);
@@ -1039,6 +1067,11 @@ private: System::Void MouseD(System::Object^  sender, System::Windows::Forms::Mo
 							 dx52 = 11 - 4;
 							 dy52 = y1;
 						 }
+=======
+						 Rectangle WhiteRect = Rectangle(new_x + 1, new_y + 1, LRGCELLSIZE - 1, LRGCELLSIZE - 1);
+						 g->DrawImage(starfieldgrid_png, 0, 0, LrgGridSize, LrgGridSize);
+						 gselect->DrawImage(select_png, new_x + 1, new_y + 1, LRGCELLSIZE, LRGCELLSIZE); //[Added 4/6/2015] creates target on the cell clicked
+>>>>>>> 8421431719e89968bde0cb03faa2eb1d1ebaa952
 					 }
 <<<<<<< HEAD
 
@@ -1087,12 +1120,14 @@ private: System::Void MD(System::Object^  sender, System::Windows::Forms::MouseE
 			 {
 				 if (t % 2 == 1)
 				 {
-					 g3->DrawImage(Ship_1_verticalpng, getX, getY);
+					 g3->DrawImage(starfieldempty_png, 0, 0, 250, 250);
+					 g3->DrawImage(Ship_1_verticalpng, 100, 100); //Updated 4/17/2015
 					 p = 1;
 				 }
 				 else
 				 {
-					 g3->DrawImage(Ship_1_horizontalpng, 0, 0);
+					 g3->DrawImage(starfieldempty_png, 0, 0, 250, 250);
+					 g3->DrawImage(Ship_1_horizontalpng, 100, 100); //Updated 4/17/2015
 					 p = 12;
 				 }
 
@@ -1105,12 +1140,14 @@ private: System::Void MD(System::Object^  sender, System::Windows::Forms::MouseE
 			 {
 				 if (t % 2 == 1)
 				 {
-					 g3->DrawImage(Ship_2_verticalpng, getX, getY);
+					 g3->DrawImage(starfieldempty_png, 0, 0, 250, 250);
+					 g3->DrawImage(Ship_2_verticalpng, 100, 50); //Updated 4/17/2015
 					 p = 2;
 				 }
 				 else
-				 {
-					 g3->DrawImage(Ship_2_horizontalpng, 0, 0);
+				 {	
+					 g3->DrawImage(starfieldempty_png, 0, 0, 250, 250);
+					 g3->DrawImage(Ship_2_horizontalpng, 100, 100); //Updated 4/17/2015
 					 p = 22;
 				 }
 
@@ -1120,12 +1157,14 @@ private: System::Void MD(System::Object^  sender, System::Windows::Forms::MouseE
 			 {
 				 if (t % 2 == 1)
 				 {
-					 g3->DrawImage(Ship_3_verticalpng, getX, 0);
+					 g3->DrawImage(starfieldempty_png, 0, 0, 250, 250);
+					 g3->DrawImage(Ship_3_verticalpng, 100, 50); //Updated 4/17/2015
 					 p = 3;
 				 }
 				 else
 				 {
-					 g3->DrawImage(Ship_3_horizontalpng, 0, 0);
+					 g3->DrawImage(starfieldempty_png, 0, 0, 250, 250);
+					 g3->DrawImage(Ship_3_horizontalpng, 50, 100); //Updated 4/17/2015
 					 p = 32;
 				 }
 
@@ -1135,12 +1174,14 @@ private: System::Void MD(System::Object^  sender, System::Windows::Forms::MouseE
 			 {
 				 if (t % 2 == 1)
 				 {
-					 g3->DrawImage(Ship_4_verticalpng, getX, 0);
+					 g3->DrawImage(starfieldempty_png, 0, 0, 250, 250);
+					 g3->DrawImage(Ship_4_verticalpng, 100, 50); //Updated 4/17/2015
 					 p = 4;
 				 }
 				 else
 				 {
-					 g3->DrawImage(Ship_4_horizontalpng, 0, 0);
+					 g3->DrawImage(starfieldempty_png, 0, 0, 250, 250);
+					 g3->DrawImage(Ship_4_horizontalpng, 0, 100); //Updated 4/17/2015
 					 p = 42;
 				 }
 
@@ -1150,12 +1191,14 @@ private: System::Void MD(System::Object^  sender, System::Windows::Forms::MouseE
 			 {
 				 if (t % 2 == 1)
 				 {
-					 g3->DrawImage(Ship_5_verticalpng, 0, 0);
+					 g3->DrawImage(starfieldempty_png, 0, 0, 250, 250);
+					 g3->DrawImage(Ship_5_verticalpng, 100, 0); //Updated 4/17/2015
 					 p = 5;
 				 }
 				 else
 				 {
-					 g3->DrawImage(Ship_5_horizontalpng, 0, 0);
+					 g3->DrawImage(starfieldempty_png, 0, 0, 250, 250);
+					 g3->DrawImage(Ship_5_horizontalpng, 0, 100); //Updated 4/17/2015
 					 p = 52;
 				 }
 
@@ -1937,6 +1980,7 @@ private: System::Void ML(System::Object^  sender, System::EventArgs^  e) {
 				 g2->DrawImage(Ship_3_verticalpng, 0, 151);
 				 g2->DrawImage(Ship_4_verticalpng, 0, 301);
 				 g2->DrawImage(Ship_5_verticalpng, 51, 0);
+				 g3->DrawImage(starfieldempty_png, 0, 0, 250, 250);
 	}
 
 	
