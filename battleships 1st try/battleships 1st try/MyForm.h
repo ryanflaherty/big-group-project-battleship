@@ -456,7 +456,7 @@ private: System::Void button1_Click(System::Object^  sender, System::EventArgs^ 
 			 g2->DrawImage(Ship_3_verticalpng, 0, 151);
 			 g2->DrawImage(Ship_4_verticalpng, 0, 301);
 			 g2->DrawImage(Ship_5_verticalpng, 51, 0);
-
+			 g3->DrawImage(starfieldempty_png, 0, 0, 250, 250);
 
 }
 	
@@ -878,17 +878,18 @@ private: System::Void MD(System::Object^  sender, System::Windows::Forms::MouseE
 			 getY = e->Y - (e->Y % 50);
 			 t++;
 			 pictureBox3->Refresh();
+			 g3->DrawImage(starfieldempty_png, 0, 0, 250, 250);
 			 if (getX == 0 && getY == 0)
 			 {
 				 if (t % 2 == 1)
 				 {
-					 g3->DrawImage(starfieldempty_png, 0, 0, 250, 250);
+					
 					 g3->DrawImage(Ship_1_verticalpng, 100, 100); //Updated 4/17/2015
 					 p = 1;
 				 }
 				 else
 				 {
-					 g3->DrawImage(starfieldempty_png, 0, 0, 250, 250);
+					
 					 g3->DrawImage(Ship_1_horizontalpng, 100, 100); //Updated 4/17/2015
 					 p = 12;
 				 }
@@ -902,13 +903,13 @@ private: System::Void MD(System::Object^  sender, System::Windows::Forms::MouseE
 			 {
 				 if (t % 2 == 1)
 				 {
-					 g3->DrawImage(starfieldempty_png, 0, 0, 250, 250);
+					
 					 g3->DrawImage(Ship_2_verticalpng, 100, 50); //Updated 4/17/2015
 					 p = 2;
 				 }
 				 else
 				 {	
-					 g3->DrawImage(starfieldempty_png, 0, 0, 250, 250);
+					
 					 g3->DrawImage(Ship_2_horizontalpng, 100, 100); //Updated 4/17/2015
 					 p = 22;
 				 }
@@ -919,13 +920,13 @@ private: System::Void MD(System::Object^  sender, System::Windows::Forms::MouseE
 			 {
 				 if (t % 2 == 1)
 				 {
-					 g3->DrawImage(starfieldempty_png, 0, 0, 250, 250);
+					
 					 g3->DrawImage(Ship_3_verticalpng, 100, 50); //Updated 4/17/2015
 					 p = 3;
 				 }
 				 else
 				 {
-					 g3->DrawImage(starfieldempty_png, 0, 0, 250, 250);
+					
 					 g3->DrawImage(Ship_3_horizontalpng, 50, 100); //Updated 4/17/2015
 					 p = 32;
 				 }
@@ -936,13 +937,13 @@ private: System::Void MD(System::Object^  sender, System::Windows::Forms::MouseE
 			 {
 				 if (t % 2 == 1)
 				 {
-					 g3->DrawImage(starfieldempty_png, 0, 0, 250, 250);
+					;
 					 g3->DrawImage(Ship_4_verticalpng, 100, 50); //Updated 4/17/2015
 					 p = 4;
 				 }
 				 else
 				 {
-					 g3->DrawImage(starfieldempty_png, 0, 0, 250, 250);
+					 
 					 g3->DrawImage(Ship_4_horizontalpng, 0, 100); //Updated 4/17/2015
 					 p = 42;
 				 }
@@ -953,13 +954,13 @@ private: System::Void MD(System::Object^  sender, System::Windows::Forms::MouseE
 			 {
 				 if (t % 2 == 1)
 				 {
-					 g3->DrawImage(starfieldempty_png, 0, 0, 250, 250);
+					
 					 g3->DrawImage(Ship_5_verticalpng, 100, 0); //Updated 4/17/2015
 					 p = 5;
 				 }
 				 else
 				 {
-					 g3->DrawImage(starfieldempty_png, 0, 0, 250, 250);
+					
 					 g3->DrawImage(Ship_5_horizontalpng, 0, 100); //Updated 4/17/2015
 					 p = 52;
 				 }
@@ -1895,12 +1896,12 @@ private: System::Void pictureBox1_Click(System::Object^  sender, System::EventAr
 private: System::Void MM3(System::Object^  sender, System::Windows::Forms::MouseEventArgs^  e) {
 			 if (S != 0)
 			 {
-				 if (Box2[getX2 / 25, getY2 / 25]->status != 'y')
+				 if (Box2[getX2 / 25, getY2 / 25]->status != 'y'&&Box2[getX2 / 25, getY2 / 25]->status != 'z')
 				 {
 					 Rectangle rect1(getX2, getY2, 24, 24);
 					 g4->FillRectangle(yellowBrush, rect1);
 				 }
-				 if (Box2[(e->X - (e->X % 25)) / 25, (e->Y - (e->Y % 25)) / 25]->status != 'y')
+				 if (Box2[(e->X - (e->X % 25)) / 25, (e->Y - (e->Y % 25)) / 25]->status != 'y'&&Box2[(e->X - (e->X % 25)) / 25, (e->Y - (e->Y % 25)) / 25]->status != 'z')
 				 {
 					 Rectangle rect2(e->X - (e->X % 25), e->Y - (e->Y % 25), 24, 24);
 					 g4->FillRectangle(blackBrush, rect2);
@@ -1950,8 +1951,13 @@ private: System::Void MD3(System::Object^  sender, System::Windows::Forms::Mouse
 				 }
 				 else
 				 {
-					 Rectangle rect1(getX2, getY2, 24, 24);
-					 g4->FillRectangle(redBrush, rect1);
+					 if (Box2[getX2 / 25, getY2 / 25]->status == 'b')
+					 {
+						 Box2[getX2 / 25, getY2 / 25]->status = 'y';
+						 Rectangle rect1(getX2, getY2, 24, 24);
+						 g4->FillRectangle(redBrush, rect1);
+					 }
+					
 				 }
 
 				 if (Box1[aix, aiy]->status != 'b')
@@ -1963,6 +1969,7 @@ private: System::Void MD3(System::Object^  sender, System::Windows::Forms::Mouse
 				 }
 				 else
 				 {
+					 Box2[aix / 25, aiy / 25]->status = 'y';
 					 Rectangle rect1(aix * 50, aiy * 50, 49, 49);
 					 g->FillRectangle(redBrush, rect1);
 				 }
